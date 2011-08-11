@@ -184,10 +184,4 @@ class SES_SignupFields
 		return $text;
 	}
 	
-	public static function setup()
-	{
-        global $wgParser;
-        $wgParser->setHook( 'signupfields', 'SES_SignupFields::render' );
-        return true;
-	}
 }

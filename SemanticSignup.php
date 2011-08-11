@@ -54,33 +54,16 @@ $wgExtensionCredits[defined( 'SEMANTIC_EXTENSION_TYPE' ) ? 'semantic' : 'special
 $wgExtensionMessagesFiles['SemanticSignup'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.php';
 $wgExtensionAliasesFiles['SemanticSignup'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.aliases.php';
 
+$wgAutoloadClasses['SemanticSignupHooks'] = dirname( __FILE__ ) . '/SemanticSignup.hooks.php';
 $wgAutoloadClasses['SemanticSignup'] = dirname( __FILE__ ) . '/includes/SES_Special.php';
 $wgAutoloadClasses['SES_UserAccountDataChecker'] = dirname( __FILE__ ) . '/includes/SES_Special.php'; 
-
 $wgAutoloadClasses['SES_DataChecker'] = dirname( __FILE__ ) . '/includes/SES_Utils.php';
-
 $wgAutoloadClasses['SES_SignupFields'] = dirname( __FILE__ ) . '/includes/SES_SignupFields.php';
 $wgAutoloadClasses['CreateUserFieldsTemplate'] = dirname( __FILE__ ) . '/includes/SES_SignupFields.php';
 
 $wgSpecialPages['SemanticSignup'] = 'SemanticSignup';
 
-if ( defined( 'MW_SUPPORTS_PARSERFIRSTCALLINIT' ) ) {
-	$wgHooks['ParserFirstCallInit'][] = 'SES_SignupFields::setup';
-} else { 
-	$wgExtensionFunctions[] = 'SES_SignupFields::setup';
-}
-
-function sesCreateUserRedirect($template)
-{
-	$semantic_signup_title = SemanticSignup::getTitleFor('SemanticSignup');
-	$url = $semantic_signup_title->escapeFullURL();
-	
-	global $wgOut;
-	$wgOut->redirect($url);
-	
-	return false;
-}
-
-$wgHooks['UserCreateForm'][] = 'sesCreateUserRedirect';
+$wgHooks['UserCreateForm'][] = 'SemanticSignupHooks::onUserCreateForm';
+$wgHooks['ParserFirstCallInit'][] = 'SemanticSignupHooks::onParserFirstCallInit';
 
 require_once 'SemanticSignup.settings.php';
