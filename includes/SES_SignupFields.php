@@ -191,10 +191,3 @@ class SES_SignupFields
         return true;
 	}
 }
-
-if ( defined( 'MW_SUPPORTS_PARSERFIRSTCALLINIT' ) ) {
-	$wgHooks['ParserFirstCallInit'][] = 'SES_SignupFields::setup';
-} else { 
-	$wgExtensionFunctions[] = 'SES_SignupFields::setup';
-}
-
