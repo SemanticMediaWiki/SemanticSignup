@@ -70,11 +70,5 @@ $wgSpecialPages['SemanticSignup'] = 'SemanticSignup';
 
 $egSemanticSignupSettings = array();
 
-$wgExtensionFunctions[] = 'efSemanticSignupSetup';
-
-function efSemanticSignupSetup() {
-	if ( !is_null( Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM ) ) ) {
-		$wgHooks['UserCreateForm'][] = 'SemanticSignupHooks::onUserCreateForm';
-		$wgHooks['ParserFirstCallInit'][] = 'SemanticSignupHooks::onParserFirstCallInit';	
-	}	
-}
+$wgHooks['UserCreateForm'][] = 'SemanticSignupHooks::onUserCreateForm';
+$wgHooks['ParserFirstCallInit'][] = 'SemanticSignupHooks::onParserFirstCallInit';

@@ -1,27 +1,26 @@
 <?php
-/*
+
+/**
  * Created on 7 Jan 2008 by Serhii Kutnii
- *
  */
- 
- class SES_UserAccountDataChecker extends SES_DataChecker
- {
- 	public $mUsername = '';
- 	public $mPassword = '';
- 	public $mEmail = '';
- 	public $mRealname = '';
- 	public $mDomain = '';
- 	public $mLanguage = '';
- 	public $mRemember = false;
- 	public $mUser = null;
- 	
- 	protected function populateData()
- 	{
-		$this->mUsername = $this->getUserDataValue('wpName', 'nousername');
-		$name = trim($this->mUsername);
-		$this->mUser = User::newFromName($name, 'creatable');
-		if (!$this->mUser)
-			$this->error(wfMsg('noname'));
+class SES_UserAccountDataChecker extends SES_DataChecker {
+	
+	public $mUsername = '';
+	public $mPassword = '';
+	public $mEmail = '';
+	public $mRealname = '';
+	public $mDomain = '';
+	public $mLanguage = '';
+	public $mRemember = false;
+	public $mUser = null;
+	
+	protected function populateData() {
+		$this->mUsername = $this->getUserDataValue( 'wpName', 'nousername' );
+		$name = trim( $this->mUsername );
+		$this->mUser = User::newFromName( $name, 'creatable' );
+		if ( !$this->mUser ) {
+			$this->error( wfMsg( 'noname' ) );
+		}
 					
 		global $sesRealNameRequired;
 		$this->mRealname = $this->getUserDataValue('wpRealName', $sesRealNameRequired ? 'norealname' : null);
@@ -40,95 +39,95 @@
 		
 		global $wgRequest;
 		$this->mRemember = $wgRequest->getCheck('wpRemember');
- 	}
- 	
- 	//Checks
- 	
- 	public function checkDomainValidity()
- 	{
- 		global $wgAuth;
- 		
- 		if( !$wgAuth->validDomain( $this->mDomain ) )
+	}
+	
+	//Checks
+	
+	public function checkDomainValidity()
+	{
+		global $wgAuth;
+		
+		if( !$wgAuth->validDomain( $this->mDomain ) )
 			$this->error(wfMsg('wrongpassword'));
- 	}
- 	
- 	public function checkDomainUser()
- 	{
- 		global $wgAuth;
+	}
+	
+	public function checkDomainUser()
+	{
+		global $wgAuth;
 
- 		if( ('local' != $this->mDomain) && ('' != $this->mDomain)
- 			&& !$wgAuth->canCreateAccounts() && ( !$wgAuth->userExists($this->mName) || !$wgAuth->authenticate($this->mName, $this->mPassword) ) )
- 				$this->error(wfMsg('wrongpassword'));
- 	}
- 	
- 	public function checkCreatePermissions()
- 	{
- 		global $wgUser;
- 		 
- 		if (!$wgUser->isAllowed( 'createaccount' ) || $wgUser->isBlockedFromCreateAccount() )
- 			$this->error(wfMsg('createforbidden'));
- 	}
- 	
- 	public function checkSorbs()
- 	{
- 		global $wgProxyWhitelist;
- 		global $wgEnableSorbs;
- 		$ip = wfGetIP();
+		if( ('local' != $this->mDomain) && ('' != $this->mDomain)
+			&& !$wgAuth->canCreateAccounts() && ( !$wgAuth->userExists($this->mName) || !$wgAuth->authenticate($this->mName, $this->mPassword) ) )
+				$this->error(wfMsg('wrongpassword'));
+	}
+	
+	public function checkCreatePermissions()
+	{
+		global $wgUser;
+		 
+		if (!$wgUser->isAllowed( 'createaccount' ) || $wgUser->isBlockedFromCreateAccount() )
+			$this->error(wfMsg('createforbidden'));
+	}
+	
+	public function checkSorbs()
+	{
+		global $wgProxyWhitelist;
+		global $wgEnableSorbs;
+		$ip = wfGetIP();
 		if ( $wgEnableSorbs && !in_array( $ip, $wgProxyWhitelist ) &&
 		  $wgUser->inSorbsBlacklist( $ip ) )
-		  	$this->error(wfMsg('sorbs_create_account_reason'));
- 	}
- 	
- 	public function checkUserExists()
- 	{
+		 	$this->error(wfMsg('sorbs_create_account_reason'));
+	}
+	
+	public function checkUserExists()
+	{
 		if ($this->mUser->idForName())
 			$this->error(wfMsg('userexists'));
- 	}
- 	
- 	public function checkPasswordLength()
- 	{
+	}
+	
+	public function checkPasswordLength()
+	{
 		if (!$this->mUser->isValidPassword($this->mPassword))
 		{
 			global $wgMinimalPasswordLength;
 			$this->error(wfMsgExt('passwordtooshort', array( 'parsemag' ), $wgMinimalPasswordLength));
 		}
- 	}
- 	
- 	public function checkEmailValidity()
- 	{
- 		global $wgEnableEmail;
+	}
+	
+	public function checkEmailValidity()
+	{
+		global $wgEnableEmail;
 		if ($wgEnableEmail && !User::isValidEmailAddr($this->mEmail))
 			$this->error(wfMsg('invalidemailaddress'));
- 	}
- 	
- 	public function __construct()
- 	{
- 		$this->addCheck(array(&$this, 'checkDomainValidity'), array());
- 		$this->addCheck(array(&$this, 'checkDomainUser'), array());
- 		$this->addCheck(array(&$this, 'checkCreatePermissions'), array());
- 		$this->addCheck(array(&$this, 'checkSorbs'), array());
- 		$this->addCheck(array(&$this, 'checkUserExists'), array());
- 		$this->addCheck(array(&$this, 'checkPasswordLength'), array());
- 		$this->addCheck(array(&$this, 'checkEmailValidity'), array());
- 	}
+	}
+	
+	public function __construct()
+	{
+		$this->addCheck(array(&$this, 'checkDomainValidity'), array());
+		$this->addCheck(array(&$this, 'checkDomainUser'), array());
+		$this->addCheck(array(&$this, 'checkCreatePermissions'), array());
+		$this->addCheck(array(&$this, 'checkSorbs'), array());
+		$this->addCheck(array(&$this, 'checkUserExists'), array());
+		$this->addCheck(array(&$this, 'checkPasswordLength'), array());
+		$this->addCheck(array(&$this, 'checkEmailValidity'), array());
+	}
  }
 
  class SemanticSignup extends SpecialPage
  {
- 	private $mUserDataChecker = null;
- 	private $mUserPageUrl = '';
- 	
- 	public function __construct()
- 	{
- 		parent::__construct('SemanticSignup');
- 		$this->mIncludable = false;
+	private $mUserDataChecker = null;
+	private $mUserPageUrl = '';
+	
+	public function __construct()
+	{
+		parent::__construct('SemanticSignup');
+		$this->mIncludable = false;
 
- 		$this->mUserDataChecker = new SES_UserAccountDataChecker();
- 	}
- 	
- 	private function userSignup()
- 	{
- 		//Get user input and check the environment
+		$this->mUserDataChecker = new SES_UserAccountDataChecker();
+	}
+	
+	private function userSignup()
+	{
+		//Get user input and check the environment
 		$this->mUserDataChecker->run();
 		
 		//Throw if data getting or environment checks have failed which indicates that account creation is impossible
@@ -150,7 +149,7 @@
 		}
 
 		global $wgAccountCreationThrottle;
-		global $wgUser; 		
+		global $wgUser;		
 		if ( $wgAccountCreationThrottle && $wgUser->isPingLimitable() ) 
 		{
 			$key = wfMemcKey( 'acctcreate', 'ip', wfGetIP() );
@@ -192,40 +191,40 @@
 		$language = $this->mUserDataChecker->mLanguage;
 		if( $wgLoginLanguageSelector && $language )
 			$user->setOption( 'language', $language );
- 		
- 		global $wgEmailAuthentication;
- 		if( $wgEmailAuthentication && User::isValidEmailAddr( $user->getEmail() ) ){
- 			$err = $user->sendConfirmationMail();
- 			if (WikiError::isError($err))
- 				throw new Exception(wfMsg('emailfailed'));
- 		}
- 		
- 		$user->saveSettings();
- 		wfRunHooks('AddNewAccount', array($user));
- 	}
- 	
- 	private function createUserPage() {
- 		$form_title = Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM );
- 		$form = new Article($form_title);
- 		$form_definition = $form->getContent();
- 		
- 		$page_title = Title::newFromText($this->mUserDataChecker->mUser->getName(), NS_USER);
- 		$this->mUserPageUrl = $page_title->escapeFullUrl();
+		
+		global $wgEmailAuthentication;
+		if( $wgEmailAuthentication && User::isValidEmailAddr( $user->getEmail() ) ){
+			$err = $user->sendConfirmationMail();
+			if (WikiError::isError($err))
+				throw new Exception(wfMsg('emailfailed'));
+		}
+		
+		$user->saveSettings();
+		wfRunHooks('AddNewAccount', array($user));
+	}
+	
+	private function createUserPage() {
+		$form_title = Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM );
+		$form = new Article($form_title);
+		$form_definition = $form->getContent();
+		
+		$page_title = Title::newFromText($this->mUserDataChecker->mUser->getName(), NS_USER);
+		$this->mUserPageUrl = $page_title->escapeFullUrl();
 
- 		global $sfgFormPrinter;
- 		list ($form_text, $javascript_text, $data_text, $form_page_title, $generated_page_name) =
- 			$sfgFormPrinter->formHTML($form_definition, true, false);
+		global $sfgFormPrinter;
+		list ($form_text, $javascript_text, $data_text, $form_page_title, $generated_page_name) =
+			$sfgFormPrinter->formHTML($form_definition, true, false);
 
- 		$user_page = new Article($page_title);
- 		
- 		global $wgUser;
- 		$wgUser = $this->mUserDataChecker->mUser;
- 		$user_page->doEdit( $data_text, '', EDIT_FORCE_BOT );
- 	}
+		$user_page = new Article($page_title);
+		
+		global $wgUser;
+		$wgUser = $this->mUserDataChecker->mUser;
+		$user_page->doEdit( $data_text, '', EDIT_FORCE_BOT );
+	}
 
- 	private function printForm() {
- 		global $sesSignupBotName;
- 		global $wgUser;
+	private function printForm() {
+		global $sesSignupBotName;
+		global $wgUser;
 
 		/*
 		 * SemanticForms disable the form automatically if current user hasn't got edit rights 
@@ -233,27 +232,27 @@
 		 * the $old_user variable to be restored afterwards
 		 */
 		$old_user = null;
-		if ($wgUser->isAnon()) 	
+		if ($wgUser->isAnon())	
 		{	
-	 		$old_user = $wgUser;
-	 		$wgUser = User::newFromName($sesSignupBotName);
+			$old_user = $wgUser;
+			$wgUser = User::newFromName($sesSignupBotName);
 		}
 		
- 		$form_title = Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM );
- 		$form = new Article($form_title);
- 		$form_definition = $form->getContent();
- 		
- 		global $sfgFormPrinter;
- 		list ($form_text, $javascript_text, $data_text, $form_page_title, $generated_page_name) =
- 			$sfgFormPrinter->formHTML($form_definition, false, false);
- 			
+		$form_title = Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM );
+		$form = new Article($form_title);
+		$form_definition = $form->getContent();
+		
+		global $sfgFormPrinter;
+		list ($form_text, $javascript_text, $data_text, $form_page_title, $generated_page_name) =
+			$sfgFormPrinter->formHTML($form_definition, false, false);
+			
 		$text =<<<END
 				<form name="createbox" onsubmit="return validate_all()" action="" method="post" class="createbox">
 END;
- 		$text .= $form_text.'</form>';
- 		
- 		global $sfgScriptPath, $sfgYUIBase, $wgOut;
-	 	$mainCssUrl = $sfgScriptPath . '/skins/SF_main.css';
+		$text .= $form_text.'</form>';
+		
+		global $sfgScriptPath, $sfgYUIBase, $wgOut;
+		$mainCssUrl = $sfgScriptPath . '/skins/SF_main.css';
 		$wgOut->addLink( array(
 			'rel' => 'stylesheet',
 			'type' => 'text/css',
@@ -300,46 +299,36 @@ END;
 		//Restoring the current user
 		if ($old_user)
 			$wgUser = $old_user;
- 	}
- 	
- 	private function executeOnSubmit()
- 	{
- 		global $wgOut;
- 		
- 		try
- 		{
- 			$this->userSignup();
- 			$this->createUserPage();
- 			
- 			$wgOut->redirect($this->mUserPageUrl);
- 		} 
- 		catch (Exception $e)
- 		{
- 			$wgOut->addHTML('<div class="error">'.$e->getMessage().'</div>');
- 			$this->printForm();
- 		}
- 		
- 		return true;
- 	} 
- 	
- 	private function executeOnGetPage()
- 	{
- 		$this->printForm();
- 		return true;
- 	}
- 	
- 	public function execute($par)
- 	{
- 		global $wgRequest, $wgOut;
- 		
+	}
+	
+	private function executeOnSubmit() {
+		global $wgOut;
+		
+		try {
+			$this->userSignup();
+			$this->createUserPage();
+			
+			$wgOut->redirect( $this->mUserPageUrl );
+		} 
+		catch ( Exception $e ) {
+			$wgOut->addHTML( '<div class="error">' . $e->getMessage() . '</div>' );
+			$this->printForm();
+		}
+		
+		return true;
+	} 
+	
+	public function execute( $par ) {
+		global $wgRequest, $wgOut;
+		
 		$this->setHeaders();
 		
-		$form_submitted = $wgRequest->getCheck('wpSave');
-		if ($form_submitted)
-		{
+		if ( $wgRequest->getCheck( 'wpSave' ) ) {
 			return $this->executeOnSubmit();
 		} else {
-			return $this->executeOnGetPage();
+			$this->printForm();
+			return true;
 		} 
- 	}
- }
+	}
+}
+ 
