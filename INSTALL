@@ -10,6 +10,7 @@ SemanticSignup requires:
 
 * MediaWiki 1.16 or above
 * Semantic MediaWiki 1.6 or above
+* Semantic Forms 2.0 or above
 * PHP 5.2 or above
 
 == Download ==

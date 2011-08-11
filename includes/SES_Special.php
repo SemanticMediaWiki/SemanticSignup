@@ -194,8 +194,7 @@
 			$user->setOption( 'language', $language );
  		
  		global $wgEmailAuthentication;
- 		if( $wgEmailAuthentication && User::isValidEmailAddr($user->getEmail()) )
- 		{
+ 		if( $wgEmailAuthentication && User::isValidEmailAddr( $user->getEmail() ) ){
  			$err = $user->sendConfirmationMail();
  			if (WikiError::isError($err))
  				throw new Exception(wfMsg('emailfailed'));
@@ -205,11 +204,8 @@
  		wfRunHooks('AddNewAccount', array($user));
  	}
  	
- 	private function createUserPage()
- 	{
- 		global $sesSignupFormName;
- 		
- 		$form_title = Title::newFromText($sesSignupFormName, SF_NS_FORM);
+ 	private function createUserPage() {
+ 		$form_title = Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM );
  		$form = new Article($form_title);
  		$form_definition = $form->getContent();
  		
@@ -224,12 +220,10 @@
  		
  		global $wgUser;
  		$wgUser = $this->mUserDataChecker->mUser;
- 		$user_page->doEdit($data_text, '', EDIT_FORCE_BOT);
+ 		$user_page->doEdit( $data_text, '', EDIT_FORCE_BOT );
  	}
 
- 	private function printForm()
- 	{
- 		global $sesSignupFormName;
+ 	private function printForm() {
  		global $sesSignupBotName;
  		global $wgUser;
 
@@ -245,7 +239,7 @@
 	 		$wgUser = User::newFromName($sesSignupBotName);
 		}
 		
- 		$form_title = Title::newFromText($sesSignupFormName, SF_NS_FORM);
+ 		$form_title = Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM );
  		$form = new Article($form_title);
  		$form_definition = $form->getContent();
  		

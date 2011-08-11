@@ -25,16 +25,20 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 if ( version_compare( $wgVersion, '1.16', '<' ) ) {
-	die( '<b>Error:</b> Semantic Signup requires MediaWiki 1.16 or above.' );
+	die( '<b>Error:</b> SemanticSignup requires MediaWiki 1.16 or above.' );
 }
 
 // Show a warning if Semantic MediaWiki is not loaded.
-if ( ! defined( 'SMW_VERSION' ) ) {
-	die( '<b>Error:</b> You need to have <a href="http://semantic-mediawiki.org/wiki/Semantic_MediaWiki">Semantic MediaWiki</a> installed in order to use Semantic Watchlist.' );
+if ( !defined( 'SMW_VERSION' ) ) {
+	die( '<b>Error:</b> You need to have <a href="http://semantic-mediawiki.org/wiki/Semantic_MediaWiki">Semantic MediaWiki</a> installed in order to use SemanticSignup.' );
 }
 
 if ( version_compare( SMW_VERSION, '1.6 alpha', '<' ) ) {
 	die( '<b>Error:</b> Semantic Signup requires Semantic MediaWiki 1.6 or above.' );
+}
+
+if ( !defined( 'SF_VERSION' ) ) {
+	die( '<b>Error:</b> You need to have <a href="http://semantic-mediawiki.org/wiki/Semantic_Forms">Semantic Forms</a> installed in order to use SemanticSignup.' );
 }
 
 define( 'SemanticSignup_VERSION', '0.3 alpha' );
@@ -54,6 +58,7 @@ $wgExtensionCredits[defined( 'SEMANTIC_EXTENSION_TYPE' ) ? 'semantic' : 'special
 $wgExtensionMessagesFiles['SemanticSignup'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.php';
 $wgExtensionAliasesFiles['SemanticSignup'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.aliases.php';
 
+$wgAutoloadClasses['SemanticSignupSettings'] = dirname( __FILE__ ) . '/SemanticSignup.settings.php';
 $wgAutoloadClasses['SemanticSignupHooks'] = dirname( __FILE__ ) . '/SemanticSignup.hooks.php';
 $wgAutoloadClasses['SemanticSignup'] = dirname( __FILE__ ) . '/includes/SES_Special.php';
 $wgAutoloadClasses['SES_UserAccountDataChecker'] = dirname( __FILE__ ) . '/includes/SES_Special.php'; 
@@ -63,7 +68,13 @@ $wgAutoloadClasses['CreateUserFieldsTemplate'] = dirname( __FILE__ ) . '/include
 
 $wgSpecialPages['SemanticSignup'] = 'SemanticSignup';
 
-$wgHooks['UserCreateForm'][] = 'SemanticSignupHooks::onUserCreateForm';
-$wgHooks['ParserFirstCallInit'][] = 'SemanticSignupHooks::onParserFirstCallInit';
+$egSemanticSignupSettings = array();
 
-require_once 'SemanticSignup.settings.php';
+$wgExtensionFunctions[] = 'efSemanticSignupSetup';
+
+function efSemanticSignupSetup() {
+	if ( !is_null( Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM ) ) ) {
+		$wgHooks['UserCreateForm'][] = 'SemanticSignupHooks::onUserCreateForm';
+		$wgHooks['ParserFirstCallInit'][] = 'SemanticSignupHooks::onParserFirstCallInit';	
+	}	
+}
