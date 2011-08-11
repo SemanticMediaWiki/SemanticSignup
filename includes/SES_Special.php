@@ -122,7 +122,6 @@
  	{
  		parent::__construct('SemanticSignup');
  		$this->mIncludable = false;
- 		wfLoadExtensionMessages('SemanticSignup');
 
  		$this->mUserDataChecker = new SES_UserAccountDataChecker();
  	}
