@@ -153,15 +153,21 @@ class CreateUserFieldsTemplate extends QuickTemplate
 	}
 }
 
-class SES_SignupFields
-{
-	public static function render($input, $args, $parser)
-	{
+class SES_SignupFields {
+	
+	public static function render( $args, $parser ) {
+		$args = func_get_args();
+
+		$parser = array_shift( $args );
+		
 		$template = new CreateUserFieldsTemplate();
 
 		$template->set( 'header', '' );
 		
 		global $wgEnableEmail, $wgAllowRealName, $wgEmailConfirmToEdit, $wgAuth, $wgUser;
+		
+		$template->set( 'link', '' ); // TODO
+		$template->set( 'email', '' ); // TODO
 		$template->set( 'createemail', $wgEnableEmail && $wgUser->isLoggedIn() );
 		$template->set( 'userealname', $wgAllowRealName );
 		$template->set( 'useemail', $wgEnableEmail );
@@ -171,17 +177,23 @@ class SES_SignupFields
 
 		global $wgLoginLanguageSelector;
 		# Prepare language selection links as needed
-		if( $wgLoginLanguageSelector )
+		if( $wgLoginLanguageSelector ) {
 			$template->set( 'languages', $this->makeLanguageSelector() );
+		}
 
 		// Give authentication and captcha plugins a chance to modify the form
-		$wgAuth->modifyUITemplate( $template );
+		$type = 'signup';
+		$wgAuth->modifyUITemplate( $template, $type );
 		
 		ob_start();
 		$template->execute();
 		$text = ob_get_clean();
 		
-		return $text;
+		return array(
+			$text,
+			'noparse' => true,
+			'isHTML' => true
+		);
 	}
 	
 }

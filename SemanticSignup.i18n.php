@@ -19,3 +19,10 @@ $messages['en'] = array(
 	'throttlehit' => 'New user accounts number maximum per day has been exceeded for this IP',
 	'ses_userexists' => 'User already exists'
 );
+
+$magicWords = array();
+
+/** English (English) */
+$magicWords['en'] = array(
+	'signupfields' => array( 0, 'signupfields' ),
+);
