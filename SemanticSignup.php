@@ -62,7 +62,8 @@ $wgAutoloadClasses['SemanticSignupSettings'] = dirname( __FILE__ ) . '/SemanticS
 $wgAutoloadClasses['SemanticSignupHooks'] = dirname( __FILE__ ) . '/SemanticSignup.hooks.php';
 $wgAutoloadClasses['SemanticSignup'] = dirname( __FILE__ ) . '/includes/SES_Special.php';
 $wgAutoloadClasses['SES_UserAccountDataChecker'] = dirname( __FILE__ ) . '/includes/SES_Special.php'; 
-$wgAutoloadClasses['SES_DataChecker'] = dirname( __FILE__ ) . '/includes/SES_Utils.php';
+$wgAutoloadClasses['SES_DataChecker'] = dirname( __FILE__ ) . '/includes/SES_DataChecker.php';
+$wgAutoloadClasses['SES_UserAccountDataChecker'] = dirname( __FILE__ ) . '/includes/SES_UserAccountDataChecker.php';
 $wgAutoloadClasses['SES_SignupFields'] = dirname( __FILE__ ) . '/includes/SES_SignupFields.php';
 $wgAutoloadClasses['CreateUserFieldsTemplate'] = dirname( __FILE__ ) . '/includes/SES_SignupFields.php';
 

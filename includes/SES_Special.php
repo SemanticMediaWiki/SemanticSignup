@@ -1,132 +1,18 @@
 <?php
 
-/**
- * Created on 7 Jan 2008 by Serhii Kutnii
- */
-class SES_UserAccountDataChecker extends SES_DataChecker {
+class SemanticSignup extends SpecialPage {
 	
-	public $mUsername = '';
-	public $mPassword = '';
-	public $mEmail = '';
-	public $mRealname = '';
-	public $mDomain = '';
-	public $mLanguage = '';
-	public $mRemember = false;
-	public $mUser = null;
-	
-	protected function populateData() {
-		$this->mUsername = $this->getUserDataValue( 'wpName', 'nousername' );
-		$name = trim( $this->mUsername );
-		$this->mUser = User::newFromName( $name, 'creatable' );
-		if ( !$this->mUser ) {
-			$this->error( wfMsg( 'noname' ) );
-		}
-					
-		global $sesRealNameRequired;
-		$this->mRealname = $this->getUserDataValue('wpRealName', $sesRealNameRequired ? 'norealname' : null);
-		
-		$this->mPassword = $this->getUserDataValue('wpPassword');
-		$retype = $this->getUserDataValue('wpRetype');
-		if (strcmp($this->mPassword, $retype))
-			$this->error(wfMsg('nopwdmatch'));
-			
-		$this->mDomain = $this->getUserDataValue('wpDomain');
-		
-		global $wgEmailConfirmToEdit;
-		$this->mEmail = $this->getUserDataValue('wpEmail', $wgEmailConfirmToEdit ? 'noemailtitle' : null );
-		
-		$this->mLanguage = $this->getUserDataValue('uselang');
-		
-		global $wgRequest;
-		$this->mRemember = $wgRequest->getCheck('wpRemember');
-	}
-	
-	//Checks
-	
-	public function checkDomainValidity()
-	{
-		global $wgAuth;
-		
-		if( !$wgAuth->validDomain( $this->mDomain ) )
-			$this->error(wfMsg('wrongpassword'));
-	}
-	
-	public function checkDomainUser()
-	{
-		global $wgAuth;
-
-		if( ('local' != $this->mDomain) && ('' != $this->mDomain)
-			&& !$wgAuth->canCreateAccounts() && ( !$wgAuth->userExists($this->mName) || !$wgAuth->authenticate($this->mName, $this->mPassword) ) )
-				$this->error(wfMsg('wrongpassword'));
-	}
-	
-	public function checkCreatePermissions()
-	{
-		global $wgUser;
-		 
-		if (!$wgUser->isAllowed( 'createaccount' ) || $wgUser->isBlockedFromCreateAccount() )
-			$this->error(wfMsg('createforbidden'));
-	}
-	
-	public function checkSorbs()
-	{
-		global $wgProxyWhitelist;
-		global $wgEnableSorbs;
-		$ip = wfGetIP();
-		if ( $wgEnableSorbs && !in_array( $ip, $wgProxyWhitelist ) &&
-		  $wgUser->inSorbsBlacklist( $ip ) )
-		 	$this->error(wfMsg('sorbs_create_account_reason'));
-	}
-	
-	public function checkUserExists()
-	{
-		if ($this->mUser->idForName())
-			$this->error(wfMsg('userexists'));
-	}
-	
-	public function checkPasswordLength()
-	{
-		if (!$this->mUser->isValidPassword($this->mPassword))
-		{
-			global $wgMinimalPasswordLength;
-			$this->error(wfMsgExt('passwordtooshort', array( 'parsemag' ), $wgMinimalPasswordLength));
-		}
-	}
-	
-	public function checkEmailValidity()
-	{
-		global $wgEnableEmail;
-		if ($wgEnableEmail && !User::isValidEmailAddr($this->mEmail))
-			$this->error(wfMsg('invalidemailaddress'));
-	}
-	
-	public function __construct()
-	{
-		$this->addCheck(array(&$this, 'checkDomainValidity'), array());
-		$this->addCheck(array(&$this, 'checkDomainUser'), array());
-		$this->addCheck(array(&$this, 'checkCreatePermissions'), array());
-		$this->addCheck(array(&$this, 'checkSorbs'), array());
-		$this->addCheck(array(&$this, 'checkUserExists'), array());
-		$this->addCheck(array(&$this, 'checkPasswordLength'), array());
-		$this->addCheck(array(&$this, 'checkEmailValidity'), array());
-	}
- }
-
- class SemanticSignup extends SpecialPage
- {
 	private $mUserDataChecker = null;
 	private $mUserPageUrl = '';
 	
-	public function __construct()
-	{
+	public function __construct() {
 		parent::__construct('SemanticSignup');
 		$this->mIncludable = false;
 
 		$this->mUserDataChecker = new SES_UserAccountDataChecker();
 	}
 	
-	private function userSignup()
-	{
+	private function userSignup() {
 		//Get user input and check the environment
 		$this->mUserDataChecker->run();
 		
@@ -208,22 +94,22 @@ class SES_UserAccountDataChecker extends SES_DataChecker {
 		$form = new Article($form_title);
 		$form_definition = $form->getContent();
 		
-		$page_title = Title::newFromText($this->mUserDataChecker->mUser->getName(), NS_USER);
+		$page_title = Title::newFromText( $this->mUserDataChecker->mUser->getName(), NS_USER );
 		$this->mUserPageUrl = $page_title->escapeFullUrl();
 
 		global $sfgFormPrinter;
 		list ($form_text, $javascript_text, $data_text, $form_page_title, $generated_page_name) =
 			$sfgFormPrinter->formHTML($form_definition, true, false);
 
-		$user_page = new Article($page_title);
+		$user_page = new Article( $page_title );
 		
 		global $wgUser;
 		$wgUser = $this->mUserDataChecker->mUser;
+		// TODO: doEdit removed; use internal API call
 		$user_page->doEdit( $data_text, '', EDIT_FORCE_BOT );
 	}
 
 	private function printForm() {
-		global $sesSignupBotName;
 		global $wgUser;
 
 		/*
@@ -232,10 +118,9 @@ class SES_UserAccountDataChecker extends SES_DataChecker {
 		 * the $old_user variable to be restored afterwards
 		 */
 		$old_user = null;
-		if ($wgUser->isAnon())	
-		{	
+		if ( $wgUser->isAnon() ) {	
 			$old_user = $wgUser;
-			$wgUser = User::newFromName($sesSignupBotName);
+			$wgUser = User::newFromName( SemanticSignupSettings::get( 'botName' ) );
 		}
 		
 		$form_title = Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM );
@@ -243,6 +128,7 @@ class SES_UserAccountDataChecker extends SES_DataChecker {
 		$form_definition = $form->getContent();
 		
 		global $sfgFormPrinter;
+		//var_dump($sfgFormPrinter);exit;
 		list ($form_text, $javascript_text, $data_text, $form_page_title, $generated_page_name) =
 			$sfgFormPrinter->formHTML($form_definition, false, false);
 			
@@ -277,6 +163,8 @@ END;
 			'media' => "screen, projection",
 			'href' => $sfgScriptPath . '/skins/floatbox.css'
 		));
+		
+		// FIXME: wtf?
 		$wgOut->addScript('<script type="text/javascript" src="' . $sfgYUIBase . 'yahoo/yahoo-min.js"></script>' . "\n");
 		$wgOut->addScript('<script type="text/javascript" src="' . $sfgYUIBase . 'dom/dom-min.js"></script>' . "\n");
 		$wgOut->addScript('<script type="text/javascript" src="' . $sfgYUIBase . 'event/event-min.js"></script>' . "\n");
