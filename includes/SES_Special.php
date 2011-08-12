@@ -75,14 +75,19 @@ class SemanticSignup extends SpecialPage {
 
 		global $wgLoginLanguageSelector;
 		$language = $this->mUserDataChecker->mLanguage;
-		if( $wgLoginLanguageSelector && $language )
+		
+		if( $wgLoginLanguageSelector && $language ) {
 			$user->setOption( 'language', $language );
+		}
 		
 		global $wgEmailAuthentication;
-		if( $wgEmailAuthentication && User::isValidEmailAddr( $user->getEmail() ) ){
-			$err = $user->sendConfirmationMail();
-			if (WikiError::isError($err))
-				throw new Exception(wfMsg('emailfailed'));
+		
+		if( $wgEmailAuthentication && User::isValidEmailAddr( $user->getEmail() ) ) {
+			$status = $user->sendConfirmationMail();
+			
+			if ( !$status->isGood() ) {
+				throw new Exception( wfMsg( 'emailfailed' ) . "\n" . $status->getMessage() );
+			}
 		}
 		
 		$user->saveSettings();
@@ -128,7 +133,7 @@ class SemanticSignup extends SpecialPage {
 		$form_definition = $form->getContent();
 		
 		global $sfgFormPrinter;
-		//var_dump($sfgFormPrinter);exit;
+		
 		list ($form_text, $javascript_text, $data_text, $form_page_title, $generated_page_name) =
 			$sfgFormPrinter->formHTML($form_definition, false, false);
 			
