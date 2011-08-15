@@ -1,12 +1,24 @@
 <?php
 
+/**
+ * Special page that replaces the regular signup form by
+ * a Semantic Forms form page that allows for signup with
+ * adittional (structured) data that immediately gets entered
+ * onto the user page of the new user.
+ * 
+ * @file SES_Special.php
+ * @ingroup SemanticSignup
+ *
+ * @author Serhii Kutnii
+ * @author Jeroen De Dauw < jeroendedauw@gmail.com >
+ */
 class SemanticSignup extends SpecialPage {
 	
 	private $mUserDataChecker = null;
 	private $mUserPageUrl = '';
 	
 	public function __construct() {
-		parent::__construct('SemanticSignup');
+		parent::__construct( 'SemanticSignup' );
 		$this->mIncludable = false;
 
 		$this->mUserDataChecker = new SES_UserAccountDataChecker();
@@ -18,8 +30,9 @@ class SemanticSignup extends SpecialPage {
 		
 		//Throw if data getting or environment checks have failed which indicates that account creation is impossible
 		$checker_error = $this->mUserDataChecker->getError();
-		if ($checker_error)
-			throw new Exception($checker_error);
+		if ( $checker_error ) {
+			throw new Exception( $checker_error );
+		}
 			
 		$user = $this->mUserDataChecker->mUser; 
 		
@@ -27,17 +40,16 @@ class SemanticSignup extends SpecialPage {
 		$user->setRealName( $this->mUserDataChecker->mRealname );
 		
 		$abortError = '';
-		if( !wfRunHooks( 'AbortNewAccount', array( $user, &$abortError ) ) ) 
-		{
+		if( !wfRunHooks( 'AbortNewAccount', array( $user, &$abortError ) ) )  {
 			// Hook point to add extra creation throttles and blocks
 			wfDebug( "LoginForm::addNewAccountInternal: a hook blocked creation\n" );
 			throw new Exception( $abortError );
 		}
 
 		global $wgAccountCreationThrottle;
-		global $wgUser;		
-		if ( $wgAccountCreationThrottle && $wgUser->isPingLimitable() ) 
-		{
+		global $wgUser;
+		
+		if ( $wgAccountCreationThrottle && $wgUser->isPingLimitable() )  {
 			$key = wfMemcKey( 'acctcreate', 'ip', wfGetIP() );
 			$value = $wgMemc->incr( $key );
 			
@@ -45,21 +57,29 @@ class SemanticSignup extends SpecialPage {
 				$wgMemc->set( $key, 1, 86400 );
 			}
 			
-			if ( $value > $wgAccountCreationThrottle ) 
+			if ( $value > $wgAccountCreationThrottle ) {
 				throw new Exception(wfMsg('throttlehit'));
+			}
 		}
 		
 		global $wgAuth;
 		
-		if( !$wgAuth->addUser( $user, $this->mUserDataChecker->mPassword, 
-			$this->mUserDataChecker->mEmail, $this->mUserDataChecker->mRealname ) ) 
-				throw new Exception('externaldberror');		
+		$addedUser = $wgAuth->addUser(
+			$user,
+			$this->mUserDataChecker->mPassword, 
+			$this->mUserDataChecker->mEmail,
+			$this->mUserDataChecker->mRealname
+		);
+		
+		if( !$addedUser ) {
+			throw new Exception( 'externaldberror' );
+		} 
+						
 				
 		$user->addToDatabase();
 		
-		if ( $wgAuth->allowPasswordChange() ) 
-		{
-			$user->setPassword($this->mUserDataChecker->mPassword);
+		if ( $wgAuth->allowPasswordChange() )  {
+			$user->setPassword( $this->mUserDataChecker->mPassword );
 		}
 
 		$user->setToken();
@@ -91,12 +111,12 @@ class SemanticSignup extends SpecialPage {
 		}
 		
 		$user->saveSettings();
-		wfRunHooks('AddNewAccount', array($user));
+		wfRunHooks( 'AddNewAccount', array( $user ) );
 	}
 	
 	private function createUserPage() {
 		$form_title = Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM );
-		$form = new Article($form_title);
+		$form = new Article( $form_title );
 		$form_definition = $form->getContent();
 		
 		$page_title = Title::newFromText( $this->mUserDataChecker->mUser->getName(), NS_USER );
@@ -129,7 +149,7 @@ class SemanticSignup extends SpecialPage {
 		}
 		
 		$form_title = Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM );
-		$form = new Article($form_title);
+		$form = new Article( $form_title );
 		$form_definition = $form->getContent();
 		
 		global $sfgFormPrinter;
@@ -182,16 +202,21 @@ END;
 		$wgOut->addScript('<script type="text/javascript" src="' . $sfgScriptPath . '/libs/floatbox.js"></script>' . "\n");
 	
 	    global $wgFCKEditorDir;
-	    if ($wgFCKEditorDir)
-	        $wgOut->addScript('<script type="text/javascript" src="' . "$wgScriptPath/$wgFCKEditorDir" . '/fckeditor.js"></script>' . "\n");
-		if (! empty($javascript_text))
+	    if ( $wgFCKEditorDir ) {
+	    	$wgOut->addScript('<script type="text/javascript" src="' . "$wgScriptPath/$wgFCKEditorDir" . '/fckeditor.js"></script>' . "\n");
+	    }
+	        
+		if ( !empty( $javascript_text ) ) {
 			$wgOut->addScript('		<script type="text/javascript">' . "\n" . $javascript_text . '</script>' . "\n");
-		$wgOut->addMeta('robots','noindex,nofollow');
-		$wgOut->addHTML($text);
+		}
 		
-		//Restoring the current user
-		if ($old_user)
+		$wgOut->addMeta( 'robots', 'noindex,nofollow' );
+		$wgOut->addHTML( $text );
+		
+		// Restore the current user.
+		if ( $old_user ) {
 			$wgUser = $old_user;
+		}
 	}
 	
 	private function executeOnSubmit() {
@@ -223,5 +248,6 @@ END;
 			return true;
 		} 
 	}
+	
 }
  

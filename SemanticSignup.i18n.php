@@ -1,7 +1,15 @@
 <?php
 
 /**
- * Created on 7 Jan 2008 by Serhii Kutnii
+ * /**
+ * Internationalization file for the SemanticSignup extension.
+ * Created on 7 Jan 2008
+ *
+ * @file SemanticSignup.i18n.php
+ * @ingroup SemanticSignup
+ *
+ * @author Serhii Kutnii
+ * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
 
 $messages = array();

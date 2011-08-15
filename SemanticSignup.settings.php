@@ -7,6 +7,8 @@
  * NOTICE:
  * Changing one of these settings can be done by assigning to $egSemanticSignupSettings.
  *
+ * @since 0.3
+ *
  * @file SemanticSignup.settings.php
  * @ingroup SemanticSignup
  *
