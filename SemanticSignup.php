@@ -41,7 +41,7 @@ if ( !defined( 'SF_VERSION' ) ) {
 	die( '<b>Error:</b> You need to have <a href="http://semantic-mediawiki.org/wiki/Semantic_Forms">Semantic Forms</a> installed in order to use SemanticSignup.' );
 }
 
-define( 'SemanticSignup_VERSION', '0.3' );
+define( 'SemanticSignup_VERSION', '0.4 alpha' );
 
 $wgExtensionCredits[defined( 'SEMANTIC_EXTENSION_TYPE' ) ? 'semantic' : 'specialpage'][] = array(
 	'path' => __FILE__,
