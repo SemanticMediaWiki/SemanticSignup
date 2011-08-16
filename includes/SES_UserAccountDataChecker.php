@@ -19,7 +19,7 @@ class SES_UserAccountDataChecker extends SES_DataChecker {
 		$name = trim( $this->mUsername );
 		$this->mUser = User::newFromName( $name, 'creatable' );
 		if ( !$this->mUser ) {
-			$this->error( wfMsg( 'noname' ) );
+			$this->error( wfMsg( 'ses-noname' ) );
 		}
 					
 		global $sesRealNameRequired;
@@ -28,7 +28,7 @@ class SES_UserAccountDataChecker extends SES_DataChecker {
 		$this->mPassword = $this->getUserDataValue('wpPassword');
 		$retype = $this->getUserDataValue('wpRetype');
 		if (strcmp($this->mPassword, $retype))
-			$this->error(wfMsg('nopwdmatch'));
+			$this->error(wfMsg('ses-nopwdmatch'));
 			
 		$this->mDomain = $this->getUserDataValue('wpDomain');
 		
@@ -65,7 +65,7 @@ class SES_UserAccountDataChecker extends SES_DataChecker {
 		global $wgUser;
 		 
 		if (!$wgUser->isAllowed( 'createaccount' ) || $wgUser->isBlockedFromCreateAccount() )
-			$this->error(wfMsg('createforbidden'));
+			$this->error(wfMsg('ses-createforbidden'));
 	}
 	
 	public function checkSorbs()
@@ -81,7 +81,7 @@ class SES_UserAccountDataChecker extends SES_DataChecker {
 	public function checkUserExists()
 	{
 		if ($this->mUser->idForName())
-			$this->error(wfMsg('userexists'));
+			$this->error(wfMsg('ses-userexists'));
 	}
 	
 	public function checkPasswordLength()

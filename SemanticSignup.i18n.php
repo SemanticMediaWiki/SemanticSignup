@@ -17,15 +17,14 @@ $messages = array();
 $messages['en'] = array(
 	'semanticsignup' => 'Semantic Signup',
 	'ses-desc' => 'A MediaWiki extension built on top of Semantic Forms allowing to populate a user page with semantic data at signup time',
-	'nousername' => 'Username has not been specified',
-	'nopwdmatch' => 'Password and password confirmation don\'t match',
-	'norealname' => 'Real name is required but has not been specified',
-	'userexists' => 'User already exists',
-	'invaliduname' => 'Username specified is not allowed',
-	'emailfailed' => 'Confirmation email sending failed',
-	'createforbidden' => 'Current user is not allowed to create accounts',
-	'throttlehit' => 'New user accounts number maximum per day has been exceeded for this IP',
-	'ses_userexists' => 'User already exists'
+	'ses-nousername' => 'Username has not been specified.',
+	'ses-nopwdmatch' => 'Password and password confirmation do not match.',
+	'ses-norealname' => 'Real name is required but has not been specified.',
+	'ses-userexists' => 'User already exists.',
+	'ses-emailfailed' => 'Confirmation email sending failed.',
+	'ses-createforbidden' => 'Current user is not allowed to create accounts.',
+	'ses-throttlehit' => 'New user accounts number maximum per day has been exceeded for this IP.',
+	'ses-userexists' => 'User already exists.'
 );
 
 $magicWords = array();
