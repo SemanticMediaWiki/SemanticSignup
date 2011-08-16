@@ -12,7 +12,7 @@
  */
 
 $aliases = array();
- 
+
 $aliases['en'] = array(
 	'SemanticSignup' => array( 'SemanticSignup', 'Semantic Signup' )
 );

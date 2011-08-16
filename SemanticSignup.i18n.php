@@ -13,7 +13,7 @@
  */
 
 $messages = array();
- 
+
 $messages['en'] = array(
 	'semanticsignup' => 'Semantic Signup',
 	'ses-desc' => 'A MediaWiki extension built on top of Semantic Forms allowing to populate a user page with semantic data at signup time',

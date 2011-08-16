@@ -2,7 +2,7 @@
 
 /**
  * Initialization file for the Semantic Signup extension.
- * 
+ *
  * Documentation:	 		http://www.mediawiki.org/wiki/Extension:SemanticSignup
  * Support					http://www.mediawiki.org/wiki/Extension_talk:SemanticSignup
  * Source code:			    http://svn.wikimedia.org/viewvc/mediawiki/trunk/extensions/SemanticSignup
@@ -61,7 +61,7 @@ $wgExtensionAliasesFiles['SemanticSignup'] = dirname( __FILE__ ) . '/SemanticSig
 $wgAutoloadClasses['SemanticSignupSettings'] = dirname( __FILE__ ) . '/SemanticSignup.settings.php';
 $wgAutoloadClasses['SemanticSignupHooks'] = dirname( __FILE__ ) . '/SemanticSignup.hooks.php';
 $wgAutoloadClasses['SemanticSignup'] = dirname( __FILE__ ) . '/includes/SES_Special.php';
-$wgAutoloadClasses['SES_UserAccountDataChecker'] = dirname( __FILE__ ) . '/includes/SES_Special.php'; 
+$wgAutoloadClasses['SES_UserAccountDataChecker'] = dirname( __FILE__ ) . '/includes/SES_Special.php';
 $wgAutoloadClasses['SES_DataChecker'] = dirname( __FILE__ ) . '/includes/SES_DataChecker.php';
 $wgAutoloadClasses['SES_UserAccountDataChecker'] = dirname( __FILE__ ) . '/includes/SES_UserAccountDataChecker.php';
 $wgAutoloadClasses['SES_SignupFields'] = dirname( __FILE__ ) . '/includes/SES_SignupFields.php';
