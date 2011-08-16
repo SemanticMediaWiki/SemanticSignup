@@ -32,15 +32,15 @@ if ( !defined( 'SMW_VERSION' ) ) {
 	die( '<b>Error:</b> You need to have <a href="http://semantic-mediawiki.org/wiki/Semantic_MediaWiki">Semantic MediaWiki</a> installed in order to use SemanticSignup.' );
 }
 
-if ( version_compare( SMW_VERSION, '1.6 alpha', '<' ) ) {
-	die( '<b>Error:</b> Semantic Signup requires Semantic MediaWiki 1.6 or above.' );
+if ( version_compare( SMW_VERSION, '1.5 alpha', '<' ) ) {
+	die( '<b>Error:</b> Semantic Signup requires Semantic MediaWiki 1.5 or above.' );
 }
 
 if ( !defined( 'SF_VERSION' ) ) {
 	die( '<b>Error:</b> You need to have <a href="http://semantic-mediawiki.org/wiki/Semantic_Forms">Semantic Forms</a> installed in order to use SemanticSignup.' );
 }
 
-define( 'SemanticSignup_VERSION', '0.4.1 alpha' );
+define( 'SemanticSignup_VERSION', '0.4 alpha' );
 
 $wgExtensionCredits[defined( 'SEMANTIC_EXTENSION_TYPE' ) ? 'semantic' : 'specialpage'][] = array(
 	'path' => __FILE__,
