@@ -25,3 +25,34 @@ $messages['en'] = array(
 	'ses-throttlehit' => 'New user accounts number maximum per day has been exceeded for this IP address.',
 	'ses-userexists' => 'User already exists.'
 );
+
+/** German (Deutsch)
+ * @author Kghbln
+ */
+$messages['de'] = array(
+	'semanticsignup' => 'Semantische Anmeldung',
+	'ses-desc' => 'Ermöglicht das Ergänzen der Benutzerseite mit semantischen Benutzerdaten, die dieser während der Anmeldung angibt',
+	'ses-nousername' => 'Der Benutzername wurde nicht angegeben.',
+	'ses-nopwdmatch' => 'Das Passwort und die Passwortbestätigung stimmen nicht überein.',
+	'ses-norealname' => 'Der bürgerliche Name ist erforderlich, wurde aber nicht angegeben.',
+	'ses-userexists' => 'Der Benutzer ist bereits vorhanden.',
+	'ses-emailfailed' => 'Der Versand der Bestätigungs-E-Mail ist gescheitert.',
+	'ses-createforbidden' => 'Der aktuelle Benutzer ist nicht berechtigt, Konten zu erstellen.',
+	'ses-throttlehit' => 'Die Anzahl neuer Benutzerkonten je Tag wurde für diese IP-Adresse überschritten.',
+);
+
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'semanticsignup' => 'Semantisch inschrijven',
+	'ses-desc' => 'Uitbreiding bovenop Semantic Forms om een gebruikerspagina aan te maken met semantische gegevens tijdens de registratie',
+	'ses-nousername' => 'De gebruikersnaam is niet opgegeven.',
+	'ses-nopwdmatch' => 'Het wachtwoord en de bevestiging komen niet overeen.',
+	'ses-norealname' => 'Een echte naam is vereist maar is niet opgegeven.',
+	'ses-userexists' => 'De gebruiker bestaat al.',
+	'ses-emailfailed' => 'Het verzenden van de bevestigingse-mail is mislukt.',
+	'ses-createforbidden' => 'De huidige gebruiker mag geen nieuwe gebruikers aanmaken.',
+	'ses-throttlehit' => 'Het maximale aantal aan te maken gebruikers per dag is bereikt voor dit IP-adres.',
+);
+
