@@ -41,6 +41,21 @@ $messages['de'] = array(
 	'ses-throttlehit' => 'Die Anzahl neuer Benutzerkonten je Tag wurde für diese IP-Adresse überschritten.',
 );
 
+/** Macedonian (Македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'semanticsignup' => 'Семантичка регистрација',
+	'ses-desc' => 'Додаток за МедијаВики врз Семантичките обрасци кој овозможува пополнување на корисничка страница со семантички податоци во текот на регистрацијата',
+	'ses-nousername' => 'Нема наведено корисничко име.',
+	'ses-nopwdmatch' => 'Двете лозинки не се совпаѓаат.',
+	'ses-norealname' => 'Нема наведено вистинско име, но ова е задолжително.',
+	'ses-userexists' => 'Корисникот веќе постои.',
+	'ses-emailfailed' => 'Не успеав да ја испратам потврдната порака по е-пошта.',
+	'ses-createforbidden' => 'На тековниот корисник не му е дозволено да создава сметки.',
+	'ses-throttlehit' => 'Надминат е максималниот дозволен број на новосоздадени кориснички сметки од оваа IP-адреса.',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
