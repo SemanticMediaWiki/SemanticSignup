@@ -41,6 +41,16 @@ $messages['de'] = array(
 	'ses-throttlehit' => 'Die Anzahl neuer Benutzerkonten je Tag wurde für diese IP-Adresse überschritten.',
 );
 
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'ses-nousername' => 'De Benotzernumm gouf net uginn.',
+	'ses-norealname' => 'De richtegen Numm ass verlaangt mä e gouf net uginn.',
+	'ses-userexists' => 'De Benotzer gëtt et schonn.',
+	'ses-createforbidden' => 'Den aktuelle Benotzer däerf keng Benotzerkonten uleeën.',
+);
+
 /** Macedonian (Македонски)
  * @author Bjankuloski06
  */
