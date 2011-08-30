@@ -41,6 +41,21 @@ $messages['de'] = array(
 	'ses-throttlehit' => 'Die Anzahl neuer Benutzerkonten je Tag wurde für diese IP-Adresse überschritten.',
 );
 
+/** French (Français)
+ * @author Gomoko
+ */
+$messages['fr'] = array(
+	'semanticsignup' => 'Inscription sémantique',
+	'ses-desc' => "Une extension de MediaWiki construite par-dessus les formulaires sémantiques permettant de peupler une page utilisateur avec des données sémantiques au moment de l'inscription",
+	'ses-nousername' => "Le nom d'utilisateur n'a pas été spécifié.",
+	'ses-nopwdmatch' => 'Le mot de passe et sa confirmation ne concordent pas.',
+	'ses-norealname' => "Le vrai nom est obligatoire mais n'a pas été spécifié.",
+	'ses-userexists' => "L'utilisateur existe déjà.",
+	'ses-emailfailed' => "L'envoi du courriel de confirmation a échoué.",
+	'ses-createforbidden' => "L'utilisateur courant n'est pas autorisé à créer des comptes.",
+	'ses-throttlehit' => 'Le nombre de nouveaux comptes utilisateur par jour a été dépassé pour cette adresse IP.',
+);
+
 /** Galician (Galego)
  * @author Toliño
  */
