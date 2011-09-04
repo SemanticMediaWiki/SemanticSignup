@@ -26,6 +26,21 @@ $messages['en'] = array(
 	'ses-userexists' => 'User already exists.'
 );
 
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author EugeneZelenko
+ * @author Renessaince
+ */
+$messages['be-tarask'] = array(
+	'ses-desc' => 'Пашырэньне MediaWiki, пабудаванае паверх Сэмантычных формаў, якое дазваляе зьмяшчаць на старонцы ўдзельніка падчас стварэньня рахунку сэмантычныя зьвесткі',
+	'ses-nousername' => 'Імя ўдзельніка не пазначанае.',
+	'ses-nopwdmatch' => 'Пароль і яго пацьверджаньне не супадаюць.',
+	'ses-norealname' => 'Не пазначаны абавязковы атрыбут — сапраўднае імя.',
+	'ses-userexists' => 'Удзельнік ужо існуе.',
+	'ses-emailfailed' => 'Не атрымалася даслаць электронны ліст з пацьверджаньнем.',
+	'ses-createforbidden' => 'Гэтаму ўдзельніку забаронена ствараць рахункі.',
+	'ses-throttlehit' => 'Для гэтага IP-адрасу перавышаная дзённая колькасьць новых рахункаў.',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */
