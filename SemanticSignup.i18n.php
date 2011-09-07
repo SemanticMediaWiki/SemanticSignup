@@ -71,6 +71,14 @@ $messages['fr'] = array(
 	'ses-throttlehit' => 'Le nombre de nouveaux comptes utilisateur par jour a été dépassé pour cette adresse IP.',
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'semanticsignup' => 'Enscripcion sèmantica',
+	'ses-userexists' => 'L’utilisator ègziste ja.',
+);
+
 /** Galician (Galego)
  * @author Toliño
  */
