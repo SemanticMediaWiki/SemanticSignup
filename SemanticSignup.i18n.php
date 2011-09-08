@@ -94,6 +94,21 @@ $messages['gl'] = array(
 	'ses-throttlehit' => 'Este enderezo IP superou o número máximo de novas contas de usuario ao día.',
 );
 
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'semanticsignup' => 'Inscription semantic',
+	'ses-desc' => 'Un extension de MediaWiki, construite super Formularios Semantic, que permitte plenar un pagina de usator con datos semantic al momento de creation del conto',
+	'ses-nousername' => 'Le nomine de usator non ha essite specificate.',
+	'ses-nopwdmatch' => 'Contrasigno e confirmation non corresponde.',
+	'ses-norealname' => 'Le nomine real es obligatori ma non ha essite specificate.',
+	'ses-userexists' => 'Le usator existe jam.',
+	'ses-emailfailed' => 'Le invio del e-mail de confirmation ha fallite.',
+	'ses-createforbidden' => 'Le usator actual non ha le permission de crear contos.',
+	'ses-throttlehit' => 'Le numero maxime de nove contos de usator per die ha essite excedite pro iste adresse IP.',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
