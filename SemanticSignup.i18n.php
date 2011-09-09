@@ -22,7 +22,7 @@ $messages['en'] = array(
 	'ses-userexists' => 'User already exists.',
 	'ses-emailfailed' => 'Confirmation e-mail sending failed.',
 	'ses-createforbidden' => 'Current user is not allowed to create accounts.',
-	'ses-throttlehit' => 'New user accounts number maximum per day has been exceeded for this IP address.',
+	'ses-throttlehit' => 'The maximum number of new user accounts per day has been exceeded for this IP address.',
 	'ses-userexists' => 'User already exists.'
 );
 
