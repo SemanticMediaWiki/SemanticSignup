@@ -1,9 +1,9 @@
 <?php
-/*
+/**
  * Created on 6 Jan 2009 by Serhii Kutnii
  */
 
-/*
+/**
  * Borrowed from standard UsercreateTemplate. Some minor changes have been made
  */
 

@@ -1,9 +1,9 @@
 <?php
-/*
+/**
  * Created on 13 Jan 2009 by Serhii Kutnii
  */
 
-/*
+/**
  * An abstract data getter and checker class.
  * Its concrete subclasses should incapsulate all the necessary data getting
  * and environment checks.
