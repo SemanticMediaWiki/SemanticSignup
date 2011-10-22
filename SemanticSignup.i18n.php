@@ -149,3 +149,18 @@ $messages['nl'] = array(
 	'ses-throttlehit' => 'Het maximale aantal aan te maken gebruikers per dag is bereikt voor dit IP-adres.',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Event
+ */
+$messages['no'] = array(
+	'semanticsignup' => 'Semantisk brukerkontoinformasjon',
+	'ses-desc' => 'En MediaWiki-utvidelse bygd på Semantic Forms som tillater å legge inn semantiske data på en brukerside ved opprettelse av en bruker',
+	'ses-nousername' => 'Brukernavn er ikke angitt.',
+	'ses-nopwdmatch' => 'Passord og passord-bekreftelse stemmer ikke overens.',
+	'ses-norealname' => 'Det kreves at virkelig navn oppgis.',
+	'ses-userexists' => 'Bruker finnes allerede.',
+	'ses-emailfailed' => 'Sendingen av bekreftende e-post feilet.',
+	'ses-createforbidden' => 'Aktuell bruker tillates ikke å opprette brukerkontoer.',
+	'ses-throttlehit' => 'Maksimalt antall nye brukere tillatt opprettet per døgn er overskredet for denne IP-adressen.',
+);
+
