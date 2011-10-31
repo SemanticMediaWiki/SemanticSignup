@@ -26,6 +26,21 @@ $messages['en'] = array(
 	'ses-userexists' => 'User already exists.'
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'semanticsignup' => 'Rexistru semánticu',
+	'ses-desc' => "Una estensión MediaWiki construída sobro Formularios Semánticos que permite poblar una páxina d'usuariu con datos semánticos nel momentu de rexistrase",
+	'ses-nousername' => "Nun se conseñó un nome d'usuariu.",
+	'ses-nopwdmatch' => 'La contraseña y la confirmación de la mesma nun coinciden.',
+	'ses-norealname' => " Ye necesariu'l nome real, pero nun se conseñó.",
+	'ses-userexists' => "L'usuariu yá esiste.",
+	'ses-emailfailed' => "Falló l'unviu del corréu electrónicu de confirmación.",
+	'ses-createforbidden' => "L'usuariu actual nun tien permisu pa crear cuentes.",
+	'ses-throttlehit' => "Esta direición IP pasó del númberu máximu de cuentes d'usuariu nueves al día.",
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Renessaince
