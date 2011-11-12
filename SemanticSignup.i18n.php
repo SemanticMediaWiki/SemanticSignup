@@ -56,6 +56,13 @@ $messages['be-tarask'] = array(
 	'ses-throttlehit' => 'Для гэтага IP-адрасу перавышаная дзённая колькасьць новых рахункаў.',
 );
 
+/** Breton (Brezhoneg)
+ * @author Fulup
+ */
+$messages['br'] = array(
+	'ses-userexists' => "An implijer-mañ zo anezhañ c'hoazh.",
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */
