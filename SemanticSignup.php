@@ -50,7 +50,7 @@ $wgExtensionCredits[defined( 'SEMANTIC_EXTENSION_TYPE' ) ? 'semantic' : 'special
 		'Serg Kutny',
 		'[http://www.mediawiki.org/wiki/User:Jeroen_De_Dauw Jeroen De Dauw]',
 	),
-	'url' => 'http://www.mediawiki.org/wiki/Extension:Semantic_Watchlist',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:Semantic_Watchlist',
 	'descriptionmsg' => 'ses-desc'
 );
 
