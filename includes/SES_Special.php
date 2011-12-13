@@ -47,10 +47,10 @@ class SemanticSignup extends SpecialPage {
 		}
 
 		global $wgAccountCreationThrottle;
-		global $wgUser;
+		global $wgUser, $wgRequest;
 
 		if ( $wgAccountCreationThrottle && $wgUser->isPingLimitable() )  {
-			$key = wfMemcKey( 'acctcreate', 'ip', wfGetIP() );
+			$key = wfMemcKey( 'acctcreate', 'ip', $wgRequest->getIP() );
 			$value = $wgMemc->incr( $key );
 
 			if ( !$value ) {

@@ -71,8 +71,8 @@ class SES_UserAccountDataChecker extends SES_DataChecker {
 	public function checkSorbs()
 	{
 		global $wgProxyWhitelist;
-		global $wgEnableSorbs;
-		$ip = wfGetIP();
+		global $wgEnableSorbs, $wgRequest;
+		$ip = $wgRequest->getIP();
 		if ( $wgEnableSorbs && !in_array( $ip, $wgProxyWhitelist ) &&
 		  $wgUser->inSorbsBlacklist( $ip ) )
 		 	$this->error( wfMsg( 'sorbs_create_account_reason' ) );
