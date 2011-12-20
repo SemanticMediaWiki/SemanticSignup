@@ -178,7 +178,7 @@ class SES_SignupFields {
 		global $wgLoginLanguageSelector;
 		# Prepare language selection links as needed
 		if ( $wgLoginLanguageSelector ) {
-			$template->set( 'languages', $this->makeLanguageSelector() );
+			$template->set( 'languages', $this->makeLanguageSelector() ); // FIXME: $this is not accessible in a static context
 		}
 
 		// Give authentication and captcha plugins a chance to modify the form
