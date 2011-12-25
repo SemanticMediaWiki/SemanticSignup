@@ -174,7 +174,7 @@ $messages['nl'] = array(
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Event
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'semanticsignup' => 'Semantisk brukerkontoinformasjon',
 	'ses-desc' => 'En MediaWiki-utvidelse bygd på Semantic Forms som tillater å legge inn semantiske data på en brukerside ved opprettelse av en bruker',
 	'ses-nousername' => 'Brukernavn er ikke angitt.',
