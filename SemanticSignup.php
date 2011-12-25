@@ -56,7 +56,7 @@ $wgExtensionCredits[defined( 'SEMANTIC_EXTENSION_TYPE' ) ? 'semantic' : 'special
 
 $wgExtensionMessagesFiles['SemanticSignup'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.php';
 $wgExtensionMessagesFiles['SemanticSignupMagic'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.magic.php';
-$wgExtensionAliasesFiles['SemanticSignup'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.aliases.php';
+$wgExtensionMessagesFiles['SemanticSignupAlias'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.aliases.php';
 
 $wgAutoloadClasses['SemanticSignupSettings'] = dirname( __FILE__ ) . '/SemanticSignup.settings.php';
 $wgAutoloadClasses['SemanticSignupHooks'] = dirname( __FILE__ ) . '/SemanticSignup.hooks.php';
