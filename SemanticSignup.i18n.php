@@ -116,6 +116,21 @@ $messages['gl'] = array(
 	'ses-throttlehit' => 'Este enderezo IP superou o número máximo de novas contas de usuario ao día.',
 );
 
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'semanticsignup' => 'Semantiske přizjewjenje',
+	'ses-desc' => 'Rozšěrjenje MediaWiki, kotrež zmóžnja, wužiwarsku stronu ze semantiskimi datami za přizjewjenje wuhotować',
+	'ses-nousername' => 'Wužiwarske mjeno njeje so podało.',
+	'ses-nopwdmatch' => 'Hesło a jeho wobkrućenje so njekryjetej.',
+	'ses-norealname' => 'Woprawdźite mjeno je trěbne, ale njeje so podało.',
+	'ses-userexists' => 'Wužiwar hižo eksistuje.',
+	'ses-emailfailed' => 'Słanje wobkrućenskeje e-mejle je so njeporadźiło.',
+	'ses-createforbidden' => 'Aktualny wužiwar njesmě konta załožić',
+	'ses-throttlehit' => 'Maksimalna ličba nowych wužiwarskich kontow na dźeń je za tutu IP-adresu překročena.',
+);
+
 /** Interlingua (Interlingua)
  * @author McDutchie
  */
@@ -156,21 +171,6 @@ $messages['mk'] = array(
 	'ses-throttlehit' => 'Надминат е максималниот дозволен број на новосоздадени кориснички сметки од оваа IP-адреса.',
 );
 
-/** Dutch (Nederlands)
- * @author Siebrand
- */
-$messages['nl'] = array(
-	'semanticsignup' => 'Semantisch inschrijven',
-	'ses-desc' => 'Uitbreiding bovenop Semantic Forms om een gebruikerspagina aan te maken met semantische gegevens tijdens de registratie',
-	'ses-nousername' => 'De gebruikersnaam is niet opgegeven.',
-	'ses-nopwdmatch' => 'Het wachtwoord en de bevestiging komen niet overeen.',
-	'ses-norealname' => 'Een echte naam is vereist maar is niet opgegeven.',
-	'ses-userexists' => 'De gebruiker bestaat al.',
-	'ses-emailfailed' => 'Het verzenden van de bevestigingse-mail is mislukt.',
-	'ses-createforbidden' => 'De huidige gebruiker mag geen nieuwe gebruikers aanmaken.',
-	'ses-throttlehit' => 'Het maximale aantal aan te maken gebruikers per dag is bereikt voor dit IP-adres.',
-);
-
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Event
  */
@@ -184,5 +184,20 @@ $messages['nb'] = array(
 	'ses-emailfailed' => 'Sendingen av bekreftende e-post feilet.',
 	'ses-createforbidden' => 'Aktuell bruker tillates ikke å opprette brukerkontoer.',
 	'ses-throttlehit' => 'Maksimalt antall nye brukere tillatt opprettet per døgn er overskredet for denne IP-adressen.',
+);
+
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'semanticsignup' => 'Semantisch inschrijven',
+	'ses-desc' => 'Uitbreiding bovenop Semantic Forms om een gebruikerspagina aan te maken met semantische gegevens tijdens de registratie',
+	'ses-nousername' => 'De gebruikersnaam is niet opgegeven.',
+	'ses-nopwdmatch' => 'Het wachtwoord en de bevestiging komen niet overeen.',
+	'ses-norealname' => 'Een echte naam is vereist maar is niet opgegeven.',
+	'ses-userexists' => 'De gebruiker bestaat al.',
+	'ses-emailfailed' => 'Het verzenden van de bevestigingse-mail is mislukt.',
+	'ses-createforbidden' => 'De huidige gebruiker mag geen nieuwe gebruikers aanmaken.',
+	'ses-throttlehit' => 'Het maximale aantal aan te maken gebruikers per dag is bereikt voor dit IP-adres.',
 );
 
