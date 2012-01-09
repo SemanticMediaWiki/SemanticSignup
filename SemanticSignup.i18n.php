@@ -201,3 +201,18 @@ $messages['nl'] = array(
 	'ses-throttlehit' => 'Het maximale aantal aan te maken gebruikers per dag is bereikt voor dit IP-adres.',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'semanticsignup' => 'Firma Semantica',
+	'ses-desc' => "N'estension MediaWiki costruìa an sa sima ëd Semantic Forms ch'a përmëtt ëd popolé na pagina utent con dat semantich al moment dla firma",
+	'ses-nousername' => "Ël nòm utent a l'é pa stàit specificà.",
+	'ses-nopwdmatch' => 'Ciav e ciav confirmà as cobio pa.',
+	'ses-norealname' => "Un nòm ver a l'é ciamà ma a l'é pa stàit specificà.",
+	'ses-userexists' => "L'utent a esist già.",
+	'ses-emailfailed' => "La spedission dl'e-mail ëd confirma a l'é falìa.",
+	'ses-createforbidden' => "L'utent corent a peul pa creé ëd cont.",
+	'ses-throttlehit' => "Ë màssim nùmer ëd cont utent neuv për di a l'é stàit superà për st'adrëssa IP.",
+);
+
