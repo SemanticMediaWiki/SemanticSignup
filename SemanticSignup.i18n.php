@@ -202,17 +202,18 @@ $messages['nl'] = array(
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'semanticsignup' => 'Firma Semantica',
-	'ses-desc' => "N'estension MediaWiki costruìa an sa sima ëd Semantic Forms ch'a përmëtt ëd popolé na pagina utent con dat semantich al moment dla firma",
-	'ses-nousername' => "Ël nòm utent a l'é pa stàit specificà.",
-	'ses-nopwdmatch' => 'Ciav e ciav confirmà as cobio pa.',
-	'ses-norealname' => "Un nòm ver a l'é ciamà ma a l'é pa stàit specificà.",
+	'semanticsignup' => 'Anscrission semàntica',
+	'ses-desc' => "N'estension MediaWiki costruìa ansima ai formolari semàntich ch'a përmët ëd popolé na pàgina utent con dij dat semàntich al moment dl'anscrission",
+	'ses-nousername' => "Lë stranòm a l'é nen ëstàit spessificà.",
+	'ses-nopwdmatch' => 'La ciav e la ciav confirmà as corëspondo nen.',
+	'ses-norealname' => "Ël nòm ver a l'é obligatòri ma a l'é pa stàit spessificà.",
 	'ses-userexists' => "L'utent a esist già.",
-	'ses-emailfailed' => "La spedission dl'e-mail ëd confirma a l'é falìa.",
+	'ses-emailfailed' => "La spedission dël mëssagi ëd confirma a l'é falìa.",
 	'ses-createforbidden' => "L'utent corent a peul pa creé ëd cont.",
-	'ses-throttlehit' => "Ë màssim nùmer ëd cont utent neuv për di a l'é stàit superà për st'adrëssa IP.",
+	'ses-throttlehit' => "Ël nùmer màssim ëd cont utent neuv për di a l'é stàit superà për st'adrëssa IP.",
 );
 
