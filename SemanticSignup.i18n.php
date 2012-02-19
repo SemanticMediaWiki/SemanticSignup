@@ -151,9 +151,12 @@ $messages['ia'] = array(
  */
 $messages['lb'] = array(
 	'ses-nousername' => 'De Benotzernumm gouf net uginn.',
+	'ses-nopwdmatch' => "D'Passwuert an d'Confirmatioun vum Passwuert sinn net d'selwecht.",
 	'ses-norealname' => 'De richtegen Numm ass verlaangt mä e gouf net uginn.',
 	'ses-userexists' => 'De Benotzer gëtt et schonn.',
+	'ses-emailfailed' => "D'Confirmatiouns-Mail konnt net geschéckt ginn.",
 	'ses-createforbidden' => 'Den aktuelle Benotzer däerf keng Benotzerkonten uleeën.',
+	'ses-throttlehit' => "D'Zuel vun neie Benotzerkonte pro Dag gouf fir dës IP-Adress depasséiert.",
 );
 
 /** Macedonian (Македонски)
