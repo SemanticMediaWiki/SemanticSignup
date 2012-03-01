@@ -220,3 +220,18 @@ $messages['pms'] = array(
 	'ses-throttlehit' => "Ël nùmer màssim ëd cont utent neuv për di a l'é stàit superà për st'adrëssa IP.",
 );
 
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Linforest
+ */
+$messages['zh-hans'] = array(
+	'semanticsignup' => '语义登记',
+	'ses-desc' => '一个建立在Semantic Forms（语义表单）基础之上的MediaWiki扩展，允许在注册登记时采用语义数据充填用户页面',
+	'ses-nousername' => '尚未指定用户名。',
+	'ses-nopwdmatch' => '密码与确认密码不匹配。',
+	'ses-norealname' => '真实姓名是必需的但尚未指定。',
+	'ses-userexists' => '用户已存在。',
+	'ses-emailfailed' => '用于确认的电子邮件发送失败。',
+	'ses-createforbidden' => '不允许当前用户创建帐户。',
+	'ses-throttlehit' => '此IP地址已经超过了每天新用户帐户的最大数量。',
+);
+
