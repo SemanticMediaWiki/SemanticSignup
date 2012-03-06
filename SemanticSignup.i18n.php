@@ -78,6 +78,21 @@ $messages['de'] = array(
 	'ses-throttlehit' => 'Die Anzahl neuer Benutzerkonten je Tag wurde für diese IP-Adresse überschritten.',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'semanticsignup' => 'Registro semántico',
+	'ses-desc' => 'Una extensión MediaWiki construída a partir de formularios semánticos para permitir poblar una página de usuario con datos semánticos en el momento del registro',
+	'ses-nousername' => 'No se ha especificado el nombre de usuario.',
+	'ses-nopwdmatch' => 'La contraseña y la confirmación no coinciden.',
+	'ses-norealname' => 'El nombre real es necesario, pero no se ha especificado.',
+	'ses-userexists' => 'El usuario ya existe.',
+	'ses-emailfailed' => 'Error durante el envío del correo electrónico de confirmación.',
+	'ses-createforbidden' => 'El usuario actual no tiene permiso para crear cuentas.',
+	'ses-throttlehit' => 'El número máximo de nuevas cuentas de usuario por día ha sido excedido por esta dirección IP.',
+);
+
 /** French (Français)
  * @author Gomoko
  */
