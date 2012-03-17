@@ -68,7 +68,7 @@ $messages['br'] = array(
  */
 $messages['de'] = array(
 	'semanticsignup' => 'Semantische Anmeldung',
-	'ses-desc' => 'Ermöglicht das Ergänzen der Benutzerseite mit semantischen Benutzerdaten, die dieser während der Anmeldung angibt',
+	'ses-desc' => 'Ermöglicht das automatische Erstellen einer aus semantischen Daten bestehenden Benutzerseite, die während der Registrierung erfasst werden',
 	'ses-nousername' => 'Der Benutzername wurde nicht angegeben.',
 	'ses-nopwdmatch' => 'Das Passwort und die Passwortbestätigung stimmen nicht überein.',
 	'ses-norealname' => 'Der bürgerliche Name ist erforderlich, wurde aber nicht angegeben.',
