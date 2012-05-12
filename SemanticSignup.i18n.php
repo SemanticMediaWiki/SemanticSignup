@@ -113,7 +113,7 @@ $messages['fr'] = array(
  */
 $messages['frp'] = array(
 	'semanticsignup' => 'Enscripcion sèmantica',
-	'ses-userexists' => 'L’utilisator ègziste ja.',
+	'ses-userexists' => 'L’usanciér ègziste ja.',
 );
 
 /** Galician (Galego)
@@ -159,6 +159,15 @@ $messages['ia'] = array(
 	'ses-emailfailed' => 'Le invio del e-mail de confirmation ha fallite.',
 	'ses-createforbidden' => 'Le usator actual non ha le permission de crear contos.',
 	'ses-throttlehit' => 'Le numero maxime de nove contos de usator per die ha essite excedite pro iste adresse IP.',
+);
+
+/** Italian (Italiano)
+ * @author Beta16
+ */
+$messages['it'] = array(
+	'ses-nousername' => 'Il nome utente non è stato specificato.',
+	'ses-nopwdmatch' => 'La password e la conferma non corrispondono.',
+	'ses-userexists' => 'Nome utente già esistente.',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -217,6 +226,19 @@ $messages['nl'] = array(
 	'ses-emailfailed' => 'Het verzenden van de bevestigingse-mail is mislukt.',
 	'ses-createforbidden' => 'De huidige gebruiker mag geen nieuwe gebruikers aanmaken.',
 	'ses-throttlehit' => 'Het maximale aantal aan te maken gebruikers per dag is bereikt voor dit IP-adres.',
+);
+
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'ses-nousername' => 'Nie określono nazwy użytkownika.',
+	'ses-nopwdmatch' => 'Hasło i jego potwierdzenie nie są jednakowe.',
+	'ses-norealname' => 'Prawdziwe nazwisko jest wymagane, ale nie zostało określone.',
+	'ses-userexists' => 'Użytkownik już istnieje.',
+	'ses-emailfailed' => 'Wysyłanie wiadomości e-mail potwierdzenia nie powiodło się.',
+	'ses-createforbidden' => 'Bieżący użytkownik nie ma uprawnień do tworzenia kont.',
+	'ses-throttlehit' => 'Maksymalna dzienna liczba nowych kont użytkowników została przekroczona dla tego adresu IP.',
 );
 
 /** Piedmontese (Piemontèis)
