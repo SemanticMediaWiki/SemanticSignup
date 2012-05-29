@@ -25,6 +25,10 @@ class SemanticSignup extends SpecialPage {
 	}
 
 	private function userSignup() {
+
+        //Hook for dynamic signup control
+        wfRunHooks('SemanticSignupUserSignup');
+
 		// Get user input and check the environment
 		$this->mUserDataChecker->run();
 
@@ -157,6 +161,9 @@ class SemanticSignup extends SpecialPage {
 		list ( $form_text, $javascript_text, $data_text, $form_page_title, $generated_page_name ) =
 			$sfgFormPrinter->formHTML( $form_definition, false, false );
 
+        /* Run hook allow externals to modify output of form */
+        wfRunHooks('SemanticSignupPrintForm', array( &$form_text, &$javascript_text, &$data_text, &$form_page_title, &$generated_page_name ) );
+
 		$text = <<<END
 				<form name="createbox" onsubmit="return validate_all()" action="" method="post" class="createbox">
 END;
@@ -240,6 +247,9 @@ END;
 		global $wgRequest, $wgOut;
 
 		$this->setHeaders();
+
+        //Hook for dynamic control page access
+        if(!wfRunHooks('SemanticSignupUserSignupSpecial')) return true;
 
 		if ( $wgRequest->getCheck( 'wpSave' ) ) {
 			return $this->executeOnSubmit();
