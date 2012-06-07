@@ -161,13 +161,19 @@ $messages['ia'] = array(
 	'ses-throttlehit' => 'Le numero maxime de nove contos de usator per die ha essite excedite pro iste adresse IP.',
 );
 
-/** Italian (Italiano)
+/** Italian (italiano)
  * @author Beta16
  */
 $messages['it'] = array(
-	'ses-nousername' => 'Il nome utente non è stato specificato.',
+	'semanticsignup' => 'Registrazione semantica',
+	'ses-desc' => "Un'estensione MediaWiki costruita sulla base di moduli semantici che permette di compilare una pagina utente con i dati semantici in fase di registrazione",
+	'ses-nousername' => 'Il nome utente non è stato indicato.',
 	'ses-nopwdmatch' => 'La password e la conferma non corrispondono.',
+	'ses-norealname' => 'Il nome reale è obbligatorio ma non è stato indicato.',
 	'ses-userexists' => 'Nome utente già esistente.',
+	'ses-emailfailed' => "Invio dell'email di conferma non riuscito.",
+	'ses-createforbidden' => "All'utente attuate non è permesso creare account.",
+	'ses-throttlehit' => 'Il numero massimo di nuovi account utente per giorno è stato superato per questo indirizzo IP.',
 );
 
 /** Japanese (日本語)
