@@ -26,7 +26,7 @@ $messages['en'] = array(
 	'ses-userexists' => 'User already exists.'
 );
 
-/** Asturian (Asturianu)
+/** Asturian (asturianu)
  * @author Xuacu
  */
 $messages['ast'] = array(
@@ -56,7 +56,7 @@ $messages['be-tarask'] = array(
 	'ses-throttlehit' => 'Для гэтага IP-адрасу перавышаная дзённая колькасьць новых рахункаў.',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fulup
  */
 $messages['br'] = array(
@@ -78,7 +78,7 @@ $messages['de'] = array(
 	'ses-throttlehit' => 'Die Anzahl neuer Benutzerkonten je Tag wurde für diese IP-Adresse überschritten.',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Armando-Martin
  */
 $messages['es'] = array(
@@ -93,7 +93,7 @@ $messages['es'] = array(
 	'ses-throttlehit' => 'El número máximo de nuevas cuentas de usuario por día ha sido excedido por esta dirección IP.',
 );
 
-/** French (Français)
+/** French (français)
  * @author Gomoko
  */
 $messages['fr'] = array(
@@ -108,7 +108,7 @@ $messages['fr'] = array(
 	'ses-throttlehit' => 'Le nombre de nouveaux comptes utilisateur par jour a été dépassé pour cette adresse IP.',
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
@@ -146,7 +146,7 @@ $messages['hsb'] = array(
 	'ses-throttlehit' => 'Maksimalna ličba nowych wužiwarskich kontow na dźeń je za tutu IP-adresu překročena.',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -202,7 +202,7 @@ $messages['lb'] = array(
 	'ses-throttlehit' => "D'Zuel vun neie Benotzerkonte pro Dag gouf fir dës IP-Adress depasséiert.",
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
@@ -247,7 +247,7 @@ $messages['nl'] = array(
 	'ses-throttlehit' => 'Het maximale aantal aan te maken gebruikers per dag is bereikt voor dit IP-adres.',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author BeginaFelicysym
  */
 $messages['pl'] = array(
@@ -276,7 +276,7 @@ $messages['pms'] = array(
 	'ses-throttlehit' => "Ël nùmer màssim ëd cont utent neuv për di a l'é stàit superà për st'adrëssa IP.",
 );
 
-/** Simplified Chinese (‪中文(简体)‬)
+/** Simplified Chinese (‪中文（简体）‬)
  * @author Linforest
  */
 $messages['zh-hans'] = array(
