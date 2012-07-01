@@ -41,7 +41,7 @@ $messages['ast'] = array(
 	'ses-throttlehit' => "Esta direición IP pasó del númberu máximu de cuentes d'usuariu nueves al día.",
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Renessaince
  */
@@ -116,7 +116,7 @@ $messages['frp'] = array(
 	'ses-userexists' => 'L’usanciér ègziste ja.',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -131,7 +131,7 @@ $messages['gl'] = array(
 	'ses-throttlehit' => 'Este enderezo IP superou o número máximo de novas contas de usuario ao día.',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
