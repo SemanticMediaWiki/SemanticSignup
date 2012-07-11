@@ -217,7 +217,7 @@ $messages['mk'] = array(
 	'ses-throttlehit' => 'Пречекорен е максималниот дозволен број на новосоздадени кориснички сметки од оваа IP-адреса.',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+/** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Event
  */
 $messages['nb'] = array(
@@ -274,6 +274,21 @@ $messages['pms'] = array(
 	'ses-emailfailed' => "La spedission dël mëssagi ëd confirma a l'é falìa.",
 	'ses-createforbidden' => "L'utent corent a peul pa creé ëd cont.",
 	'ses-throttlehit' => "Ël nùmer màssim ëd cont utent neuv për di a l'é stàit superà për st'adrëssa IP.",
+);
+
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'semanticsignup' => 'Pagrerehistrong Semantiko',
+	'ses-desc' => 'Isang dugtong ng MediaWiki na itinayo sa ibabaw ng mga Pormularyong Semantiko na nagpapahintulot sa pagpupuno sa isang pahina ng tagagamit ng datong semantiko sa panahon ng pagpaparehistro',
+	'ses-nousername' => 'Hindi tinukoy ang pangalan ng tagagamit.',
+	'ses-nopwdmatch' => 'Hindi magkatugma ang hudyat at pagtitiyak ng hudyat.',
+	'ses-norealname' => 'Kailangan ang tunay na pangalan subalit hindi natukoy.',
+	'ses-userexists' => 'Umiiral na ang tagagamit.',
+	'ses-emailfailed' => 'Nabigo ang pagpapadala ng e-liham ng paniniyak.',
+	'ses-createforbidden' => 'Ang pangkasalukuyang tagagamit ay hindi pinapayagang lumikha ng mga akawnt.',
+	'ses-throttlehit' => 'Ang pinaka mataas na bilang ng bagong mga akawnt ng tagagamit sa bawat araw ay nalampasan na para sa tirahang ito ng IP.',
 );
 
 /** Simplified Chinese (‪中文（简体）‬)
