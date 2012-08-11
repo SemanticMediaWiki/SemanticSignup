@@ -146,6 +146,21 @@ $messages['hsb'] = array(
 	'ses-throttlehit' => 'Maksimalna ličba nowych wužiwarskich kontow na dźeń je za tutu IP-adresu překročena.',
 );
 
+/** Hungarian (magyar)
+ * @author TK-999
+ */
+$messages['hu'] = array(
+	'semanticsignup' => 'Szemantikus regisztráció',
+	'ses-desc' => 'A szemantikus űrlapok kiterjesztésre épülő épülő MediaWiki kiterjesztés, mely lehetővé teszi a felhasználói lap kitöltését szemantikus adatokkal regisztrációkor.',
+	'ses-nousername' => 'Nem adtál meg felhasználónevet.',
+	'ses-nopwdmatch' => 'A jelszó és a megerősítése nem egyeznek meg.',
+	'ses-norealname' => 'A valódi név szükséges, de nincs megadva.',
+	'ses-userexists' => 'A felhasználó már létezik.',
+	'ses-emailfailed' => 'A megerősítő e-mail küldése nem sikerült.',
+	'ses-createforbidden' => 'Jelen felhasználó nem hozhat létre felhasználói fiókokat.',
+	'ses-throttlehit' => 'Ezen IP-cím túllépte az egy nap alatt létrehozható felhasználói fiókok maximumát.',
+);
+
 /** Interlingua (interlingua)
  * @author McDutchie
  */
