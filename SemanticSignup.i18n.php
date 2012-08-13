@@ -291,6 +291,15 @@ $messages['pms'] = array(
 	'ses-throttlehit' => "Ël nùmer màssim ëd cont utent neuv për di a l'é stàit superà për st'adrëssa IP.",
 );
 
+/** Tamil (தமிழ்)
+ * @author Shanmugamp7
+ */
+$messages['ta'] = array(
+	'ses-userexists' => 'பயனர் ஏற்கனவே உள்ளார்.',
+	'ses-emailfailed' => 'உறுதிப்படுத்தல் மின்னஞ்சல் அனுப்புவது தோல்வியடைந்தது.',
+	'ses-createforbidden' => 'தற்போதைய பயனர் கணக்குகள் உருவாக்க அனுமதிக்கப்படவில்லை.',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
