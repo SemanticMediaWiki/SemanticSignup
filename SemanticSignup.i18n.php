@@ -195,6 +195,7 @@ $messages['it'] = array(
  * @author Shirayuki
  */
 $messages['ja'] = array(
+	'semanticsignup' => '意味的利用者登録',
 	'ses-nousername' => '利用者名が指定されていません。',
 	'ses-nopwdmatch' => 'パスワードとその確認が一致しません。',
 	'ses-norealname' => '本名は必須ですが指定されていません。',
