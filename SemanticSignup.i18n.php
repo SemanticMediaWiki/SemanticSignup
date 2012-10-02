@@ -41,7 +41,7 @@ $messages['ast'] = array(
 	'ses-throttlehit' => "Esta direición IP pasó del númberu máximu de cuentes d'usuariu nueves al día.",
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Renessaince
  */
@@ -248,7 +248,7 @@ $messages['mk'] = array(
 	'ses-throttlehit' => 'Пречекорен е максималниот дозволен број на новосоздадени кориснички сметки од оваа IP-адреса.',
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬)
+/** Norwegian Bokmål (norsk (bokmål)‎)
  * @author Event
  */
 $messages['nb'] = array(
@@ -331,7 +331,7 @@ $messages['tl'] = array(
 	'ses-throttlehit' => 'Ang pinaka mataas na bilang ng bagong mga akawnt ng tagagamit sa bawat araw ay nalampasan na para sa tirahang ito ng IP.',
 );
 
-/** Simplified Chinese (‪中文（简体）‬)
+/** Simplified Chinese (中文（简体）‎)
  * @author Linforest
  */
 $messages['zh-hans'] = array(
