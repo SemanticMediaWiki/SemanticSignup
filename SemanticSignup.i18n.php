@@ -307,6 +307,21 @@ $messages['pms'] = array(
 	'ses-throttlehit' => "Ël nùmer màssim ëd cont utent neuv për di a l'é stàit superà për st'adrëssa IP.",
 );
 
+/** Swedish (svenska)
+ * @author Martinwiss
+ */
+$messages['sv'] = array(
+	'semanticsignup' => 'Semantic Signup',
+	'ses-desc' => 'Ett tillägg till MediaWiki som kompletterar tillägget Semantic Forms och gör så att användare kan fylla i en användarsida med semantiska data i samband med skapandet av en ny användare.',
+	'ses-nousername' => 'Användarnamn har inte angetts.',
+	'ses-nopwdmatch' => 'Lösenordet och upprepningen av lösenordet stämmer inte överrens.',
+	'ses-norealname' => 'Det rikta namnet krävs men har inte angetts.',
+	'ses-userexists' => 'Användaren finns redan.',
+	'ses-emailfailed' => 'Det gick inte att skicka bekräftelsebrevet.',
+	'ses-createforbidden' => 'Nuvarande användare kan inte skapa nya användare.',
+	'ses-throttlehit' => 'För denna IP-adress har största antalet nya användarkonton per dag överskridits.',
+);
+
 /** Tamil (தமிழ்)
  * @author Shanmugamp7
  */
