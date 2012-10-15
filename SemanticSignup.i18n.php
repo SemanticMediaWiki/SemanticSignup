@@ -307,6 +307,21 @@ $messages['pms'] = array(
 	'ses-throttlehit' => "Ël nùmer màssim ëd cont utent neuv për di a l'é stàit superà për st'adrëssa IP.",
 );
 
+/** Brazilian Portuguese (português do Brasil)
+ * @author Jaideraf
+ */
+$messages['pt-br'] = array(
+	'semanticsignup' => 'Cadastro Semântico',
+	'ses-desc' => 'Uma extensão do MediaWiki construída a partir da extensão Semantic Forms que permite preencher uma página de usuário com dados semânticos na hora do cadastro.',
+	'ses-nousername' => 'O username não foi especificado.',
+	'ses-nopwdmatch' => 'A senha e a confirmação da senha não coincidem.',
+	'ses-norealname' => 'O nome real é necessário, mas não foi especificado.',
+	'ses-userexists' => 'Esse usuário já existe.',
+	'ses-emailfailed' => 'O envio da confirmação de e-mail falhou.',
+	'ses-createforbidden' => 'O usuário atual não tem permissão para criar contas de usuário.',
+	'ses-throttlehit' => 'O número máximo por dia de novas contas de usuário criadas a partir desse endereço IP foi excedido.',
+);
+
 /** Swedish (svenska)
  * @author Martinwiss
  */
