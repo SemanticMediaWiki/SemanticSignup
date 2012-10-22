@@ -376,7 +376,8 @@ $messages['zh-hans'] = array(
 	'ses-throttlehit' => '此IP地址已经超过了每天新用户帐户的最大数量。',
 );
 
-/** Traditional Chinese (中文（繁體）‎) */
+/** Traditional Chinese (中文（繁體）‎)
+ */
 $messages['zh-hant'] = array(
 	'semanticsignup' => '語義登記',
 	'ses-desc' => '一個建立在Semantic Forms（語義表單）基礎之上的MediaWiki擴展，允許在註冊登記時採用語義數據充填用戶頁面',
@@ -388,4 +389,3 @@ $messages['zh-hant'] = array(
 	'ses-createforbidden' => '不允許當前用戶創建帳戶。',
 	'ses-throttlehit' => '此IP地址已經超過了每天新用戶帳戶的最大數量。',
 );
-
