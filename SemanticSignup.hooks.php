@@ -40,9 +40,8 @@ final class SemanticSignupHooks {
 	 *
 	 * @return true
 	 */
-	public static function onParserFirstCallInit() {
-		global $wgParser;
-		$wgParser->setFunctionHook( 'signupfields', 'SES_SignupFields::render' );
+	public static function onParserFirstCallInit( $parser ) {
+		$parser->setFunctionHook( 'signupfields', 'SES_SignupFields::render' );
 		return true;
 	}
 
