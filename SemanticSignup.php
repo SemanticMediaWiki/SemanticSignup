@@ -2,9 +2,9 @@
 /**
  * Initialization file for the Semantic Signup extension.
  *
- * Documentation:	 		http://www.mediawiki.org/wiki/Extension:SemanticSignup
- * Support					http://www.mediawiki.org/wiki/Extension_talk:SemanticSignup
- * Source code:			    http://svn.wikimedia.org/viewvc/mediawiki/trunk/extensions/SemanticSignup
+ * Documentation: http://www.mediawiki.org/wiki/Extension:SemanticSignup
+ * Support: http://www.mediawiki.org/wiki/Extension_talk:SemanticSignup
+ * Source code:	https://gerrit.wikimedia.org/r/gitweb?p=mediawiki/extensions/SemanticSignup.git
  *
  * @file SemanticSignup.php
  * @ingroup SemanticSignup

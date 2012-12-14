@@ -13,13 +13,13 @@
  */
 final class SemanticSignupHooks {
 
-    /**
-     * @since 0.3
-     *
-     * @param $template
-     *
-     * @return false
-     */
+	/**
+	 * @since 0.3
+	 *
+	 * @param $template
+	 *
+	 * @return false
+	 */
 	public static function onUserCreateForm( $template ) {
 		if ( is_null( Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM ) ) ) {
 			return true;
@@ -27,7 +27,7 @@ final class SemanticSignupHooks {
 
 		$url = SemanticSignup::getTitleFor( 'SemanticSignup' )->escapeFullURL();
 
-        wfRunHooks('SemanticSignupBeforeRedirect', array( &$url ) );
+		wfRunHooks('SemanticSignupBeforeRedirect', array( &$url ) );
 
 		global $wgOut;
 		$wgOut->redirect( $url );
@@ -35,15 +35,15 @@ final class SemanticSignupHooks {
 		return false;
 	}
 
-    /**
-     * @since 0.3
-     *
-     * @return true
-     */
+	/**
+	 * @since 0.3
+	 *
+	 * @return true
+	 */
 	public static function onParserFirstCallInit() {
-        global $wgParser;
-        $wgParser->setFunctionHook( 'signupfields', 'SES_SignupFields::render' );
-        return true;
+		global $wgParser;
+		$wgParser->setFunctionHook( 'signupfields', 'SES_SignupFields::render' );
+		return true;
 	}
 
 }
