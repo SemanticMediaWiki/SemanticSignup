@@ -26,6 +26,13 @@ $messages['en'] = array(
 	'ses-userexists' => 'User already exists.'
 );
 
+/** Message documentation (Message documentation)
+ * @author Shirayuki
+ */
+$messages['qqq'] = array(
+	'ses-desc' => '{{desc|name=Semantic Signup|url=http://www.mediawiki.org/wiki/Semantic_Signup}}',
+);
+
 /** Asturian (asturianu)
  * @author Xuacu
  */
