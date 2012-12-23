@@ -383,6 +383,21 @@ $messages['tl'] = array(
 	'ses-throttlehit' => 'Ang pinaka mataas na bilang ng bagong mga akawnt ng tagagamit sa bawat araw ay nalampasan na para sa tirahang ito ng IP.',
 );
 
+/** Ukrainian (українська)
+ * @author Base
+ */
+$messages['uk'] = array(
+	'semanticsignup' => 'Семантична реєстрація',
+	'ses-desc' => 'Розширення MediaWiki побудоване поверх Semantic Forms, що дозволяє розміщати на сторінку користувача семантичні дані під час реєстрації',
+	'ses-nousername' => "Ім'я користувача не вказано.",
+	'ses-nopwdmatch' => 'Пароль та підтвердження паролю не співпадають.',
+	'ses-norealname' => "Справжнє ім'я обов'язково вказати, але не було вказано.",
+	'ses-userexists' => 'Користувач уже існує.',
+	'ses-emailfailed' => 'Не вдалось надіслати лист з підтвердженням електронної пошти.',
+	'ses-createforbidden' => 'Поточному користувачу не дозволено створювати облікові записи.',
+	'ses-throttlehit' => 'Максимальне число нових облікових записів на день було досягнуто для цієї IP-адреси.',
+);
+
 /** Simplified Chinese (中文（简体）‎)
  * @author Linforest
  */
