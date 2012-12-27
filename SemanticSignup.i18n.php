@@ -70,6 +70,13 @@ $messages['br'] = array(
 	'ses-userexists' => "An implijer-mañ zo anezhañ c'hoazh.",
 );
 
+/** Czech (česky)
+ * @author Vks
+ */
+$messages['cs'] = array(
+	'ses-userexists' => 'Uživatel již existuje.',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */
