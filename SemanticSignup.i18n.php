@@ -351,6 +351,14 @@ $messages['pt-br'] = array(
 	'ses-throttlehit' => 'O número máximo por dia de novas contas de usuário criadas a partir desse endereço IP foi excedido.',
 );
 
+/** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['si'] = array(
+	'semanticsignup' => 'අර්ථ විචාර ලියාපදිංචිය',
+	'ses-userexists' => 'පරිශීලක දැනටමත් පවතියි.',
+);
+
 /** Swedish (svenska)
  * @author Martinwiss
  */
