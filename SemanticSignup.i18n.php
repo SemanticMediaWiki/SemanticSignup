@@ -356,6 +356,7 @@ $messages['pt-br'] = array(
  */
 $messages['si'] = array(
 	'semanticsignup' => 'අර්ථ විචාර ලියාපදිංචිය',
+	'ses-nousername' => 'පරිශීලක නාමය විශේෂණය කර නොමැත.',
 	'ses-userexists' => 'පරිශීලක දැනටමත් පවතියි.',
 );
 
