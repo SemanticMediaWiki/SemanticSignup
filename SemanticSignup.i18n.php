@@ -351,13 +351,30 @@ $messages['pt-br'] = array(
 	'ses-throttlehit' => 'O número máximo por dia de novas contas de usuário criadas a partir desse endereço IP foi excedido.',
 );
 
+/** Romanian (română)
+ * @author Minisarm
+ * @author Stelistcristi
+ */
+$messages['ro'] = array(
+	'ses-nousername' => 'Numele de utilizator nu a fost specificat',
+	'ses-nopwdmatch' => 'Parola și confirmarea parolei nu se potrivesc.',
+	'ses-norealname' => 'Numele real este obligatoriu însă nu a fost specificat.',
+	'ses-userexists' => 'Utilizatorul există deja.',
+	'ses-emailfailed' => 'Nu s-a reușit trimiterea e-mailului de confirmare.',
+	'ses-createforbidden' => 'Actualului utilizator nu îi este permisă crearea de conturi.',
+);
+
 /** Sinhala (සිංහල)
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
 	'semanticsignup' => 'අර්ථ විචාර ලියාපදිංචිය',
 	'ses-nousername' => 'පරිශීලක නාමය විශේෂණය කර නොමැත.',
+	'ses-nopwdmatch' => 'මුරපදය සහ මුරපද තහවුරු කිරීම නොගැලපේ.',
+	'ses-norealname' => 'සැබෑ නාමය අවශ්‍ය වන තර එය විශේෂණය කර නොමැත.',
 	'ses-userexists' => 'පරිශීලක දැනටමත් පවතියි.',
+	'ses-emailfailed' => 'තහවුරු කිරීමේ විද්‍යුත්-තැපෑල යැවීම අසාර්ථකයි.',
+	'ses-createforbidden' => 'වත්මන් පරිශීලකට ගිණුම් තැනීමට ඉඩ ලබා නොදේ.',
 );
 
 /** Swedish (svenska)
