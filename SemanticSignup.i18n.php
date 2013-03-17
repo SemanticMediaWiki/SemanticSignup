@@ -377,6 +377,13 @@ $messages['ro'] = array(
 	'ses-createforbidden' => 'Actualului utilizator nu îi este permisă crearea de conturi.',
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'ses-userexists' => "L'utende già esiste.",
+);
+
 /** Sinhala (සිංහල)
  * @author පසිඳු කාවින්ද
  */
