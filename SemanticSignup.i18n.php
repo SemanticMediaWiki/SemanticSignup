@@ -92,6 +92,13 @@ $messages['de'] = array(
 	'ses-throttlehit' => 'Die Anzahl neuer Benutzerkonten je Tag wurde für diese IP-Adresse überschritten.',
 );
 
+/** Swiss High German (Schweizer Hochdeutsch)
+ * @author Geitost
+ */
+$messages['de-ch'] = array(
+	'ses-emailfailed' => 'Der Versand des Bestätigungs-E-Mails ist gescheitert.',
+);
+
 /** Spanish (español)
  * @author Armando-Martin
  */
