@@ -23,8 +23,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-if ( version_compare( $wgVersion, '1.16', '<' ) ) {
-	die( '<b>Error:</b> SemanticSignup requires MediaWiki 1.16 or above.' );
+if ( version_compare( $wgVersion, '1.17', '<' ) ) {
+	die( '<b>Error:</b> SemanticSignup requires MediaWiki 1.17 or above.' );
 }
 
 // Show a warning if Semantic MediaWiki is not loaded.
