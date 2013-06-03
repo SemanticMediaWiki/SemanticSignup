@@ -162,8 +162,6 @@ class SES_SignupFields {
 
 		$template = new CreateUserFieldsTemplate();
 
-		$template->set( 'header', '' );
-
 		global $wgEnableEmail, $wgAllowRealName, $wgEmailConfirmToEdit, $wgAuth, $wgUser;
 
 		$template->set( 'link', '' ); // TODO
@@ -184,6 +182,11 @@ class SES_SignupFields {
 		// Give authentication and captcha plugins a chance to modify the form
 		$type = 'signup';
 		$wgAuth->modifyUITemplate( $template, $type );
+
+		if( SemanticSignupSettings::get( 'useCaptcha' ) && isset( $GLOBALS['wgCaptchaClass'] ) ) {
+			$captchaObject = new $GLOBALS['wgCaptchaClass'];
+			$captchaObject->injectUserCreate( $template );
+		}
 
 		ob_start();
 		$template->execute();

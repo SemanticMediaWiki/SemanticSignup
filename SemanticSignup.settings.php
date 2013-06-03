@@ -22,6 +22,7 @@ class SemanticSignupSettings {
 			'requireName' => false,
 			'formName' => '',
 			'botName' => '',
+			'useCaptcha' => true,
 		);
 	}
 

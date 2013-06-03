@@ -66,3 +66,9 @@ sufficient priviliges to create new pages in the User: namespace.
 Default: $egSemanticSignupSettings['botName'] = '';
 
 Example: $egSemanticSignupSettings['botName'] = 'Admin';
+
+=== Enable Captcha ===
+
+If captcha should be enabled (requires ConfirmEdit extension to be installed) ?
+
+Default: $egSemanticSignupSettings['useCaptcha'] = true;

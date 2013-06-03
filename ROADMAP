@@ -5,7 +5,3 @@ Latest version of the roadmap: http://svn.wikimedia.org/viewvc/mediawiki/trunk/e
 
 
 == Version 0.4 ==
-
-* Fix compatibility with latest SemanticForms
-* Fix compatibility with Confirm Edit and other captcha extensions.
-* Fix loading of obsolete JavaScript and CSS files.
