@@ -297,7 +297,7 @@ $messages['mk'] = array(
 	'ses-throttlehit' => 'Пречекорен е максималниот дозволен број на новосоздадени кориснички сметки од оваа IP-адреса.',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎)
+/** Norwegian Bokmål (norsk bokmål)
  * @author Event
  */
 $messages['nb'] = array(
