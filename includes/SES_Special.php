@@ -139,7 +139,7 @@ class SemanticSignup extends SpecialPage {
 	}
 
 	private function printForm() {
-		global $wgUser;
+		global $wgUser, $sfgFormPrinter, $wgOut, $wgFCKEditorDir;
 
 		/*
 		 * SemanticForms disable the form automatically if current user hasn't got edit rights
@@ -156,8 +156,6 @@ class SemanticSignup extends SpecialPage {
 		$form = new Article( $form_title );
 		$form_definition = $form->getContent();
 
-		global $sfgFormPrinter;
-
 		list ( $form_text, $javascript_text, $data_text, $form_page_title, $generated_page_name ) =
 			$sfgFormPrinter->formHTML( $form_definition, false, false );
 
@@ -165,50 +163,10 @@ class SemanticSignup extends SpecialPage {
         wfRunHooks('SemanticSignupPrintForm', array( &$form_text, &$javascript_text, &$data_text, &$form_page_title, &$generated_page_name ) );
 
 		$text = <<<END
-				<form name="createbox" onsubmit="return validate_all()" action="" method="post" class="createbox">
+				<form name="createbox" id="sfForm" onsubmit="return validate_all()" action="" method="post" class="createbox">
 END;
 		$text .= $form_text . '</form>';
 
-		global $sfgScriptPath, $sfgYUIBase, $wgOut;
-		$mainCssUrl = $sfgScriptPath . '/skins/SF_main.css';
-		$wgOut->addLink( array(
-			'rel' => 'stylesheet',
-			'type' => 'text/css',
-			'media' => "screen, projection",
-			'href' => $mainCssUrl
-		) );
-		$wgOut->addLink( array(
-			'rel' => 'stylesheet',
-			'type' => 'text/css',
-			'media' => "screen, projection",
-			'href' => $sfgYUIBase . "autocomplete/assets/skins/sam/autocomplete.css"
-		) );
-		$wgOut->addLink( array(
-			'rel' => 'stylesheet',
-			'type' => 'text/css',
-			'media' => "screen, projection",
-			'href' => $sfgScriptPath . '/skins/SF_yui_autocompletion.css'
-		) );
-		$wgOut->addLink( array(
-			'rel' => 'stylesheet',
-			'type' => 'text/css',
-			'media' => "screen, projection",
-			'href' => $sfgScriptPath . '/skins/floatbox.css'
-		) );
-
-		// FIXME: wtf?
-		$wgOut->addScript( '<script type="text/javascript" src="' . $sfgYUIBase . 'yahoo/yahoo-min.js"></script>' . "\n" );
-		$wgOut->addScript( '<script type="text/javascript" src="' . $sfgYUIBase . 'dom/dom-min.js"></script>' . "\n" );
-		$wgOut->addScript( '<script type="text/javascript" src="' . $sfgYUIBase . 'event/event-min.js"></script>' . "\n" );
-		$wgOut->addScript( '<script type="text/javascript" src="' . $sfgYUIBase . 'get/get-min.js"></script>' . "\n" );
-		$wgOut->addScript( '<script type="text/javascript" src="' . $sfgYUIBase . 'connection/connection-min.js"></script>' . "\n" );
-		$wgOut->addScript( '<script type="text/javascript" src="' . $sfgYUIBase . 'json/json-min.js"></script>' . "\n" );
-		$wgOut->addScript( '<script type="text/javascript" src="' . $sfgYUIBase . 'datasource/datasource-min.js"></script>' . "\n" );
-		$wgOut->addScript( '<script type="text/javascript" src="' . $sfgYUIBase . 'autocomplete/autocomplete-min.js"></script>' . "\n" );
-		$wgOut->addScript( '<script type="text/javascript" src="' . $sfgScriptPath . '/libs/SF_yui_autocompletion.js"></script>' . "\n" );
-		$wgOut->addScript( '<script type="text/javascript" src="' . $sfgScriptPath . '/libs/floatbox.js"></script>' . "\n" );
-
-	    global $wgFCKEditorDir;
 	    if ( $wgFCKEditorDir ) {
 	    	$wgOut->addScript( '<script type="text/javascript" src="' . "$wgScriptPath/$wgFCKEditorDir" . '/fckeditor.js"></script>' . "\n" );
 	    }
