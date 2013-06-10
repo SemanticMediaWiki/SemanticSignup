@@ -21,7 +21,7 @@ class CreateUserFieldsTemplate extends QuickTemplate
 	function execute() {
 
 	?>
-<div id="userlogin">
+<div id="userlogin" style="float:none;">
 
 	<h2><?php $this->msg( 'createaccount' ) ?></h2>
 	<p id="userloginlink"><?php $this->html( 'link' ) ?></p>
