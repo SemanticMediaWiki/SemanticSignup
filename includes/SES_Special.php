@@ -118,6 +118,13 @@ class SemanticSignup extends SpecialPage {
 		wfRunHooks( 'AddNewAccount', array( $user ) );
 	}
 
+	private function userLogin() {
+		$user = $this->mUserDataChecker->mUser;
+		$user->saveSettings();
+		$user->invalidateCache();
+		$user->setCookies();
+	}
+
 	private function createUserPage() {
 		$form_title = Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM );
 		$form = new Article( $form_title );
@@ -190,7 +197,7 @@ END;
 		try {
 			$this->userSignup();
 			$this->createUserPage();
-
+			$this->userLogin();
 			$wgOut->redirect( $this->mUserPageUrl );
 		}
 		catch ( Exception $e ) {
