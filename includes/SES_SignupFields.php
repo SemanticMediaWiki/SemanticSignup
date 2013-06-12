@@ -7,8 +7,8 @@
  * Borrowed from standard UsercreateTemplate. Some minor changes have been made
  */
 
-class CreateUserFieldsTemplate extends QuickTemplate
-{
+class CreateUserFieldsTemplate extends QuickTemplate {
+
 	function addInputItem( $name, $value, $type, $msg ) {
 		$this->data['extraInput'][] = array(
 			'name' => $name,
@@ -19,6 +19,7 @@ class CreateUserFieldsTemplate extends QuickTemplate
 	}
 
 	function execute() {
+		global $sfgTabIndex;
 
 	?>
 <div id="userlogin" style="float:none;">
@@ -32,7 +33,7 @@ class CreateUserFieldsTemplate extends QuickTemplate
 			<td class="mw-label"><label for='wpName2'><?php $this->msg( 'yourname' ) ?></label></td>
 			<td class="mw-input">
 				<input type='text' class='loginText' name="wpName" id="wpName2"
-					tabindex="1"
+					tabindex="<?php echo $sfgTabIndex++; ?>"
 					size='20' />
 			</td>
 		</tr>
@@ -40,7 +41,7 @@ class CreateUserFieldsTemplate extends QuickTemplate
 			<td class="mw-label"><label for='wpPassword2'><?php $this->msg( 'yourpassword' ) ?></label></td>
 			<td class="mw-input">
 				<input type='password' class='loginPassword' name="wpPassword" id="wpPassword2"
-					tabindex="2"
+					tabindex="<?php echo $sfgTabIndex++; ?>"
 					value="" size='20' />
 			</td>
 		</tr>
@@ -54,7 +55,7 @@ class CreateUserFieldsTemplate extends QuickTemplate
 			<td class="mw-label"><?php $this->msg( 'yourdomainname' ) ?></td>
 			<td class="mw-input">
 				<select name="wpDomain" value="<?php $this->text( 'domain' ) ?>"
-					tabindex="3">
+					tabindex="<?php echo $sfgTabIndex++; ?>">
 					<?php echo $doms ?>
 				</select>
 			</td>
@@ -64,7 +65,7 @@ class CreateUserFieldsTemplate extends QuickTemplate
 			<td class="mw-label"><label for='wpRetype'><?php $this->msg( 'yourpasswordagain' ) ?></label></td>
 			<td class="mw-input">
 				<input type='password' class='loginPassword' name="wpRetype" id="wpRetype"
-					tabindex="4"
+					tabindex="<?php echo $sfgTabIndex++; ?>"
 					value=""
 					size='20' />
 			</td>
@@ -74,7 +75,7 @@ class CreateUserFieldsTemplate extends QuickTemplate
 				<td class="mw-label"><label for='wpEmail'><?php $this->msg( 'youremail' ) ?></label></td>
 				<td class="mw-input">
 					<input type='text' class='loginText' name="wpEmail" id="wpEmail"
-						tabindex="5"
+						tabindex="<?php echo $sfgTabIndex++; ?>"
 						value="<?php $this->text( 'email' ) ?>" size='20' />
 					<div class="prefsectiontip">
 						<?php if ( $this->data['emailrequired'] ) {
@@ -91,7 +92,7 @@ class CreateUserFieldsTemplate extends QuickTemplate
 					<td class="mw-label"><label for='wpRealName'><?php $this->msg( 'yourrealname' ) ?></label></td>
 					<td class="mw-input">
 						<input type='text' class='loginText' name="wpRealName" id="wpRealName"
-							tabindex="6"
+							tabindex="<?php echo $sfgTabIndex++; ?>"
 							size='20' />
 					</td>
 			<?php } ?>
@@ -100,7 +101,6 @@ class CreateUserFieldsTemplate extends QuickTemplate
 			<td></td>
 		</tr>
 <?php
-		$tabIndex = 8;
 		if ( isset( $this->data['extraInput'] ) && is_array( $this->data['extraInput'] ) ) {
 			foreach ( $this->data['extraInput'] as $inputItem ) { ?>
 		<tr>
@@ -116,7 +116,7 @@ class CreateUserFieldsTemplate extends QuickTemplate
 			<td class="mw-input">
 				<input type="<?php echo htmlspecialchars( $inputItem['type'] ) ?>" name="<?php
 				echo htmlspecialchars( $inputItem['name'] ); ?>"
-					tabindex="<?php echo $tabIndex++; ?>"
+					tabindex="<?php echo $sfgTabIndex++; ?>"
 					value="<?php
 				if ( $inputItem['type'] != 'checkbox' ) {
 					echo htmlspecialchars( $inputItem['value'] );
