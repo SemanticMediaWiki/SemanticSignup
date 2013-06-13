@@ -96,8 +96,9 @@ class SES_UserAccountDataChecker extends SES_DataChecker {
 	public function checkEmailValidity()
 	{
 		global $wgEnableEmail;
-		if ( $wgEnableEmail && !User::isValidEmailAddr( $this->mEmail ) )
+		if ( $wgEnableEmail && $this->mEmail !== '' && !Sanitizer::validateEmail( $this->mEmail ) ) {
 			$this->error( wfMsg( 'invalidemailaddress' ) );
+		}
 	}
 
 	public function __construct()
