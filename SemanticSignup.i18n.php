@@ -388,6 +388,7 @@ $messages['ro'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'semanticsignup' => 'Reggistrazione semandeche',
 	'ses-userexists' => "L'utende già esiste.",
 );
 
