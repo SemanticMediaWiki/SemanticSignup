@@ -51,8 +51,10 @@ $messages['ast'] = array(
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Renessaince
+ * @author Wizardist
  */
 $messages['be-tarask'] = array(
+	'semanticsignup' => 'Сэмантычная рэгістрацыя',
 	'ses-desc' => 'Пашырэньне MediaWiki, пабудаванае паверх Сэмантычных формаў, якое дазваляе зьмяшчаць на старонцы ўдзельніка падчас стварэньня рахунку сэмантычныя зьвесткі',
 	'ses-nousername' => 'Імя ўдзельніка не пазначанае.',
 	'ses-nopwdmatch' => 'Пароль і яго пацьверджаньне не супадаюць.',
