@@ -363,8 +363,8 @@ $messages['pms'] = array(
  */
 $messages['pt-br'] = array(
 	'semanticsignup' => 'Cadastro Semântico',
-	'ses-desc' => 'Uma extensão do MediaWiki construída a partir da extensão Semantic Forms que permite preencher uma página de usuário com dados semânticos na hora do cadastro.',
-	'ses-nousername' => 'O username não foi especificado.',
+	'ses-desc' => 'Uma extensão do MediaWiki, construída a partir da extensão Semantic Forms, que permite preencher uma página de usuário com dados semânticos na hora do cadastro.',
+	'ses-nousername' => 'O nome de usuário não foi especificado.',
 	'ses-nopwdmatch' => 'A senha e a confirmação da senha não coincidem.',
 	'ses-norealname' => 'O nome real é necessário, mas não foi especificado.',
 	'ses-userexists' => 'Esse usuário já existe.',
