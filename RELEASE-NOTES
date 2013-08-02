@@ -1,13 +1,18 @@
 These are the release notes for the SemanticSignup extension.
 	
-Extension page on mediawiki.org: http://www.mediawiki.org/wiki/Extension:SemanticSignup
-Latest version of the release notes: http://svn.wikimedia.org/viewvc/mediawiki/trunk/extensions/SemanticSignup/RELEASE-NOTES?view=co
+Extension page on mediawiki.org:
+https://www.mediawiki.org/wiki/Extension:SemanticSignup
+
+Latest version of the release notes:
+https://git.wikimedia.org/blob/mediawiki%2Fextensions%2FSemanticSignup/HEAD/RELEASE-NOTES
 
 
 === Version 0.4 ===
-2011-xx-xx
+2013-08-02
 
-* Added compatibility with ConfirmEdit
+* Added compatibility with ConfirmEdit.
+* Added compatibility with MediaWiki 1.18 and above.
+* Added compatibility with Semantic Forms 2.0 and above.
 
 === Version 0.3 ===
 2011-08-15
