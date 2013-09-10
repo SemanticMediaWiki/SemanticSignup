@@ -315,6 +315,7 @@ $messages['nb'] = array(
 );
 
 /** Dutch (Nederlands)
+ * @author HanV
  * @author Siebrand
  */
 $messages['nl'] = array(
@@ -324,7 +325,7 @@ $messages['nl'] = array(
 	'ses-nopwdmatch' => 'Het wachtwoord en de bevestiging komen niet overeen.',
 	'ses-norealname' => 'Een echte naam is vereist maar is niet opgegeven.',
 	'ses-userexists' => 'De gebruiker bestaat al.',
-	'ses-emailfailed' => 'Het verzenden van de bevestigingse-mail is mislukt.',
+	'ses-emailfailed' => 'Het e-mailen van de bevestiging is mislukt.',
 	'ses-createforbidden' => 'De huidige gebruiker mag geen nieuwe gebruikers aanmaken.',
 	'ses-throttlehit' => 'Het maximale aantal aan te maken gebruikers per dag is bereikt voor dit IP-adres.',
 );
