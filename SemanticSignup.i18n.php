@@ -72,7 +72,7 @@ $messages['br'] = array(
 	'ses-userexists' => "An implijer-mañ zo anezhañ c'hoazh.",
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Vks
  */
 $messages['cs'] = array(
