@@ -116,6 +116,20 @@ $messages['es'] = array(
 	'ses-throttlehit' => 'El número máximo de nuevas cuentas de usuario por día ha sido excedido por esta dirección IP.',
 );
 
+/** Persian (فارسی)
+ * @author Armin1392
+ */
+$messages['fa'] = array(
+	'semanticsignup' => 'ثبت‌نام معنایی',
+	'ses-nousername' => 'نام کاربری تعیین نشده‌است.',
+	'ses-nopwdmatch' => 'رمز عبور و تایید رمز عبور با هم تطبیق ندارند.',
+	'ses-norealname' => 'نام واقعی لازم است ولی تعیین نشده‌است.',
+	'ses-userexists' => 'کاربر در حال حاضر وجود دارد.',
+	'ses-emailfailed' => 'ارسال تاییدیهٔ رایانامه انجام نشد.',
+	'ses-createforbidden' => 'کاربر فعلی مجاز به ایجاد حساب نیست.',
+	'ses-throttlehit' => 'روزانه حداکثر تعداد حساب‌های کاربری برای این آدرس آی‌پی فراتر رفته است.',
+);
+
 /** Finnish (suomi)
  * @author Nedergard
  */
