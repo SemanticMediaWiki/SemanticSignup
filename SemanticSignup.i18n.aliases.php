@@ -10,9 +10,11 @@
  * @author Serhii Kutnii
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
+// @codingStandardsIgnoreFile
 
-$aliases = array();
+$specialPageAliases = array();
 
-$aliases['en'] = array(
-	'SemanticSignup' => array( 'SemanticSignup', 'Semantic Signup' )
+/** English (English) */
+$specialPageAliases['en'] = array(
+	'SemanticSignup' => array( 'SemanticSignup', 'Semantic Signup' ),
 );
