@@ -19,6 +19,11 @@ $specialPageAliases['en'] = array(
 	'SemanticSignup' => array( 'SemanticSignup', 'Semantic Signup' ),
 );
 
+/** German (Deutsch) */
+$specialPageAliases['de'] = array(
+	'SemanticSignup' => array( 'Semantische_Anmeldung' ),
+);
+
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'SemanticSignup' => array( '语义注册' ),
