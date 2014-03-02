@@ -17,3 +17,13 @@ $magicWords = array();
 $magicWords['en'] = array(
 	'signupfields' => array( 0, 'signupfields' ),
 );
+
+/** Arabic (العربية) */
+$magicWords['ar'] = array(
+	'signupfields' => array( 0, 'مجالات_تسجيل' ),
+);
+
+/** Egyptian Spoken Arabic (مصرى) */
+$magicWords['arz'] = array(
+	'signupfields' => array( 0, 'مجالات_تسجيل' ),
+);

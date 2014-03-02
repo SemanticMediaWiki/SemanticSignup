@@ -19,6 +19,11 @@ $specialPageAliases['en'] = array(
 	'SemanticSignup' => array( 'SemanticSignup', 'Semantic Signup' ),
 );
 
+/** Egyptian Spoken Arabic (مصرى) */
+$specialPageAliases['arz'] = array(
+	'SemanticSignup' => array( 'تسجيل_سيمانتيك' ),
+);
+
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
 	'SemanticSignup' => array( 'Semantische_Anmeldung' ),
