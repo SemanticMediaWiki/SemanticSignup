@@ -487,12 +487,13 @@ $messages['ta'] = array(
 
 /** Tagalog (Tagalog)
  * @author AnakngAraw
+ * @author Jojit fb
  */
 $messages['tl'] = array(
 	'semanticsignup' => 'Pagrerehistrong Semantiko',
 	'ses-desc' => 'Isang dugtong ng MediaWiki na itinayo sa ibabaw ng mga Pormularyong Semantiko na nagpapahintulot sa pagpupuno sa isang pahina ng tagagamit ng datong semantiko sa panahon ng pagpaparehistro',
 	'ses-nousername' => 'Hindi tinukoy ang pangalan ng tagagamit.',
-	'ses-nopwdmatch' => 'Hindi magkatugma ang hudyat at pagtitiyak ng hudyat.',
+	'ses-nopwdmatch' => 'Hindi magkatugma ang password at pagtitiyak ng password.',
 	'ses-norealname' => 'Kailangan ang tunay na pangalan subalit hindi natukoy.',
 	'ses-userexists' => 'Umiiral na ang tagagamit.',
 	'ses-emailfailed' => 'Nabigo ang pagpapadala ng e-liham ng paniniyak.',
