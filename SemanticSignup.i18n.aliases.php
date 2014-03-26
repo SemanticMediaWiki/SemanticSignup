@@ -33,3 +33,8 @@ $specialPageAliases['de'] = array(
 $specialPageAliases['zh-hans'] = array(
 	'SemanticSignup' => array( '语义注册' ),
 );
+
+/** Traditional Chinese (中文（繁體）‎) */
+$specialPageAliases['zh-hant'] = array(
+	'SemanticSignup' => array( 'Semantic登記' ),
+);
