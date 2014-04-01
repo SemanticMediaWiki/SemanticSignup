@@ -40,7 +40,7 @@ if ( !defined( 'SF_VERSION' ) ) {
 	die( '<b>Error:</b> You need to have <a href="http://semantic-mediawiki.org/wiki/Semantic_Forms">Semantic Forms</a> installed in order to use SemanticSignup.' );
 }
 
-define( 'SemanticSignup_VERSION', '0.4' );
+define( 'SemanticSignup_VERSION', '0.5.0' );
 
 $wgExtensionCredits[defined( 'SEMANTIC_EXTENSION_TYPE' ) ? 'semantic' : 'specialpage'][] = array(
 	'path' => __FILE__,
@@ -55,6 +55,7 @@ $wgExtensionCredits[defined( 'SEMANTIC_EXTENSION_TYPE' ) ? 'semantic' : 'special
 	'descriptionmsg' => 'ses-desc'
 );
 
+$wgMessagesDirs['SemanticSignup'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SemanticSignup'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.php';
 $wgExtensionMessagesFiles['SemanticSignupMagic'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.magic.php';
 $wgExtensionMessagesFiles['SemanticSignupAlias'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.aliases.php';
