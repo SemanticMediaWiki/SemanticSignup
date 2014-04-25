@@ -28,6 +28,11 @@ $magicWords['arz'] = array(
 	'signupfields' => array( 0, 'مجالات_تسجيل' ),
 );
 
+/** Macedonian (македонски) */
+$magicWords['mk'] = array(
+	'signupfields' => array( 0, 'полињапријава' ),
+);
+
 /** Simplified Chinese (中文（简体）‎) */
 $magicWords['zh-hans'] = array(
 	'signupfields' => array( 0, '注册域' ),
