@@ -29,6 +29,11 @@ $specialPageAliases['de'] = array(
 	'SemanticSignup' => array( 'Semantische_Anmeldung' ),
 );
 
+/** Zazaki (Zazaki) */
+$specialPageAliases['diq'] = array(
+	'SemanticSignup' => array( 'MeaneyenQeyd', 'Meaneyen_Qeyd' ),
+);
+
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'SemanticSignup' => array( '语义注册' ),
