@@ -34,6 +34,11 @@ $specialPageAliases['diq'] = array(
 	'SemanticSignup' => array( 'MeaneyenQeyd', 'Meaneyen_Qeyd' ),
 );
 
+/** Korean (한국어) */
+$specialPageAliases['ko'] = array(
+	'SemanticSignup' => array( '시맨틱가입' ),
+);
+
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'SemanticSignup' => array( '语义注册' ),
