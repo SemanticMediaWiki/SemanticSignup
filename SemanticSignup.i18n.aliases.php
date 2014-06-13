@@ -39,6 +39,11 @@ $specialPageAliases['ko'] = array(
 	'SemanticSignup' => array( '시맨틱가입' ),
 );
 
+/** Dutch (Nederlands) */
+$specialPageAliases['nl'] = array(
+	'SemanticSignup' => array( 'SemanticAanmelden' ),
+);
+
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'SemanticSignup' => array( '语义注册' ),
