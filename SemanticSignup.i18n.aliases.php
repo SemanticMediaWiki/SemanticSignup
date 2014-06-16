@@ -34,6 +34,11 @@ $specialPageAliases['diq'] = array(
 	'SemanticSignup' => array( 'MeaneyenQeyd', 'Meaneyen_Qeyd' ),
 );
 
+/** Upper Sorbian (hornjoserbsce) */
+$specialPageAliases['hsb'] = array(
+	'SemanticSignup' => array( 'Semantiske_přizjawjenje' ),
+);
+
 /** Korean (한국어) */
 $specialPageAliases['ko'] = array(
 	'SemanticSignup' => array( '시맨틱가입' ),
