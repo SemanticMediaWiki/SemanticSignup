@@ -44,6 +44,11 @@ $specialPageAliases['ko'] = array(
 	'SemanticSignup' => array( '시맨틱가입' ),
 );
 
+/** Macedonian (македонски) */
+$specialPageAliases['mk'] = array(
+	'SemanticSignup' => array( 'СемантичкаНајава' ),
+);
+
 /** Dutch (Nederlands) */
 $specialPageAliases['nl'] = array(
 	'SemanticSignup' => array( 'SemanticAanmelden' ),
