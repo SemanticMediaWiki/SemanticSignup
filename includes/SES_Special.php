@@ -106,7 +106,7 @@ class SemanticSignup extends SpecialPage {
 
 		global $wgEmailAuthentication;
 
-		if ( $wgEmailAuthentication && User::isValidEmailAddr( $user->getEmail() ) ) {
+		if ( $wgEmailAuthentication && Sanitizer::validateEmail( $user->getEmail() ) ) {
 			$status = $user->sendConfirmationMail();
 
 			if ( !$status->isGood() ) {
