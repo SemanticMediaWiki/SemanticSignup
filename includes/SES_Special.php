@@ -131,7 +131,7 @@ class SemanticSignup extends SpecialPage {
 		$form_definition = $form->getContent();
 
 		$page_title = Title::newFromText( $this->mUserDataChecker->mUser->getName(), NS_USER );
-		$this->mUserPageUrl = $page_title->escapeFullUrl();
+		$this->mUserPageUrl = htmlspecialchars( $page_title->getFullURL() );
 
 		global $sfgFormPrinter;
 		list ( $form_text, $javascript_text, $data_text, $form_page_title, $generated_page_name ) =

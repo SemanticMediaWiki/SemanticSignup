@@ -25,7 +25,7 @@ final class SemanticSignupHooks {
 			return true;
 		}
 
-		$url = SemanticSignup::getTitleFor( 'SemanticSignup' )->escapeFullURL();
+		$url = htmlspecialchars( SemanticSignup::getTitleFor( 'SemanticSignup' )->getFullURL() );
 
 		wfRunHooks('SemanticSignupBeforeRedirect', array( &$url ) );
 
