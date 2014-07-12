@@ -64,7 +64,7 @@ $wgAutoloadClasses['SpecialSemanticSignup'] = __DIR__ . '/includes/SpecialSemant
 $wgAutoloadClasses['SES_DataChecker'] = __DIR__ . '/includes/SES_DataChecker.php';
 $wgAutoloadClasses['SES_UserAccountDataChecker'] = __DIR__ . '/includes/SES_UserAccountDataChecker.php';
 $wgAutoloadClasses['SES_SignupFields'] = __DIR__ . '/includes/SES_SignupFields.php';
-$wgAutoloadClasses['CreateUserFieldsTemplate'] = __DIR__ . '/includes/SES_SignupFields.php';
+$wgAutoloadClasses['CreateUserFieldsTemplate'] = __DIR__ . '/includes/CreateUserFieldsTemplate.php';
 
 $wgSpecialPages['SemanticSignup'] = 'SpecialSemanticSignup';
 
