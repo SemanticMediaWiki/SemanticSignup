@@ -56,18 +56,18 @@ $wgExtensionCredits[defined( 'SEMANTIC_EXTENSION_TYPE' ) ? 'semantic' : 'special
 );
 
 $wgMessagesDirs['SemanticSignup'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['SemanticSignup'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.php';
-$wgExtensionMessagesFiles['SemanticSignupMagic'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.magic.php';
-$wgExtensionMessagesFiles['SemanticSignupAlias'] = dirname( __FILE__ ) . '/SemanticSignup.i18n.aliases.php';
+$wgExtensionMessagesFiles['SemanticSignup'] = __DIR__ . '/SemanticSignup.i18n.php';
+$wgExtensionMessagesFiles['SemanticSignupMagic'] = __DIR__ . '/SemanticSignup.i18n.magic.php';
+$wgExtensionMessagesFiles['SemanticSignupAlias'] = __DIR__ . '/SemanticSignup.i18n.aliases.php';
 
-$wgAutoloadClasses['SemanticSignupSettings'] = dirname( __FILE__ ) . '/SemanticSignup.settings.php';
-$wgAutoloadClasses['SemanticSignupHooks'] = dirname( __FILE__ ) . '/SemanticSignup.hooks.php';
-$wgAutoloadClasses['SemanticSignup'] = dirname( __FILE__ ) . '/includes/SES_Special.php';
-$wgAutoloadClasses['SES_UserAccountDataChecker'] = dirname( __FILE__ ) . '/includes/SES_Special.php';
-$wgAutoloadClasses['SES_DataChecker'] = dirname( __FILE__ ) . '/includes/SES_DataChecker.php';
-$wgAutoloadClasses['SES_UserAccountDataChecker'] = dirname( __FILE__ ) . '/includes/SES_UserAccountDataChecker.php';
-$wgAutoloadClasses['SES_SignupFields'] = dirname( __FILE__ ) . '/includes/SES_SignupFields.php';
-$wgAutoloadClasses['CreateUserFieldsTemplate'] = dirname( __FILE__ ) . '/includes/SES_SignupFields.php';
+$wgAutoloadClasses['SemanticSignupSettings'] = __DIR__ . '/SemanticSignup.settings.php';
+$wgAutoloadClasses['SemanticSignupHooks'] = __DIR__ . '/SemanticSignup.hooks.php';
+$wgAutoloadClasses['SemanticSignup'] = __DIR__ . '/includes/SES_Special.php';
+$wgAutoloadClasses['SES_UserAccountDataChecker'] = __DIR__ . '/includes/SES_Special.php';
+$wgAutoloadClasses['SES_DataChecker'] = __DIR__ . '/includes/SES_DataChecker.php';
+$wgAutoloadClasses['SES_UserAccountDataChecker'] = __DIR__ . '/includes/SES_UserAccountDataChecker.php';
+$wgAutoloadClasses['SES_SignupFields'] = __DIR__ . '/includes/SES_SignupFields.php';
+$wgAutoloadClasses['CreateUserFieldsTemplate'] = __DIR__ . '/includes/SES_SignupFields.php';
 
 $wgSpecialPages['SemanticSignup'] = 'SemanticSignup';
 
