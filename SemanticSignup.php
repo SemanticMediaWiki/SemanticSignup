@@ -60,14 +60,13 @@ $wgExtensionMessagesFiles['SemanticSignupAlias'] = __DIR__ . '/SemanticSignup.i1
 
 $wgAutoloadClasses['SemanticSignupSettings'] = __DIR__ . '/SemanticSignup.settings.php';
 $wgAutoloadClasses['SemanticSignupHooks'] = __DIR__ . '/SemanticSignup.hooks.php';
-$wgAutoloadClasses['SemanticSignup'] = __DIR__ . '/includes/SES_Special.php';
-$wgAutoloadClasses['SES_UserAccountDataChecker'] = __DIR__ . '/includes/SES_Special.php';
+$wgAutoloadClasses['SpecialSemanticSignup'] = __DIR__ . '/includes/SpecialSemanticSignup.php';
 $wgAutoloadClasses['SES_DataChecker'] = __DIR__ . '/includes/SES_DataChecker.php';
 $wgAutoloadClasses['SES_UserAccountDataChecker'] = __DIR__ . '/includes/SES_UserAccountDataChecker.php';
 $wgAutoloadClasses['SES_SignupFields'] = __DIR__ . '/includes/SES_SignupFields.php';
 $wgAutoloadClasses['CreateUserFieldsTemplate'] = __DIR__ . '/includes/SES_SignupFields.php';
 
-$wgSpecialPages['SemanticSignup'] = 'SemanticSignup';
+$wgSpecialPages['SemanticSignup'] = 'SpecialSemanticSignup';
 
 $egSemanticSignupSettings = array();
 

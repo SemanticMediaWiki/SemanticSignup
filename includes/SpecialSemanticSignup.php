@@ -1,18 +1,17 @@
 <?php
 
 /**
- * Special page that replaces the regular signup form by
- * a Semantic Forms form page that allows for signup with
- * adittional (structured) data that immediately gets entered
- * onto the user page of the new user.
+ * Special page to replace SpecialUserLogin/signup with an equivalent
+ * SemanticForms form page and allow for additional (structured) data
+ * to be collected on signup and used on the new user's userpage.
  *
- * @file SES_Special.php
+ * @file SpecialSemanticSignup.php
  * @ingroup SemanticSignup
  *
  * @author Serhii Kutnii
  * @author Jeroen De Dauw <jeroendedauw@gmail.com>
  */
-class SemanticSignup extends SpecialPage {
+class SpecialSemanticSignup extends SpecialPage {
 
 	private $mUserDataChecker = null;
 	private $mUserPageUrl = '';
