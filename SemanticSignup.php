@@ -1,22 +1,20 @@
 <?php
 /**
  * Initialization file for the Semantic Signup extension.
+ * This documenation group collects source code files belonging to SemanticSignup.
  *
- * Documentation: http://www.mediawiki.org/wiki/Extension:SemanticSignup
- * Support: http://www.mediawiki.org/wiki/Extension_talk:SemanticSignup
- * Source code:	https://gerrit.wikimedia.org/r/gitweb?p=mediawiki/extensions/SemanticSignup.git
+ * Documentation: https://www.mediawiki.org/wiki/Extension:SemanticSignup
+ * Support: https://www.mediawiki.org/wiki/Extension talk:SemanticSignup
+ * Source code: https://gerrit.wikimedia.org/r/gitweb?p=mediawiki/extensions/SemanticSignup.git
  *
  * @file SemanticSignup.php
+ * @ingroup Extensions
+ * @defgroup SemanticSignup SemanticSignup
  * @ingroup SemanticSignup
  *
  * @licence GNU GPL v3+
- * @author Jeroen De Dauw < jeroendedauw@gmail.com >
- */
-
-/**
- * This documenation group collects source code files belonging to SemanticSignup.
- *
- * @defgroup SemanticSignup SemanticSignup
+ * @link https://www.mediawiki.org/wiki/Extension:SemanticSignup
+ * @author Jeroen De Dauw <jeroendedauw@gmail.com>
  */
 
 if ( !defined( 'MEDIAWIKI' ) ) {

@@ -13,7 +13,7 @@
  * @ingroup SemanticSignup
  *
  * @licence GNU GPL v3+
- * @author Jeroen De Dauw < jeroendedauw@gmail.com >
+ * @author Jeroen De Dauw <jeroendedauw@gmail.com>
  */
 class SemanticSignupSettings {
 

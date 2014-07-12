@@ -8,7 +8,7 @@
  * @ingroup SemanticSignup
  *
  * @author Serhii Kutnii
- * @author Jeroen De Dauw < jeroendedauw@gmail.com >
+ * @author Jeroen De Dauw <jeroendedauw@gmail.com>
  */
 // @codingStandardsIgnoreFile
 
