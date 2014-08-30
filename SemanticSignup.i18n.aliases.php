@@ -66,5 +66,5 @@ $specialPageAliases['zh-hans'] = array(
 
 /** Traditional Chinese (中文（繁體）‎) */
 $specialPageAliases['zh-hant'] = array(
-	'SemanticSignup' => array( '语义注册' ),
+	'SemanticSignup' => array( '語意註冊' ),
 );
