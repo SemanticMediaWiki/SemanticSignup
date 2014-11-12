@@ -11,6 +11,6 @@
 	"ses-norealname": "真實姓名是必需的但尚未指定。",
 	"ses-userexists": "用戶已存在。",
 	"ses-emailfailed": "用於確認的電子郵件發送失敗。",
-	"ses-createforbidden": "不允許當前用戶創建帳戶。",
+	"ses-createforbidden": "不允許當前使用者建立帳號。",
 	"ses-throttlehit": "此IP位址已經超過了每天新使用者帳戶的最大數量。"
 }
