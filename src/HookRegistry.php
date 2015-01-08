@@ -52,7 +52,7 @@ class HookRegistry {
 			$signupfieldsParserDefinition = function( $parser ) {
 
 				$signupFields = new SignupFields(
-					new CreateUserFieldsTemplate()
+					new UserFieldsCreateTemplate()
 				);
 
 				return $signupFields->parser( func_get_args() );
@@ -63,6 +63,5 @@ class HookRegistry {
 			return false;
 		};
 	}
-
 
 }

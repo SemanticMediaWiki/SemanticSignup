@@ -47,14 +47,14 @@ call_user_func( function () {
 	$GLOBALS['wgAutoloadClasses']['SpecialSemanticSignup'] = __DIR__ . '/includes/SpecialSemanticSignup.php';
 	$GLOBALS['wgAutoloadClasses']['SES_DataChecker'] = __DIR__ . '/includes/SES_DataChecker.php';
 	$GLOBALS['wgAutoloadClasses']['SES_UserAccountDataChecker'] = __DIR__ . '/includes/SES_UserAccountDataChecker.php';
-	$GLOBALS['wgAutoloadClasses']['CreateUserFieldsTemplate'] = __DIR__ . '/includes/CreateUserFieldsTemplate.php';
 
 	$GLOBALS['wgSpecialPages']['SemanticSignup'] = 'SpecialSemanticSignup';
 
-	$egSemanticSignupSettings = array();
+	$GLOBALS['egSemanticSignupSettings'] = array();
 
 	$GLOBALS['wgAutoloadClasses']['\SES\HookRegistry'] = __DIR__ . '/src/HookRegistry.php';
 	$GLOBALS['wgAutoloadClasses']['\SES\SignupFields'] = __DIR__ . '/src/SignupFields.php';
+	$GLOBALS['wgAutoloadClasses']['\SES\UserFieldsCreateTemplate'] = __DIR__ . '/src/UserFieldsCreateTemplate.php';
 
 	// Finalize extension setup
 	$GLOBALS['wgExtensionFunctions'][] = function() {
