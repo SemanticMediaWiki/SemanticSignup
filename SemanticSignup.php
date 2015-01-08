@@ -43,12 +43,7 @@ call_user_func( function () {
 	$GLOBALS['wgExtensionMessagesFiles']['semanticsignup-magic'] = __DIR__ . '/SemanticSignup.i18n.magic.php';
 	$GLOBALS['wgExtensionMessagesFiles']['semanticsignup-alias'] = __DIR__ . '/SemanticSignup.i18n.aliases.php';
 
-	$GLOBALS['wgAutoloadClasses']['SemanticSignupSettings'] = __DIR__ . '/SemanticSignup.settings.php';
-	$GLOBALS['wgAutoloadClasses']['SpecialSemanticSignup'] = __DIR__ . '/includes/SpecialSemanticSignup.php';
-	$GLOBALS['wgAutoloadClasses']['SES_DataChecker'] = __DIR__ . '/includes/SES_DataChecker.php';
-	$GLOBALS['wgAutoloadClasses']['SES_UserAccountDataChecker'] = __DIR__ . '/includes/SES_UserAccountDataChecker.php';
-
-	$GLOBALS['wgSpecialPages']['SemanticSignup'] = 'SpecialSemanticSignup';
+	$GLOBALS['wgSpecialPages']['SemanticSignup'] = '\SES\SpecialSemanticSignup';
 
 	$GLOBALS['egSemanticSignupSettings'] = array();
 
@@ -56,6 +51,10 @@ call_user_func( function () {
 	$GLOBALS['wgAutoloadClasses']['SES\SignupFields'] = __DIR__ . '/src/SignupFields.php';
 	$GLOBALS['wgAutoloadClasses']['SES\UserFieldsCreateTemplate'] = __DIR__ . '/src/UserFieldsCreateTemplate.php';
 	$GLOBALS['wgAutoloadClasses']['SES\RedirectFormFinder'] = __DIR__ . '/src/RedirectFormFinder.php';
+	$GLOBALS['wgAutoloadClasses']['SES\SpecialSemanticSignup'] = __DIR__ . '/src/SpecialSemanticSignup.php';
+	$GLOBALS['wgAutoloadClasses']['SES\DataChecker'] = __DIR__ . '/src/DataChecker.php';
+	$GLOBALS['wgAutoloadClasses']['SES\UserAccountDataChecker'] = __DIR__ . '/src/UserAccountDataChecker.php';
+	$GLOBALS['wgAutoloadClasses']['SES\Settings'] = __DIR__ . '/src/Settings.php';
 
 	// Finalize extension setup
 	$GLOBALS['wgExtensionFunctions'][] = function() {

@@ -2,8 +2,6 @@
 
 namespace SES;
 
-use SemanticSignupSettings as Settings;
-
 use OutputPage;
 use Title;
 use SpecialPage;
