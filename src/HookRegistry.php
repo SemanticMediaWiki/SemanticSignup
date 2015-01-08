@@ -28,20 +28,14 @@ class HookRegistry {
 		/**
 		 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserCreateForm
 		 */
-		$wgHooks['UserCreateForm'][] = function ( $template ) {
+		$wgHooks['UserCreateForm'][] = function ( &$template ) {
 
-			if ( Title::newFromText( Settings::get( 'formName' ), SF_NS_FORM ) === null ) {
-				return true;
-			}
-
-			$url = htmlspecialchars( SpecialPage::getTitleFor( 'SemanticSignup' )->getFullURL() );
-
-			wfRunHooks( 'SemanticSignupBeforeRedirect', array( &$url ) );
-
+			//FIXME
 			global $wgOut;
-			$wgOut->redirect( $url );
 
-			return false;
+			$redirectFormFinder = new RedirectFormFinder();
+
+			return $redirectFormFinder->redirectToUrl( $wgOut );
 		};
 
 		/**

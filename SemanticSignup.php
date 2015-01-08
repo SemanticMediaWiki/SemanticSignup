@@ -52,9 +52,10 @@ call_user_func( function () {
 
 	$GLOBALS['egSemanticSignupSettings'] = array();
 
-	$GLOBALS['wgAutoloadClasses']['\SES\HookRegistry'] = __DIR__ . '/src/HookRegistry.php';
-	$GLOBALS['wgAutoloadClasses']['\SES\SignupFields'] = __DIR__ . '/src/SignupFields.php';
-	$GLOBALS['wgAutoloadClasses']['\SES\UserFieldsCreateTemplate'] = __DIR__ . '/src/UserFieldsCreateTemplate.php';
+	$GLOBALS['wgAutoloadClasses']['SES\HookRegistry'] = __DIR__ . '/src/HookRegistry.php';
+	$GLOBALS['wgAutoloadClasses']['SES\SignupFields'] = __DIR__ . '/src/SignupFields.php';
+	$GLOBALS['wgAutoloadClasses']['SES\UserFieldsCreateTemplate'] = __DIR__ . '/src/UserFieldsCreateTemplate.php';
+	$GLOBALS['wgAutoloadClasses']['SES\RedirectFormFinder'] = __DIR__ . '/src/RedirectFormFinder.php';
 
 	// Finalize extension setup
 	$GLOBALS['wgExtensionFunctions'][] = function() {

@@ -44,4 +44,9 @@ class SemanticSignupSettings {
 		return array_key_exists( $settingName, $settings ) ? $settings[$settingName] : null;
 	}
 
+	public static function set( $key, $value ) {
+		$settings = self::getSettings();
+		$settings[ $key ] = $value;
+	}
+
 }

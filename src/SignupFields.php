@@ -49,9 +49,14 @@ class SignupFields {
 
 		global $wgLoginLanguageSelector;
 		# Prepare language selection links as needed
-		if ( $wgLoginLanguageSelector ) {
-			$this->userFieldsCreateTemplate->set( 'languages', $this->makeLanguageSelector() ); // FIXME: $this is not accessible in a static context
-		}
+
+		// FIXME
+		//
+		// Plain incorrect, makeLanguageSelector is not part of this class
+		// see LoginForm::makeLanguageSelector
+		// if ( $wgLoginLanguageSelector ) {
+		//	$this->userFieldsCreateTemplate->set( 'languages', $this->makeLanguageSelector() ); // FIXME: $this is not accessible in a static context
+		// }
 
 		// Give authentication and captcha plugins a chance to modify the form
 		$type = 'signup';
