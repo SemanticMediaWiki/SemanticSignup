@@ -48,7 +48,8 @@ call_user_func( function () {
 	$GLOBALS['egSemanticSignupSettings'] = array();
 
 	$GLOBALS['wgAutoloadClasses']['SES\HookRegistry'] = __DIR__ . '/src/HookRegistry.php';
-	$GLOBALS['wgAutoloadClasses']['SES\SignupFields'] = __DIR__ . '/src/SignupFields.php';
+	$GLOBALS['wgAutoloadClasses']['SES\ParserFunctionFactory'] = __DIR__ . '/src/ParserFunctionFactory.php';
+	$GLOBALS['wgAutoloadClasses']['SES\SignupFieldsParserFunction'] = __DIR__ . '/src/SignupFieldsParserFunction.php';
 	$GLOBALS['wgAutoloadClasses']['SES\UserFieldsCreateTemplate'] = __DIR__ . '/src/UserFieldsCreateTemplate.php';
 	$GLOBALS['wgAutoloadClasses']['SES\RedirectFormFinder'] = __DIR__ . '/src/RedirectFormFinder.php';
 	$GLOBALS['wgAutoloadClasses']['SES\SpecialSemanticSignup'] = __DIR__ . '/src/SpecialSemanticSignup.php';

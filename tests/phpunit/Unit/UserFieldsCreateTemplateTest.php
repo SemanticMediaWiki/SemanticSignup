@@ -24,7 +24,26 @@ class UserFieldsCreateTemplateTest extends \PHPUnit_Framework_TestCase {
 		);
 	}
 
-	public function testExecute() {
+	public function testExecuteForEmptyData() {
+
+		$instance = new UserFieldsCreateTemplate();
+
+		$outputPage = $this->getMockBuilder( '\OutputPage' )
+			->disableOriginalConstructor()
+			->getMock();
+
+		$GLOBALS['wgOut'] = $outputPage;
+
+		ob_start();
+		$instance->execute();
+		$text = ob_get_clean();
+
+		$this->assertEmpty(
+			$text
+		);
+	}
+
+	public function testExecuteForFalseUseData() {
 
 		$instance = new UserFieldsCreateTemplate();
 
@@ -49,6 +68,11 @@ class UserFieldsCreateTemplateTest extends \PHPUnit_Framework_TestCase {
 
 		$this->assertInternalType(
 			'string',
+			$text
+		);
+
+		$this->assertContains(
+			'http:://example.org',
 			$text
 		);
 	}

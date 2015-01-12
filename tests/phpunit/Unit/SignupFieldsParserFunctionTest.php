@@ -2,10 +2,10 @@
 
 namespace SES\Tests;
 
-use SES\SignupFields;
+use SES\SignupFieldsParserFunction;
 
 /**
- * @covers \SES\SignupFields
+ * @covers \SES\SignupFieldsParserFunction
  *
  * @group semantic-signup
  *
@@ -14,7 +14,7 @@ use SES\SignupFields;
  *
  * @author mwjames
  */
-class SignupFieldsTest extends \PHPUnit_Framework_TestCase {
+class SignupFieldsParserFunctionTest extends \PHPUnit_Framework_TestCase {
 
 	public function testCanConstruct() {
 
@@ -23,8 +23,8 @@ class SignupFieldsTest extends \PHPUnit_Framework_TestCase {
 			->getMock();
 
 		$this->assertInstanceOf(
-			'\SES\SignupFields',
-			new SignupFields( $userFieldsCreateTemplate )
+			'\SES\SignupFieldsParserFunction',
+			new SignupFieldsParserFunction( $userFieldsCreateTemplate )
 		);
 	}
 
@@ -34,7 +34,7 @@ class SignupFieldsTest extends \PHPUnit_Framework_TestCase {
 			->disableOriginalConstructor()
 			->getMock();
 
-		$instance = new SignupFields( $userFieldsCreateTemplate );
+		$instance = new SignupFieldsParserFunction( $userFieldsCreateTemplate );
 
 		$this->assertInternalType(
 			'array',

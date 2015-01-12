@@ -10,7 +10,7 @@ use Parser;
  *
  * @author Serhii Kutnii
  */
-class SignupFields {
+class SignupFieldsParserFunction {
 
 	/**
 	 * @var UserFieldsCreateTemplate

@@ -26,6 +26,10 @@ class UserFieldsCreateTemplate extends QuickTemplate {
 	function execute() {
 		global $sfgTabIndex;
 
+		if ( !$this->haveData( 'header' ) ) {
+			return '';
+		}
+
 	?>
 <div id="userlogin" style="float:none;">
 

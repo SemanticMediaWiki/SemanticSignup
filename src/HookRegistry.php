@@ -41,18 +41,13 @@ class HookRegistry {
 		 */
 		$wgHooks['ParserFirstCallInit'][] = function ( $parser ) {
 
-			$signupfieldsParserDefinition = function( $parser ) {
+			$parserFunctionFactory = new ParserFunctionFactory();
 
-				$signupFields = new SignupFields(
-					new UserFieldsCreateTemplate()
-				);
+			list( $name, $definition, $flag ) = $parserFunctionFactory->newSignupFieldsParserFunction();
 
-				return $signupFields->parser( func_get_args() );
-			};
+			$parser->setFunctionHook( $name, $definition, $flag );
 
-			$parser->setFunctionHook( 'signupfields', $signupfieldsParserDefinition );
-
-			return false;
+			return true;
 		};
 	}
 
