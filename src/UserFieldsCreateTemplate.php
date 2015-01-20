@@ -1,13 +1,18 @@
 <?php
-/**
- * Created on 6 Jan 2009 by Serhii Kutnii
- */
+
+namespace SES;
+
+use QuickTemplate;
 
 /**
  * Borrowed from standard UsercreateTemplate. Some minor changes have been made
+ *
+ * @license GNU GPL v3+
+ * @since 1.0
+ *
+ * @author Serhii Kutnii
  */
-
-class CreateUserFieldsTemplate extends QuickTemplate {
+class UserFieldsCreateTemplate extends QuickTemplate {
 
 	function addInputItem( $name, $value, $type, $msg ) {
 		$this->data['extraInput'][] = array(
@@ -20,6 +25,10 @@ class CreateUserFieldsTemplate extends QuickTemplate {
 
 	function execute() {
 		global $sfgTabIndex;
+
+		if ( !$this->haveData( 'header' ) ) {
+			return '';
+		}
 
 	?>
 <div id="userlogin" style="float:none;">

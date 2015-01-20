@@ -1,5 +1,7 @@
 <?php
 
+namespace SES;
+
 /**
  * File defining the settings for the SemanticSignup extension.
  * More info can be found at http://www.mediawiki.org/wiki/Extension:SemanticSignup#Settings
@@ -9,13 +11,10 @@
  *
  * @since 0.3
  *
- * @file SemanticSignup.settings.php
- * @ingroup SemanticSignup
- *
- * @licence GNU GPL v3+
+ * @license GNU GPL v3+
  * @author Jeroen De Dauw <jeroendedauw@gmail.com>
  */
-class SemanticSignupSettings {
+class Settings {
 
 	protected static function getDefaultSettings() {
 		return array(
@@ -42,6 +41,11 @@ class SemanticSignupSettings {
 	public static function get( $settingName ) {
 		$settings = self::getSettings();
 		return array_key_exists( $settingName, $settings ) ? $settings[$settingName] : null;
+	}
+
+	public static function set( $key, $value ) {
+		$settings = self::getSettings();
+		$settings[ $key ] = $value;
 	}
 
 }

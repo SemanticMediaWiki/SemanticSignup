@@ -1,12 +1,22 @@
 <?php
 
+namespace SES;
+
+use SpecialPage;
+use Exception;
+use SiteStatsUpdate;
+use Sanitizer;
+use Title;
+use Article;
+use User;
+
 /**
  * Special page to replace SpecialUserLogin/signup with an equivalent
  * SemanticForms form page and allow for additional (structured) data
  * to be collected on signup and used on the new user's userpage.
  *
- * @file SpecialSemanticSignup.php
- * @ingroup SemanticSignup
+ * @license GNU GPL v3+
+ * @since 1.0
  *
  * @author Serhii Kutnii
  * @author Jeroen De Dauw <jeroendedauw@gmail.com>
@@ -20,7 +30,7 @@ class SpecialSemanticSignup extends SpecialPage {
 		parent::__construct( 'SemanticSignup' );
 		$this->mIncludable = false;
 
-		$this->mUserDataChecker = new SES_UserAccountDataChecker();
+		$this->mUserDataChecker = new UserAccountDataChecker();
 	}
 
 	private function userSignup() {
@@ -125,7 +135,7 @@ class SpecialSemanticSignup extends SpecialPage {
 	}
 
 	private function createUserPage() {
-		$form_title = Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM );
+		$form_title = Title::newFromText( Settings::get( 'formName' ), SF_NS_FORM );
 		$form = new Article( $form_title );
 		$form_definition = $form->getContent();
 
@@ -155,10 +165,10 @@ class SpecialSemanticSignup extends SpecialPage {
 		$old_user = null;
 		if ( $wgUser->isAnon() ) {
 			$old_user = $wgUser;
-			$wgUser = User::newFromName( SemanticSignupSettings::get( 'botName' ) );
+			$wgUser = User::newFromName( Settings::get( 'botName' ) );
 		}
 
-		$form_title = Title::newFromText( SemanticSignupSettings::get( 'formName' ), SF_NS_FORM );
+		$form_title = Title::newFromText( Settings::get( 'formName' ), SF_NS_FORM );
 		$form = new Article( $form_title );
 		$form_definition = $form->getContent();
 
@@ -224,4 +234,3 @@ END;
 	}
 
 }
- 
