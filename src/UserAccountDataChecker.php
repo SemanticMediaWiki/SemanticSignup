@@ -39,7 +39,7 @@ class UserAccountDataChecker extends DataChecker {
 		global $wgAuth;
 
 		if ( !$wgAuth->validDomain( $this->mDomain ) )
-			$this->error( wfMsg( 'wrongpassword' ) );
+			$this->error( wfMessage( 'wrongpassword' )->text() );
 	}
 
 	public function checkDomainUser() {
@@ -47,14 +47,14 @@ class UserAccountDataChecker extends DataChecker {
 
 		if ( ( 'local' != $this->mDomain ) && ( '' != $this->mDomain )
 			&& !$wgAuth->canCreateAccounts() && ( !$wgAuth->userExists( $this->mName ) || !$wgAuth->authenticate( $this->mName, $this->mPassword ) ) )
-				$this->error( wfMsg( 'wrongpassword' ) );
+				$this->error( wfMessage( 'wrongpassword' )->text() );
 	}
 
 	public function checkCreatePermissions() {
 		global $wgUser;
 
 		if ( !$wgUser->isAllowed( 'createaccount' ) || $wgUser->isBlockedFromCreateAccount() )
-			$this->error( wfMsg( 'ses-createforbidden' ) );
+			$this->error( wfMessage( 'ses-createforbidden' )->text() );
 	}
 
 	public function checkSorbs() {
@@ -63,26 +63,26 @@ class UserAccountDataChecker extends DataChecker {
 		$ip = $wgRequest->getIP();
 		if ( $wgEnableSorbs && !in_array( $ip, $wgProxyWhitelist ) &&
 		  $wgUser->inSorbsBlacklist( $ip ) )
-		 	$this->error( wfMsg( 'sorbs_create_account_reason' ) );
+		 	$this->error( wfMessage( 'sorbs_create_account_reason' )->text() );
 	}
 
 	public function checkUserExists() {
 		if ( $this->mUser->idForName() )
-			$this->error( wfMsg( 'ses-userexists' ) );
+			$this->error( wfMessage( 'ses-userexists' )->text() );
 	}
 
 	public function checkPasswordLength() {
 		if ( !$this->mUser->isValidPassword( $this->mPassword ) )
 		{
 			global $wgMinimalPasswordLength;
-			$this->error( wfMsgExt( 'passwordtooshort', array( 'parsemag' ), $wgMinimalPasswordLength ) );
+			$this->error( wfMessage( 'passwordtooshort' )->numParams( $wgMinimalPasswordLength )->text() );
 		}
 	}
 
 	public function checkEmailValidity() {
 		global $wgEnableEmail;
 		if ( $wgEnableEmail && $this->mEmail !== '' && !Sanitizer::validateEmail( $this->mEmail ) ) {
-			$this->error( wfMsg( 'invalidemailaddress' ) );
+			$this->error( wfMessage( 'invalidemailaddress' )->text() );
 		}
 	}
 
@@ -91,7 +91,7 @@ class UserAccountDataChecker extends DataChecker {
 		$name = trim( $this->mUsername );
 		$this->mUser = User::newFromName( $name, 'creatable' );
 		if ( !$this->mUser ) {
-			$this->error( wfMsg( 'ses-noname' ) );
+			$this->error( wfMessage( 'ses-noname' )->text() );
 		}
 
 		global $sesRealNameRequired;
@@ -100,7 +100,7 @@ class UserAccountDataChecker extends DataChecker {
 		$this->mPassword = $this->getUserDataValue( 'wpPassword' );
 		$retype = $this->getUserDataValue( 'wpRetype' );
 		if ( strcmp( $this->mPassword, $retype ) )
-			$this->error( wfMsg( 'ses-nopwdmatch' ) );
+			$this->error( wfMessage( 'ses-nopwdmatch' )->text() );
 
 		$this->mDomain = $this->getUserDataValue( 'wpDomain' );
 
