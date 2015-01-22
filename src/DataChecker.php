@@ -47,7 +47,7 @@ abstract class DataChecker {
  		$value = $wgRequest->getText( $id );
 
  		if ( $err_message_id && !$value )
- 			$this->error( wfMsg( $err_message_id ) );
+ 			$this->error( wfMessage( $err_message_id )->plain() );
 
  		return $value;
  	}
