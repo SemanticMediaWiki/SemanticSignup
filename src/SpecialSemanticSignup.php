@@ -71,7 +71,7 @@ class SpecialSemanticSignup extends SpecialPage {
 			}
 
 			if ( $value > $wgAccountCreationThrottle ) {
-				throw new Exception( wfMsg( 'ses-throttlehit' ) );
+				throw new Exception( wfMessage( 'ses-throttlehit' )->text() );
 			}
 		}
 
@@ -119,7 +119,7 @@ class SpecialSemanticSignup extends SpecialPage {
 			$status = $user->sendConfirmationMail();
 
 			if ( !$status->isGood() ) {
-				throw new Exception( wfMsg( 'ses-emailfailed' ) . "\n" . $status->getMessage() );
+				throw new Exception( wfMessage( 'ses-emailfailed' )->text() . "\n" . $status->getMessage() );
 			}
 		}
 
