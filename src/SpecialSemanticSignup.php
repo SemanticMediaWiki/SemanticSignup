@@ -119,7 +119,7 @@ class SpecialSemanticSignup extends SpecialPage {
 			$status = $user->sendConfirmationMail();
 
 			if ( !$status->isGood() ) {
-				throw new Exception( wfMessage( 'ses-emailfailed' )->escaped() . "\n" . $status->getMessage() );
+				throw new Exception( wfMessage( 'ses-emailfailed' )->text() . "\n" . $status->getMessage() );
 			}
 		}
 
