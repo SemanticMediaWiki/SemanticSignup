@@ -1,6 +1,5 @@
 # Semantic Signup
 
-[![Build Status](https://secure.travis-ci.org/SemanticMediaWiki/SemanticSignup.svg?branch=master)](http://travis-ci.org/SemanticMediaWiki/SemanticSignup)
 [![Latest Stable Version](https://poser.pugx.org/mediawiki/semantic-signup/version.png)](https://packagist.org/packages/mediawiki/semantic-signup)
 [![Packagist download count](https://poser.pugx.org/mediawiki/semantic-signup/d/total.png)](https://packagist.org/packages/mediawiki/semantic-signup)
 [![Dependency Status](https://www.versioneye.com/php/mediawiki:semantic-signup/badge.png)](https://www.versioneye.com/php/mediawiki:semantic-signup)
