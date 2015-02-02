@@ -169,6 +169,12 @@ class SpecialSemanticSignup extends SpecialPage {
 		}
 
 		$form_title = Title::newFromText( Settings::get( 'formName' ), SF_NS_FORM );
+
+		if ( $form_title === null ) {
+			$wgOut->addHTML( wfMessage( 'ses-noformname' )->text() );
+			return true;
+		}
+
 		$form = new Article( $form_title );
 		$form_definition = $form->getContent();
 

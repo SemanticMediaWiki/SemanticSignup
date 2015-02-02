@@ -8,6 +8,7 @@
     "semanticsignup": "Semantic Signup",
     "ses-desc": "A MediaWiki extension built on top of Semantic Forms allowing to populate a user page with semantic data at signup time",
     "ses-nousername": "Username has not been specified.",
+    "ses-noformname": "Form has not been specified.",
     "ses-nopwdmatch": "Password and password confirmation do not match.",
     "ses-norealname": "Real name is required but has not been specified.",
     "ses-userexists": "User already exists.",
