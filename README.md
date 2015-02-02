@@ -62,4 +62,5 @@ but can also be executed using `composer phpunit` from the extension base direct
 
 [gpl-licence]: https://www.gnu.org/copyleft/gpl.html
 [smw]: https://github.com/SemanticMediaWiki/SemanticMediaWiki
+[sf]: https://www.mediawiki.org/wiki/Extension:Semantic_Forms
 [travis]: https://travis-ci.org/SemanticMediaWiki/SemanticSignup
