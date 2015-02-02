@@ -48,6 +48,11 @@ class ParserFunctionFactoryTest extends \PHPUnit_Framework_TestCase {
 			$definition
 		);
 
+		$this->assertEquals(
+			0,
+			$flag
+		);
+
 		$this->assertNotEmpty(
 			call_user_func_array( $definition, array( $parser ) )
 		);

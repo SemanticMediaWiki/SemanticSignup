@@ -28,7 +28,7 @@ class ParserFunctionFactory {
 			return $signupFieldsParserFunction->parse( func_get_args() );
 		};
 
-		return array( 'signupfields', $signupfieldsParserDefinition, Parser::SFH_NO_HASH );
+		return array( 'signupfields', $signupfieldsParserDefinition, 0 );
 	}
 
 }
