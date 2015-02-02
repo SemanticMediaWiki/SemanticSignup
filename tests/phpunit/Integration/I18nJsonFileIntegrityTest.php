@@ -6,7 +6,6 @@ use SMW\Tests\Utils\UtilityFactory;
 
 /**
  * @group semantic-signup
- *
  * @group medium
  *
  * @license GNU GPL v2+
@@ -37,7 +36,7 @@ class I18nJsonFileIntegrityTest extends \PHPUnit_Framework_TestCase {
 	public function i18nFileProvider() {
 
 		$provider = array();
-		$location = $GLOBALS['wgMessagesDirs']['semanticsignup'];
+		$location = $GLOBALS['wgMessagesDirs']['semantic-signup'];
 
 		$bulkFileProvider = UtilityFactory::getInstance()->newBulkFileProvider( $location );
 		$bulkFileProvider->searchByFileExtension( 'json' );

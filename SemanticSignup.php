@@ -10,19 +10,26 @@ use SES\HookRegistry;
  * @author Jeroen De Dauw <jeroendedauw@gmail.com>
  *
  * @defgroup SES SemanticSignup
+ */
+if ( !defined( 'MEDIAWIKI' ) ) {
+	die( 'This file is part of the SemanticSignup extension, it is not a valid entry point.' );
+}
+
+if ( version_compare( $GLOBALS[ 'wgVersion' ], '1.19', 'lt' ) ) {
+	die( '<b>Error:</b> This version of <a href="https://github.com/SemanticMediaWiki/SemanticSignup/">SemanticSignup</a> is only compatible with MediaWiki 1.19 or above. You need to upgrade MediaWiki first.' );
+}
+
+if ( defined( 'SES_VERSION' ) ) {
+	// Do not initialize more than once.
+	return 1;
+}
+
+define( 'SES_VERSION', '1.0-alpha' );
+
+/**
  * @codeCoverageIgnore
  */
 call_user_func( function () {
-
-	if ( !defined( 'MEDIAWIKI' ) ) {
-		die( 'This file is part of the SemanticSignup extension, it is not a valid entry point.' );
-	}
-
-	if ( version_compare( $GLOBALS[ 'wgVersion' ], '1.19', 'lt' ) ) {
-		die( '<b>Error:</b> This version of <a href="https://github.com/SemanticMediaWiki/SemanticSignup/">SemanticSignup</a> is only compatible with MediaWiki 1.19 or above. You need to upgrade MediaWiki first.' );
-	}
-
-	define( 'SES_VERSION', '1.0-alpha' );
 
 	// Register extension info
 	$GLOBALS[ 'wgExtensionCredits' ][ 'semantic' ][ ] = array(
@@ -38,10 +45,10 @@ call_user_func( function () {
 		'descriptionmsg' => 'ses-desc'
 	);
 
-	$GLOBALS['wgMessagesDirs']['semanticsignup'] = __DIR__ . '/i18n';
-	$GLOBALS['wgExtensionMessagesFiles']['semanticsignup'] = __DIR__ . '/SemanticSignup.i18n.php';
-	$GLOBALS['wgExtensionMessagesFiles']['semanticsignup-magic'] = __DIR__ . '/SemanticSignup.i18n.magic.php';
-	$GLOBALS['wgExtensionMessagesFiles']['semanticsignup-alias'] = __DIR__ . '/SemanticSignup.i18n.aliases.php';
+	$GLOBALS['wgMessagesDirs']['semantic-signup'] = __DIR__ . '/i18n';
+	$GLOBALS['wgExtensionMessagesFiles']['semantic-signup'] = __DIR__ . '/SemanticSignup.i18n.php';
+	$GLOBALS['wgExtensionMessagesFiles']['semantic-signup-magic'] = __DIR__ . '/SemanticSignup.i18n.magic.php';
+	$GLOBALS['wgExtensionMessagesFiles']['semantic-signup-alias'] = __DIR__ . '/SemanticSignup.i18n.aliases.php';
 
 	$GLOBALS['wgSpecialPages']['SemanticSignup'] = '\SES\SpecialSemanticSignup';
 

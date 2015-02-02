@@ -17,7 +17,7 @@ class ParserFunctionFactory {
 	 *
 	 * @return array
 	 */
-	public function newSignupFieldsParserFunction() {
+	public function newSignupFieldsParserFunctionDefinition() {
 
 		$signupfieldsParserDefinition = function( $parser ) {
 

@@ -43,7 +43,7 @@ class HookRegistry {
 
 			$parserFunctionFactory = new ParserFunctionFactory();
 
-			list( $name, $definition, $flag ) = $parserFunctionFactory->newSignupFieldsParserFunction();
+			list( $name, $definition, $flag ) = $parserFunctionFactory->newSignupFieldsParserFunctionDefinition();
 
 			$parser->setFunctionHook( $name, $definition, $flag );
 

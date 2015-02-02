@@ -36,7 +36,7 @@ class ParserFunctionFactoryTest extends \PHPUnit_Framework_TestCase {
 
 		$instance = new ParserFunctionFactory();
 
-		list( $name, $definition, $flag ) = $instance->newSignupFieldsParserFunction();
+		list( $name, $definition, $flag ) = $instance->newSignupFieldsParserFunctionDefinition();
 
 		$this->assertEquals(
 			'signupfields',
