@@ -25,7 +25,14 @@ class UserFieldsCreateTemplate extends QuickTemplate {
 
 	function execute() {
 		global $sfgTabIndex;
-		global $wgOut; /* No other way to access http://www.mediawiki.org/wiki/Manual:$wgOut */
+		
+		if ( version_compare( $GLOBALS[ 'wgVersion' ], '1.25', 'lt' ) ) {
+			/* In versions lower than MW 1.25, no other way http://www.mediawiki.org/wiki/Manual:$wgOut */
+			global $wgOut;
+		} else {
+			$wgOut = $this->getSkin()->getOutput();
+		}
+
 		$wgOut->addModules( 'ext.semanticforms.main' );
 
 	?>
