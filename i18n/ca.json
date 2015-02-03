@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toniher"
+		]
+	},
+	"semanticsignup": "Registre semàntic",
+	"ses-desc": "Una extensió de MediaWiki que funciona sobre Semantic Forms per permetre crear pàgines d'usuari amb dades semàntiques en el moment de registre",
+	"ses-nousername": "No s'ha especificat el nom d'usuari.",
+	"ses-nopwdmatch": "La contrasenya i la confirmació de contrasenya no coincideixen.",
+	"ses-norealname": "Cal un nom real per no s'ha especificat.",
+	"ses-userexists": "L'usuari ja existeix.",
+	"ses-emailfailed": "L'enviament del correu de confirmació ha fallat.",
+	"ses-createforbidden": "L'usuari actual no té permisos per crear comptes.",
+	"ses-throttlehit": "Des d'aquesta IP s'ha excedit el nombre màxim de nous usuaris per dia."
+}
