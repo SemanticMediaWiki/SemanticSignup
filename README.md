@@ -64,3 +64,4 @@ but can also be executed using `composer phpunit` from the extension base direct
 [smw]: https://github.com/SemanticMediaWiki/SemanticMediaWiki
 [sf]: https://www.mediawiki.org/wiki/Extension:Semantic_Forms
 [travis]: https://travis-ci.org/SemanticMediaWiki/SemanticSignup
+[composer]: https://getcomposer.org/
