@@ -25,17 +25,14 @@ class UserFieldsCreateTemplate extends QuickTemplate {
 
 	function execute() {
 		global $sfgTabIndex;
-
-		if ( !$this->haveData( 'header' ) ) {
-			return '';
-		}
+		global $wgOut; /* No other way to access http://www.mediawiki.org/wiki/Manual:$wgOut */
+		$wgOut->addModules( 'ext.semanticforms.main' );
 
 	?>
 <div id="userlogin" style="float:none;">
 
 	<h2><?php $this->msg( 'createaccount' ) ?></h2>
 	<p id="userloginlink"><?php $this->html( 'link' ) ?></p>
-	<?php $this->html( 'header' ); /* pre-table point for form plugins... */ ?>
 	<?php if ( @$this->haveData( 'languages' ) ) { ?><div id="languagelinks"><p><?php $this->html( 'languages' ); ?></p></div><?php } ?>
 	<table>
 		<tr>
