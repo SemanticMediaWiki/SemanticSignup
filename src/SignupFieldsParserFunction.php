@@ -34,12 +34,18 @@ class SignupFieldsParserFunction {
 	public function parse( $arguments ) {
 
 		$parser = array_shift( $arguments );
-		global $wgEnableEmail, $wgAllowRealName, $wgEmailConfirmToEdit, $wgAuth, $wgUser;
+		global $wgEnableEmail, $wgHiddenPrefs, $wgEmailConfirmToEdit, $wgAuth, $wgUser;
+
+		// Deprecated $wgAllowRealName https://www.mediawiki.org/wiki/Manual:$wgAllowRealName
+		$allowRealName = true;
+		if ( in_array( 'realname', $wgHiddenPrefs ) ) {
+			$allowRealName = false;
+		}
 
 		$this->userFieldsCreateTemplate->set( 'link', '' ); // TODO
 		$this->userFieldsCreateTemplate->set( 'email', '' ); // TODO
 		$this->userFieldsCreateTemplate->set( 'createemail', $wgEnableEmail && $wgUser->isLoggedIn() );
-		$this->userFieldsCreateTemplate->set( 'userealname', $wgAllowRealName );
+		$this->userFieldsCreateTemplate->set( 'userealname', $allowRealName );
 		$this->userFieldsCreateTemplate->set( 'useemail', $wgEnableEmail );
 		$this->userFieldsCreateTemplate->set( 'emailrequired', $wgEmailConfirmToEdit );
 		$this->userFieldsCreateTemplate->set( 'canreset', $wgAuth->allowPasswordChange() );
