@@ -25,17 +25,21 @@ class UserFieldsCreateTemplate extends QuickTemplate {
 
 	function execute() {
 		global $sfgTabIndex;
-
-		if ( !$this->haveData( 'header' ) ) {
-			return '';
+		
+		if ( version_compare( $GLOBALS[ 'wgVersion' ], '1.25', 'lt' ) ) {
+			/* In versions lower than MW 1.25, no other way http://www.mediawiki.org/wiki/Manual:$wgOut */
+			global $wgOut;
+		} else {
+			$wgOut = $this->getSkin()->getOutput();
 		}
+
+		$wgOut->addModules( 'ext.semanticforms.main' );
 
 	?>
 <div id="userlogin" style="float:none;">
 
 	<h2><?php $this->msg( 'createaccount' ) ?></h2>
 	<p id="userloginlink"><?php $this->html( 'link' ) ?></p>
-	<?php $this->html( 'header' ); /* pre-table point for form plugins... */ ?>
 	<?php if ( @$this->haveData( 'languages' ) ) { ?><div id="languagelinks"><p><?php $this->html( 'languages' ); ?></p></div><?php } ?>
 	<table>
 		<tr>
