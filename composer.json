@@ -6,7 +6,10 @@
 		"smw",
 		"semantic mediawiki",
 		"semantic forms",
-		"mediawiki"
+		"mediawiki",
+		"account creation",
+		"structured registration",
+		"workflow"
 	],
 	"homepage": "https://semantic-mediawiki.org/wiki/Extension:SemanticSignup",
 	"license": "GPL-3.0+",
