@@ -26,12 +26,8 @@ class UserFieldsCreateTemplate extends QuickTemplate {
 	function execute() {
 		global $sfgTabIndex;
 		
-		if ( version_compare( $GLOBALS[ 'wgVersion' ], '1.25', 'lt' ) ) {
-			/* In versions lower than MW 1.25, no other way http://www.mediawiki.org/wiki/Manual:$wgOut */
-			global $wgOut;
-		} else {
-			$wgOut = $this->getSkin()->getOutput();
-		}
+		/* We should find way to deprecate :( http://www.mediawiki.org/wiki/Manual:$wgOut */
+		global $wgOut;
 
 		$wgOut->addModules( 'ext.semanticforms.main' );
 
