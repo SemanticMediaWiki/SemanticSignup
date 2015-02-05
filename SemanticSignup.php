@@ -43,10 +43,11 @@ call_user_func( function () {
 		'author' => array(
 			'Serg Kutny',
 			'[https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw Jeroen De Dauw]',
-			'[https://www.mediawiki.org/wiki/User:Nischayn22 Nischay Nahata]',
+			'...'
 		),
 		'url' => 'https://www.mediawiki.org/wiki/Extension:SemanticSignup',
-		'descriptionmsg' => 'ses-desc'
+		'descriptionmsg' => 'ses-desc',
+		'license-name' => 'GPL-3.0+'
 	);
 
 	$GLOBALS['wgMessagesDirs']['semantic-signup'] = __DIR__ . '/i18n';
