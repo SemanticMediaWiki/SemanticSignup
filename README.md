@@ -38,8 +38,12 @@ Whenever the user registration form is requested the user is redirected
 to the Semantic Signup special page where he has to enter the usual
 account data and some additional information into a semantic form.
 When the form is submitted, the usual account information is used
-to register the new user account and a new User:<Username> page is
-populated with the additional data.
+to register the new user account and a new "User:Username" page is
+created and populated with the additional data provided via the form.
+
+For details on how to adjust the settings and prepare the required form and
+template, please have a look at the [configuration guideline](CONFIGURATION.md).
+
 
 ## Contribution and support
 
