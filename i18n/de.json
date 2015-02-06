@@ -1,12 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kghbln"
+			"Kghbln",
+			"Metalhead64"
 		]
 	},
 	"semanticsignup": "Semantische Anmeldung",
 	"ses-desc": "Ermöglicht das automatische Erstellen einer aus semantischen Daten bestehenden Benutzerseite, die während der Registrierung erfasst werden",
 	"ses-nousername": "Der Benutzername wurde nicht angegeben.",
+	"ses-noformname": "Das Formular wurde nicht angegeben.",
 	"ses-nopwdmatch": "Das Passwort und die Passwortbestätigung stimmen nicht überein.",
 	"ses-norealname": "Der bürgerliche Name ist erforderlich, wurde aber nicht angegeben.",
 	"ses-userexists": "Der Benutzer ist bereits vorhanden.",
