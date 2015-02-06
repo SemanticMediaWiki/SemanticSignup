@@ -9,7 +9,7 @@ These are the release notes for the SemanticSignup extension.
 * Added compatibility with PHP 5.4 - 5.6 and with HHVM
 * #1 Fixed class `SemanticSignup` not found
 * #2 Added basic tests, fixed null `formName` error, and added a check for `botName` to exists and to have the correct rights (`createaccount`) (164576f)
-* #3 Removde depreciated `wfMsg` 
+* #3 Removed deprecated `wfMsg` references
 * #8 Deprecated usage of `wgAllowRealName`
 * #10 Fixed JS registration of SF module
 
