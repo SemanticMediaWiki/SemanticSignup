@@ -169,10 +169,15 @@ class SpecialSemanticSignup extends SpecialPage {
 			$wgUser = User::newFromName( Settings::get( 'botName' ) );
 		}
 
+		if ( !$wgUser instanceOf User || !$wgUser->isAllowedToCreateAccount() || $wgUser->idForName() == 0 ) {
+			$wgOut->addHTML( '<div class="error errorbox">' . wfMessage( 'ses-nobotname' )->text() . '</div>' );
+			return true;
+		}
+
 		$form_title = Title::newFromText( Settings::get( 'formName' ), SF_NS_FORM );
 
 		if ( $form_title === null ) {
-			$wgOut->addHTML( wfMessage( 'ses-noformname' )->text() );
+			$wgOut->addHTML( '<div class="error errorbox">' . wfMessage( 'ses-noformname' )->text() . '</div>' );
 			return true;
 		}
 
