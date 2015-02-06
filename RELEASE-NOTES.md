@@ -1,8 +1,11 @@
 These are the release notes for the SemanticSignup extension.
-	
-Extension page on mediawiki.org:
-https://www.mediawiki.org/wiki/Extension:SemanticSignup
 
+## Version 1.0 (dev)
+
+* Installation is now done via Composer
+* Added compatibility with MediaWiki 1.19 - 1.25
+* Added compatibility with Semantic Forms 3.x
+* Added compatibility with PHP 5.4 - 5.6 and with HHVM
 
 ## Version 0.4 (2013-08-02)
 
