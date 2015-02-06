@@ -155,7 +155,7 @@ class SpecialSemanticSignup extends SpecialPage {
 	}
 
 	private function printForm() {
-		global $wgUser, $sfgFormPrinter, $wgOut, $wgFCKEditorDir;
+		global $wgUser, $sfgFormPrinter, $wgOut;
 
 		/*
 		 * SemanticForms disable the form automatically if current user hasn't got edit rights
@@ -163,6 +163,7 @@ class SpecialSemanticSignup extends SpecialPage {
 		 * the $old_user variable to be restored afterwards
 		 */
 		$old_user = null;
+
 		if ( $wgUser->isAnon() ) {
 			$old_user = $wgUser;
 			$wgUser = User::newFromName( Settings::get( 'botName' ) );
@@ -188,14 +189,6 @@ class SpecialSemanticSignup extends SpecialPage {
 				<form name="createbox" id="sfForm" onsubmit="return validate_all()" action="" method="post" class="createbox">
 END;
 		$text .= $form_text . '</form>';
-
-	    if ( $wgFCKEditorDir ) {
-	    	$wgOut->addScript( '<script type="text/javascript" src="' . "$wgScriptPath/$wgFCKEditorDir" . '/fckeditor.js"></script>' . "\n" );
-	    }
-
-		if ( !empty( $javascript_text ) ) {
-			$wgOut->addScript( '		<script type="text/javascript">' . "\n" . $javascript_text . '</script>' . "\n" );
-		}
 
 		$wgOut->addMeta( 'robots', 'noindex,nofollow' );
 		$wgOut->addHTML( $text );
