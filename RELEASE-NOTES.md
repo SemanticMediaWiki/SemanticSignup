@@ -12,6 +12,13 @@ These are the release notes for the SemanticSignup extension.
 * #3 Removed deprecated `wfMsg` references
 * #8 Deprecated usage of `wgAllowRealName`
 * #10 Fixed JS registration of SF module
+* Replaced deprecated Title::escapeFullURL calls
+* Replaced deprecated User::isValidEmailAddr call
+
+## Version 0.5 (2014-04-01)
+
+* Migrated to JSON i18n
+* Removed compatibility with PHP 5.2
 
 ## Version 0.4 (2013-08-02)
 
@@ -40,4 +47,4 @@ These are the release notes for the SemanticSignup extension.
 
 ## Version 0.1 (2009-01-30)
 
-Initial release
+* Initial release
