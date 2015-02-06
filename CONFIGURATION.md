@@ -1,37 +1,80 @@
 ## Configuration
 
-Configuration of SemanticSignup is done by assigning to $egSemanticSignupSettings in your
-[[Manual:LocalSettings.php|LocalSettings.php]] file. These statements need to be placed
-AFTER the inclusion of SemanticSignup.
+Configuration of the Semantic Signup extension is done by assigning values to the
+`$egSemanticSignupSettings` parameter in your "LocalSettings.php" file.
 
-You should NOT modify the settings file, but can have a look at it to get an idea of
-how to use the  settings, in case the below descriptions do not suffice.
 
-### Require name
+### Real name
 
-Require entering a real name during the registration process?
+Is entering a real name during the registration process required?
 
 Default: `$egSemanticSignupSettings['requireName'] = false;` // true or false
 
+
 ### Form name
 
-The name of the form you want to use for signup.
+The name of the form that should be used for signup.
 
-Default: `$egSemanticSignupSettings['formName'] = '';`
+Default: `$egSemanticSignupSettings['formName'] = '';` // no form assinged
 
-Example: `$egSemanticSignupSettings['formName'] = 'Signup_form';`
+Example: `$egSemanticSignupSettings['formName'] = 'UserSignup';`
+
 
 ### Bot name
 
-The name of the user to create the user page with. This user needs
-sufficient priviliges to create new pages in the User: namespace.
+The name of the user to automatically create the user page with. This user needs
+sufficient privileges to create an user account as well as creating new pages in
+the `User:` namespace.
 
-Default: `$egSemanticSignupSettings['botName'] = '';`
+Default: `$egSemanticSignupSettings['botName'] = '';` // no user assigned
 
 Example: `$egSemanticSignupSettings['botName'] = 'Admin';`
 
-### Enable Captcha
 
-If captcha should be enabled (requires ConfirmEdit extension to be installed) ?
+### CAPTCHA
 
-Default: `$egSemanticSignupSettings['useCaptcha'] = true;`
+Is completing a CAPTCHA required during the registration process? Note that this 
+requires the ConfirmEdit extension to be installed.
+
+Default: `$egSemanticSignupSettings['useCaptcha'] = true;` // true or false
+
+Example: `$egSemanticSignupSettings['useCaptcha'] = false;` // not recommended (only if ConfirmEdit extension is not installed)
+
+
+## Usage
+
+Create a form a template and respective propertie(s) to be used for user pages
+(see the [docu of Semantic Forms](https://www.mediawiki.org/wiki/Extension:Semantic_Forms)
+for details on how to do this). After the form, template and properties were created
+the `{{#signupfields:}}` parser function needs to be added to the form right above the
+"for template" tag. Voilà.
+
+### Example
+
+"Form:UserSignup"
+``` text
+<includeonly>
+{{#signupfields:}}
+{{{for template|UserSignup}}}
+{| class="formtable"
+! Institution: 
+| {{{field|Institution|mandatory}}}
+|-
+! About me:
+| {{{field|About|input type=textarea|rows=3|autogrow}}}
+|}
+{{{end template}}}
+
+{{{standard input|save|label=Create account}}}{{{standard input|cancel}}}
+</includeonly>
+```
+
+"Template:UserSignup"
+``` text
+<includeonly>
+;Institution
+[[Institution::{{{Institution|}}}]]
+
+;About me
+{{{About|No information provided yet.}}}
+</includeonly>
