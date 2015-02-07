@@ -1,6 +1,6 @@
 These are the release notes for the SemanticSignup extension.
 
-## Version 1.0 (dev)
+## Version 1.0 (2015-02-07)
 
 * Installation is now done via Composer
 * Added compatibility with MediaWiki 1.19 - 1.25

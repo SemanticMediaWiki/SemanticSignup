@@ -28,7 +28,7 @@ if ( defined( 'SES_VERSION' ) ) {
 	return 1;
 }
 
-define( 'SES_VERSION', '1.0-alpha' );
+define( 'SES_VERSION', '1.0' );
 
 /**
  * @codeCoverageIgnore
@@ -36,7 +36,7 @@ define( 'SES_VERSION', '1.0-alpha' );
 call_user_func( function () {
 
 	// Register extension info
-	$GLOBALS[ 'wgExtensionCredits' ][ 'semantic' ][ ] = array(
+	$GLOBALS['wgExtensionCredits']['semantic'][] = array(
 		'path' => __FILE__,
 		'name' => 'Semantic Signup',
 		'version' => SES_VERSION,
