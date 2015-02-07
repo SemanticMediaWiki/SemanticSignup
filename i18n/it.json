@@ -1,12 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Beta16"
+			"Beta16",
+			"Nivit"
 		]
 	},
 	"semanticsignup": "Registrazione semantica",
 	"ses-desc": "Un'estensione MediaWiki costruita sulla base di moduli semantici che permette di compilare una pagina utente con i dati semantici in fase di registrazione",
 	"ses-nousername": "Il nome utente non è stato indicato.",
+	"ses-noformname": "Un modulo di iscrizione non è stato specificato. (vedere `egSemanticSignupSettings`)",
+	"ses-nobotname": "Non è stato specificato un utente privilegiato (bot) per consentire  di creare nuovi account utente. (vedere `egSemanticSignupSettings`)",
 	"ses-nopwdmatch": "La password e la conferma non corrispondono.",
 	"ses-norealname": "Il nome reale è obbligatorio ma non è stato indicato.",
 	"ses-userexists": "Nome utente già esistente.",
