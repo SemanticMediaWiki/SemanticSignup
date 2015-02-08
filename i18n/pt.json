@@ -1,12 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vitorvicentevalente"
+			"Vitorvicentevalente",
+			"Fernandofelippe"
 		]
 	},
 	"semanticsignup": "Semântica de Registo",
 	"ses-desc": "Uma extensão MediaWiki construída através da Formulários Semânticos, permitindo o preenchimento da página de utilizador com dados semânticos na altura do registo",
 	"ses-nousername": "O nome de utilizador não foi especificado.",
+	"ses-nobotname": "Um usuário privilegiado (bot) não foi especificado para permitir criar novas contas de usuário. (consulte a `egSemanticSignupSettings`)",
 	"ses-nopwdmatch": "A palavra-chave e a sua confirmação não correspondem.",
 	"ses-norealname": "O nome verdadeiro é necessário mas não foi especificado.",
 	"ses-userexists": "O utilizador já existe.",
