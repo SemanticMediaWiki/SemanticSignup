@@ -34,7 +34,18 @@ class SignupFieldsParserFunction {
 	public function parse( $arguments ) {
 
 		$parser = array_shift( $arguments );
-		global $wgEnableEmail, $wgHiddenPrefs, $wgEmailConfirmToEdit, $wgAuth, $wgUser;
+
+		$text = $parser instanceOf Parser && $parser->getTitle() !== null ? $this->createUserFieldsTemplateFields() : '';
+
+		return array(
+			$text,
+			'noparse' => true,
+			'isHTML' => true
+		);
+	}
+
+	private function createUserFieldsTemplateFields() {
+		global $wgEnableEmail, $wgHiddenPrefs, $wgEmailConfirmToEdit, $wgAuth, $wgUser, $wgLoginLanguageSelector;
 
 		// Deprecated $wgAllowRealName https://www.mediawiki.org/wiki/Manual:$wgAllowRealName
 		$allowRealName = true;
@@ -51,7 +62,6 @@ class SignupFieldsParserFunction {
 		$this->userFieldsCreateTemplate->set( 'canreset', $wgAuth->allowPasswordChange() );
 		// $this->userFieldsCreateTemplate->set( 'remember', $wgUser->getOption( 'rememberpassword' )  );
 
-		global $wgLoginLanguageSelector;
 		# Prepare language selection links as needed
 
 		// FIXME
@@ -75,11 +85,7 @@ class SignupFieldsParserFunction {
 		$this->userFieldsCreateTemplate->execute();
 		$text = ob_get_clean();
 
-		return array(
-			$text,
-			'noparse' => true,
-			'isHTML' => true
-		);
+		return $text;
 	}
 
 }

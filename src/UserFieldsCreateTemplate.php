@@ -25,7 +25,11 @@ class UserFieldsCreateTemplate extends QuickTemplate {
 
 	function execute() {
 		global $sfgTabIndex;
-		
+
+		if ( $this->data === array() ) {
+			return '';
+		}
+
 		/* We should find way to deprecate :( http://www.mediawiki.org/wiki/Manual:$wgOut */
 		global $wgOut;
 
