@@ -28,7 +28,7 @@ if ( defined( 'SES_VERSION' ) ) {
 	return 1;
 }
 
-define( 'SES_VERSION', '1.0' );
+define( 'SES_VERSION', '1.1 alpha' );
 
 /**
  * @codeCoverageIgnore
