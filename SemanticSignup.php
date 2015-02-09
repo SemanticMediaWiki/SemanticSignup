@@ -28,7 +28,7 @@ if ( defined( 'SES_VERSION' ) ) {
 	return 1;
 }
 
-define( 'SES_VERSION', '1.1 alpha' );
+define( 'SES_VERSION', '1.1-alpha' );
 
 /**
  * @codeCoverageIgnore
@@ -37,7 +37,7 @@ call_user_func( function () {
 
 	// Register extension info
 	$GLOBALS['wgExtensionCredits']['semantic'][] = array(
-		'path' => __FILE__,
+		'path' => __DIR__,
 		'name' => 'Semantic Signup',
 		'version' => SES_VERSION,
 		'author' => array(
@@ -58,16 +58,6 @@ call_user_func( function () {
 	$GLOBALS['wgSpecialPages']['SemanticSignup'] = '\SES\SpecialSemanticSignup';
 
 	$GLOBALS['egSemanticSignupSettings'] = array();
-
-	$GLOBALS['wgAutoloadClasses']['SES\HookRegistry'] = __DIR__ . '/src/HookRegistry.php';
-	$GLOBALS['wgAutoloadClasses']['SES\ParserFunctionFactory'] = __DIR__ . '/src/ParserFunctionFactory.php';
-	$GLOBALS['wgAutoloadClasses']['SES\SignupFieldsParserFunction'] = __DIR__ . '/src/SignupFieldsParserFunction.php';
-	$GLOBALS['wgAutoloadClasses']['SES\UserFieldsCreateTemplate'] = __DIR__ . '/src/UserFieldsCreateTemplate.php';
-	$GLOBALS['wgAutoloadClasses']['SES\RedirectFormFinder'] = __DIR__ . '/src/RedirectFormFinder.php';
-	$GLOBALS['wgAutoloadClasses']['SES\SpecialSemanticSignup'] = __DIR__ . '/src/SpecialSemanticSignup.php';
-	$GLOBALS['wgAutoloadClasses']['SES\DataChecker'] = __DIR__ . '/src/DataChecker.php';
-	$GLOBALS['wgAutoloadClasses']['SES\UserAccountDataChecker'] = __DIR__ . '/src/UserAccountDataChecker.php';
-	$GLOBALS['wgAutoloadClasses']['SES\Settings'] = __DIR__ . '/src/Settings.php';
 
 	// Finalize extension setup
 	$GLOBALS['wgExtensionFunctions'][] = function() {
