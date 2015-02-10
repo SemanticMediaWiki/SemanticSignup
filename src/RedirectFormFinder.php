@@ -3,7 +3,6 @@
 namespace SES;
 
 use OutputPage;
-use Title;
 use SpecialPage;
 
 /**
@@ -15,6 +14,20 @@ use SpecialPage;
 class RedirectFormFinder {
 
 	/**
+	 * @var FormPrinterHandler
+	 */
+	private $formPrinterHandler;
+
+	/**
+	 * @since 1.1
+	 *
+	 * @param FormPrinterHandler $formPrinterHandler
+	 */
+	public function __construct( FormPrinterHandler $formPrinterHandler ) {
+		$this->formPrinterHandler = $formPrinterHandler;
+	}
+
+	/**
 	 * @since 1.0
 	 *
 	 * @param OutputPage $output
@@ -23,7 +36,7 @@ class RedirectFormFinder {
 	 */
 	public function redirectToUrl( $output ) {
 
-		if ( !$this->hasForm() ) {
+		if ( !$this->formPrinterHandler->canUseForm() ) {
 			return true;
 		}
 
@@ -35,14 +48,4 @@ class RedirectFormFinder {
 
 		return false;
 	}
-
-	/**
-	 * @since 1.0
-	 *
-	 * @return boolean
-	 */
-	public function hasForm() {
-		return Title::newFromText( Settings::get( 'formName' ), SF_NS_FORM ) !== null;
-	}
-
 }

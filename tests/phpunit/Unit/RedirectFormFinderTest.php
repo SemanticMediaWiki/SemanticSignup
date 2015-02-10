@@ -18,9 +18,13 @@ class RedirectFormFinderTest extends \PHPUnit_Framework_TestCase {
 
 	public function testCanConstruct() {
 
+		$formPrinterHandler = $this->getMockBuilder( '\SES\FormPrinterHandler' )
+			->disableOriginalConstructor()
+			->getMock();
+
 		$this->assertInstanceOf(
 			'\SES\RedirectFormFinder',
-			new RedirectFormFinder()
+			new RedirectFormFinder( $formPrinterHandler )
 		);
 	}
 
@@ -33,14 +37,15 @@ class RedirectFormFinderTest extends \PHPUnit_Framework_TestCase {
 		$outputPage->expects( $this->never() )
 			->method( 'redirect' );
 
-		$instance = $this->getMockBuilder( '\SES\RedirectFormFinder' )
+		$formPrinterHandler = $this->getMockBuilder( '\SES\FormPrinterHandler' )
 			->disableOriginalConstructor()
-			->setMethods( array( 'hasForm' ) )
 			->getMock();
 
-		$instance->expects( $this->once() )
-			->method( 'hasForm' )
+		$formPrinterHandler->expects( $this->once() )
+			->method( 'canUseForm' )
 			->will( $this->returnValue( false ) );
+
+		$instance = new RedirectFormFinder( $formPrinterHandler );
 
 		$this->assertTrue(
 			$instance->redirectToUrl( $outputPage )
@@ -56,14 +61,15 @@ class RedirectFormFinderTest extends \PHPUnit_Framework_TestCase {
 		$outputPage->expects( $this->once() )
 			->method( 'redirect' );
 
-		$instance = $this->getMockBuilder( '\SES\RedirectFormFinder' )
+		$formHandler = $this->getMockBuilder( '\SES\FormPrinterHandler' )
 			->disableOriginalConstructor()
-			->setMethods( array( 'hasForm' ) )
 			->getMock();
 
-		$instance->expects( $this->once() )
-			->method( 'hasForm' )
+		$formHandler->expects( $this->once() )
+			->method( 'canUseForm' )
 			->will( $this->returnValue( true ) );
+
+		$instance = new RedirectFormFinder( $formHandler );
 
 		$this->assertFalse(
 			$instance->redirectToUrl( $outputPage )
