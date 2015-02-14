@@ -26,11 +26,19 @@ class SpecialSemanticSignup extends SpecialPage {
 	private $mUserDataChecker = null;
 	private $mUserPageUrl = '';
 
+	/**
+	 * @var FormHandler
+	 */
+	private $formHandler;
+
 	public function __construct() {
 		parent::__construct( 'SemanticSignup' );
 		$this->mIncludable = false;
 
-		$this->mUserDataChecker = new UserAccountDataChecker();
+		$signupFactory = new SignupFactory();
+
+		$this->mUserDataChecker = $signupFactory->newUserAccountDataChecker();
+		$this->formHandler = $signupFactory->newFormPrinterHandler();
 	}
 
 	private function userSignup() {
@@ -135,16 +143,17 @@ class SpecialSemanticSignup extends SpecialPage {
 	}
 
 	private function createUserPage() {
-		$form_title = Title::newFromText( Settings::get( 'formName' ), SF_NS_FORM );
-		$form = new Article( $form_title );
-		$form_definition = $form->getContent();
 
 		$page_title = Title::newFromText( $this->mUserDataChecker->mUser->getName(), NS_USER );
 		$this->mUserPageUrl = htmlspecialchars( $page_title->getFullURL() );
 
-		global $sfgFormPrinter;
-		list ( $form_text, $javascript_text, $data_text, $form_page_title, $generated_page_name ) =
-			$sfgFormPrinter->formHTML( $form_definition, true, false );
+		// FIXME
+		if ( !$this->formHandler->canUseForm() ) {
+			# code...
+		}
+
+		$this->formHandler->setSubmitState( true );
+		$data_text = $this->formHandler->getTemplateText();
 
 		$user_page = new Article( $page_title );
 
@@ -155,7 +164,7 @@ class SpecialSemanticSignup extends SpecialPage {
 	}
 
 	private function printForm() {
-		global $wgUser, $sfgFormPrinter, $wgOut;
+		global $wgUser, $wgOut;
 
 		/*
 		 * SemanticForms disable the form automatically if current user hasn't got edit rights
@@ -174,21 +183,16 @@ class SpecialSemanticSignup extends SpecialPage {
 			return true;
 		}
 
-		$form_title = Title::newFromText( Settings::get( 'formName' ), SF_NS_FORM );
-
-		if ( $form_title === null || !$form_title->exists() ) {
+		if ( !$this->formHandler->canUseForm() ) {
 			$wgOut->addHTML( '<div class="error errorbox">' . wfMessage( 'ses-noformname' )->text() . '</div>' );
 			return true;
 		}
 
-		$form = new Article( $form_title );
-		$form_definition = $form->getContent();
-
-		list ( $form_text, $javascript_text, $data_text, $form_page_title, $generated_page_name ) =
-			$sfgFormPrinter->formHTML( $form_definition, false, false );
+		$this->formHandler->setSubmitState( false );
+		$form_text = $this->formHandler->getFormText();
 
         /* Run hook allow externals to modify output of form */
-        wfRunHooks('SemanticSignupPrintForm', array( &$form_text, &$javascript_text, &$data_text, &$form_page_title, &$generated_page_name ) );
+       // wfRunHooks('SemanticSignupPrintForm', array( &$form_text, &$javascript_text, &$data_text, &$form_page_title, &$generated_page_name ) );
 
 		$text = <<<END
 				<form name="createbox" id="sfForm" onsubmit="return validate_all()" action="" method="post" class="createbox">

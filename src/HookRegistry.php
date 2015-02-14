@@ -23,15 +23,18 @@ class HookRegistry {
 	 */
 	public function register( &$wgHooks ) {
 
+		$signupFactory = new SignupFactory();
+		$formPrinterHandler = $signupFactory->newFormPrinterHandler();
+
 		/**
 		 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserCreateForm
 		 */
-		$wgHooks['UserCreateForm'][] = function ( &$template ) {
+		$wgHooks['UserCreateForm'][] = function ( &$template ) use ( $formPrinterHandler ) {
 
 			//FIXME
 			global $wgOut;
 
-			$redirectFormFinder = new RedirectFormFinder();
+			$redirectFormFinder = new RedirectFormFinder( $formPrinterHandler );
 
 			return $redirectFormFinder->redirectToUrl( $wgOut );
 		};
