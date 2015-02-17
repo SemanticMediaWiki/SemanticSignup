@@ -51,9 +51,10 @@ call_user_func( function () {
 	);
 
 	$GLOBALS['wgMessagesDirs']['semantic-signup'] = __DIR__ . '/i18n';
-	$GLOBALS['wgExtensionMessagesFiles']['semantic-signup'] = __DIR__ . '/SemanticSignup.i18n.php';
-	$GLOBALS['wgExtensionMessagesFiles']['semantic-signup-magic'] = __DIR__ . '/SemanticSignup.i18n.magic.php';
-	$GLOBALS['wgExtensionMessagesFiles']['semantic-signup-alias'] = __DIR__ . '/SemanticSignup.i18n.aliases.php';
+
+	$GLOBALS['wgExtensionMessagesFiles']['semantic-signup'] = __DIR__ . '/i18n/SemanticSignup.i18n.php';
+	$GLOBALS['wgExtensionMessagesFiles']['semantic-signup-magic'] = __DIR__ . '/i18n/SemanticSignup.i18n.magic.php';
+	$GLOBALS['wgExtensionMessagesFiles']['semantic-signup-alias'] = __DIR__ . '/i18n/SemanticSignup.i18n.aliases.php';
 
 	$GLOBALS['wgSpecialPages']['SemanticSignup'] = '\SES\SpecialSemanticSignup';
 
