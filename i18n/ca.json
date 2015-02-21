@@ -7,6 +7,8 @@
 	"semanticsignup": "Registre semàntic",
 	"ses-desc": "Una extensió de MediaWiki que funciona sobre Semantic Forms per permetre crear pàgines d'usuari amb dades semàntiques en el moment de registre",
 	"ses-nousername": "No s'ha especificat el nom d'usuari.",
+	"ses-noformname": "No s'ha especificat cap formulari de registre (comproveu si heu definit `egSemanticSignupSettings`)",
+	"ses-nobotname": "No s'ha especificat cap usuari privilegiat (bot) per permetre la creació de nous comptes d'usuari (comproveu si heu definit `egSemanticSignupSettings`)",
 	"ses-nopwdmatch": "La contrasenya i la confirmació de contrasenya no coincideixen.",
 	"ses-norealname": "Cal un nom real per no s'ha especificat.",
 	"ses-userexists": "L'usuari ja existeix.",
