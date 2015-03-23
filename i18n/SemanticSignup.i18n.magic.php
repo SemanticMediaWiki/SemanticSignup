@@ -42,3 +42,8 @@ $magicWords['mk'] = array(
 $magicWords['zh-hans'] = array(
 	'signupfields' => array( 0, '注册域' ),
 );
+
+/** Traditional Chinese (中文（繁體）‎) */
+$magicWords['zh-hant'] = array(
+	'signupfields' => array( 0, '註冊區域' ),
+);
