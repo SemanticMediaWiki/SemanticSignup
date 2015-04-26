@@ -49,6 +49,11 @@ $specialPageAliases['ko'] = array(
 	'SemanticSignup' => array( '시맨틱가입' ),
 );
 
+/** Luxembourgish (Lëtzebuergesch) */
+$specialPageAliases['lb'] = array(
+	'SemanticSignup' => array( 'Semantesch_Umeldung' ),
+);
+
 /** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
 	'SemanticSignup' => array( 'СемантичкаНајава' ),
