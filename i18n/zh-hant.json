@@ -9,7 +9,7 @@
 	"ses-nousername": "尚未指定使用者名稱。",
 	"ses-nopwdmatch": "密碼與確認密碼不匹配。",
 	"ses-norealname": "真實姓名是必需的但尚未指定。",
-	"ses-userexists": "用戶已存在。",
+	"ses-userexists": "使用者已存在。",
 	"ses-emailfailed": "用於確認的電子郵件發送失敗。",
 	"ses-createforbidden": "不允許當前使用者建立帳號。",
 	"ses-throttlehit": "此IP位址已經超過了每天新使用者帳戶的最大數量。"
