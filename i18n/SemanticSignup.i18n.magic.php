@@ -23,7 +23,7 @@ $magicWords['ar'] = array(
 	'signupfields' => array( 0, 'مجالات_تسجيل' ),
 );
 
-/** Egyptian Spoken Arabic (مصرى) */
+/** Egyptian Arabic (مصرى) */
 $magicWords['arz'] = array(
 	'signupfields' => array( 0, 'مجالات_تسجيل' ),
 );

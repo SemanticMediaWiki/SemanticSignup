@@ -24,7 +24,7 @@ $specialPageAliases['ar'] = array(
 	'SemanticSignup' => array( 'الاشتراك_السيمانتيك' ),
 );
 
-/** Egyptian Spoken Arabic (مصرى) */
+/** Egyptian Arabic (مصرى) */
 $specialPageAliases['arz'] = array(
 	'SemanticSignup' => array( 'تسجيل_سيمانتيك' ),
 );
