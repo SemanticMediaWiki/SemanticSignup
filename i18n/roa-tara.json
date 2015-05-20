@@ -7,6 +7,8 @@
 	"semanticsignup": "Reggistrazione semandeche",
 	"ses-desc": "'N'estenzione de MediaUicchi ca mette sus a le Module de Semandeche 'a possibbilità de popolà 'na pàgene utende cu le date semandeche quanne se reggistre",
 	"ses-nousername": "'U nome de l'utende non g'ha state specificate.",
+	"ses-noformname": "'Nu module de reggistrazione non g'ha state specificate. ('ndruche le `egSemanticSignupSettings`)",
+	"ses-nobotname": "'N'utende privileggiate (bot) non 'ha state specificate pe permettere de ccrejà cunde utinde nuève ('ndruche le `egSemanticSignupSettings`)",
 	"ses-nopwdmatch": "Passuord e passuord de conferme non ge s'accocchiane.",
 	"ses-norealname": "'U nome vere ète richieste ma non g'ha state specificate.",
 	"ses-userexists": "L'utende già esiste.",
