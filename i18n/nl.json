@@ -2,12 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"HanV",
-			"Siebrand"
+			"Siebrand",
+			"Rangekill"
 		]
 	},
 	"semanticsignup": "Semantisch inschrijven",
 	"ses-desc": "Uitbreiding bovenop Semantic Forms om een gebruikerspagina aan te maken met semantische gegevens tijdens de registratie",
 	"ses-nousername": "De gebruikersnaam is niet opgegeven.",
+	"ses-noformname": "Een inschrijf formulier niet heeft opgegeven. (zie de `egSemanticSignupSettings`)",
+	"ses-nobotname": "Een bevoorrechte gebruiker (bot) niet heeft opgegeven om voor het maken van nieuwe gebruikersaccounts. (zie de `egSemanticSignupSettings`)",
 	"ses-nopwdmatch": "Het wachtwoord en de bevestiging komen niet overeen.",
 	"ses-norealname": "Een echte naam is vereist maar is niet opgegeven.",
 	"ses-userexists": "De gebruiker bestaat al.",
