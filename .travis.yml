@@ -18,6 +18,7 @@ matrix:
     - env: THENEEDFORTHIS=FAIL
 
 install:
+  - travis_retry composer self-update
   - bash ./tests/travis/install-mediawiki.sh
   - bash ./tests/travis/install-semantic-signup.sh
 
