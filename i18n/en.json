@@ -1,20 +1,20 @@
 {
-    "@metadata": {
-        "authors": [
-            "Serhii Kutnii",
-            "Jeroen De Dauw",
-            "Kghbln"
-        ]
-    },
-    "semanticsignup": "Semantic Signup",
-    "ses-desc": "Allows to populate a user page with semantic data at signup time",
-    "ses-nousername": "Username has not been specified.",
-    "ses-noformname": "A signup form has not been specified. (see the <code>\"egSemanticSignupSettings</code>\" setting for information on this.)",
-    "ses-nobotname": "A privileged user (bot) has not been specified to allow to create new user accounts. (see the <code>\"egSemanticSignupSettings</code>\" setting for information on this.)",
-    "ses-nopwdmatch": "Password and password confirmation do not match.",
-    "ses-norealname": "Real name is required but has not been specified.",
-    "ses-userexists": "User already exists.",
-    "ses-emailfailed": "Confirmation email sending failed.",
-    "ses-createforbidden": "Current user is not allowed to create accounts.",
-    "ses-throttlehit": "The maximum number of new user accounts per day has been exceeded for this IP address."
+	"@metadata": {
+		"authors": [
+			"Serhii Kutnii",
+			"Jeroen De Dauw",
+			"Kghbln"
+		]
+	},
+	"semanticsignup": "Semantic Signup",
+	"ses-desc": "Allows to populate a user page with semantic data at signup time",
+	"ses-nousername": "Username has not been specified.",
+	"ses-noformname": "A signup form has not been specified. (see the <var>egSemanticSignupSettings</var> setting for information on this.)",
+	"ses-nobotname": "A privileged user (bot) has not been specified to allow to create new user accounts. (see the <var>egSemanticSignupSettings</var> setting for information on this.)",
+	"ses-nopwdmatch": "Password and password confirmation do not match.",
+	"ses-norealname": "Real name is required but has not been specified.",
+	"ses-userexists": "User already exists.",
+	"ses-emailfailed": "Confirmation email sending failed.",
+	"ses-createforbidden": "Current user is not allowed to create accounts.",
+	"ses-throttlehit": "The maximum number of new user accounts per day has been exceeded for this IP address."
 }

@@ -7,10 +7,10 @@
 		]
 	},
 	"semanticsignup": "语义登记",
-	"ses-desc": "一个建立在Semantic Forms（语义表单）基础之上的MediaWiki扩展，允许在注册登记时采用语义数据充填用户页面",
+	"ses-desc": "允许在注册登记时采用语义数据充填用户页面",
 	"ses-nousername": "尚未指定用户名。",
-	"ses-noformname": "尚未指定注册表单。（见“egSemanticSignupSettings”）",
-	"ses-nobotname": "尚未指定一个特权用户（机器人）用以允许创建新的用户账号（见“egSemanticSignupSettings”）",
+	"ses-noformname": "尚未指定注册表单。（参见<var>egSemanticSignupSettings</var>设置以获取有关信息。）",
+	"ses-nobotname": "尚未指定一个特权用户（机器人）用以允许创建新的用户账号（参见<var>egSemanticSignupSettings</var>设置以获取有关信息。）",
 	"ses-nopwdmatch": "密码与确认密码不匹配。",
 	"ses-norealname": "真实姓名是必需的但尚未指定。",
 	"ses-userexists": "用户已存在。",

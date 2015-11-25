@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Armando-Martin",
-			"Awesomecat5"
+			"Awesomecat5",
+			"Macofe"
 		]
 	},
 	"semanticsignup": "Registro semántico",
-	"ses-desc": "Una extensión MediaWiki construída a partir de formularios semánticos para permitir poblar una página de usuario con datos semánticos en el momento del registro",
+	"ses-desc": "Permite rellenar una página de usuario con datos semánticos en el momento del registro",
 	"ses-nousername": "No se ha especificado el nombre de usuario.",
 	"ses-noformname": "No se ha especificado un formulario de registro. (ver el `egSemanticSignupSettings`)",
 	"ses-nobotname": "Un usuario con privilegios (bot) no se ha especificado para permitir crear nuevas cuentas de usuario. (ver el `egSemanticSignupSettings`)",

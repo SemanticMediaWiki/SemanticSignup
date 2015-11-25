@@ -2,13 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Vitorvicentevalente",
-			"Fernandofelippe"
+			"Fernandofelippe",
+			"Jkb8"
 		]
 	},
 	"semanticsignup": "Semântica de Registo",
-	"ses-desc": "Uma extensão MediaWiki construída através da Formulários Semânticos, permitindo o preenchimento da página de utilizador com dados semânticos na altura do registo",
+	"ses-desc": "Permite o preenchimento da página de utilizador com dados semânticos na altura do registo",
 	"ses-nousername": "O nome de utilizador não foi especificado.",
-	"ses-nobotname": "Um utilizador privilegiado (robô) não foi especificado para permitir a criação de novas contas (consulte a `egSemanticSignupSettings`).",
+	"ses-noformname": "Um formulário de inscrição não foi ainda especificado. (consulte a <code>\"egSemanticSignupSettings</code>\" configuração para obter informações sobre isso.)",
+	"ses-nobotname": "Um utilizador privilegiado (robô) não foi especificado para permitir a criação de novas contas de usuário. (Veja a configuração <code>\"egSemanticSignupSettings</code>\" para isso).",
 	"ses-nopwdmatch": "A palavra-chave e a sua confirmação não correspondem.",
 	"ses-norealname": "O nome verdadeiro é necessário mas não foi especificado.",
 	"ses-userexists": "O utilizador já existe.",

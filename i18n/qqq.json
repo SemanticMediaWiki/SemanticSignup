@@ -1,8 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shirayuki"
+			"Shirayuki",
+			"Umherirrender"
 		]
 	},
-	"ses-desc": "{{desc|name=Semantic Signup|url=http://www.mediawiki.org/wiki/Semantic_Signup}}"
+	"semanticsignup": "Used as page title on [[Special:SemanticSignup]]",
+	"ses-desc": "{{desc|name=Semantic Signup|url=http://www.mediawiki.org/wiki/Semantic_Signup}}",
+	"ses-nousername": "Used as error message on [[Special:SemanticSignup]]",
+	"ses-noformname": "Used as error message on [[Special:SemanticSignup]]",
+	"ses-nobotname": "Used as error message on [[Special:SemanticSignup]]",
+	"ses-nopwdmatch": "Used as error message on [[Special:SemanticSignup]]",
+	"ses-norealname": "Used as error message on [[Special:SemanticSignup]]",
+	"ses-userexists": "Used as error message on [[Special:SemanticSignup]]",
+	"ses-emailfailed": "Used as error message on [[Special:SemanticSignup]]",
+	"ses-createforbidden": "Used as error message on [[Special:SemanticSignup]]",
+	"ses-throttlehit": "Used as error message on [[Special:SemanticSignup]]"
 }
