@@ -5,10 +5,10 @@
 		]
 	},
 	"semanticsignup": "Rexistru semánticu",
-	"ses-desc": "Una estensión MediaWiki construída sobro Formularios Semánticos que permite poblar una páxina d'usuariu con datos semánticos nel momentu de rexistrase",
+	"ses-desc": "Permite rellenar una páxina d'usuariu con datos semánticos nel momentu de rexistrase",
 	"ses-nousername": "Nun se conseñó un nome d'usuariu.",
-	"ses-noformname": "Nun s'especificó un formulariu de rexistru. (ver `egSemanticSignupSettings`)",
-	"ses-nobotname": "Nun s'especificó un usuariu con privilexos (bot) que permita crear cuentes nueves. (ver el \"egSemanticSignupSettings\")",
+	"ses-noformname": "Nun s'especificó un formulariu de rexistru. (Ver el valor <var>\"$egSemanticSignupSettings\"</var> pa más información)",
+	"ses-nobotname": "Nun s'especificó un usuariu con privilexos (bot) que permita crear cuentes nueves. (Ver el valor <var>\"$egSemanticSignupSettings\"</var> pa más información.)",
 	"ses-nopwdmatch": "La conseña y la confirmación de la mesma nun casen.",
 	"ses-norealname": " Ye necesariu'l nome real, pero nun se conseñó.",
 	"ses-userexists": "L'usuariu yá esiste.",

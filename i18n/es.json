@@ -3,14 +3,15 @@
 		"authors": [
 			"Armando-Martin",
 			"Awesomecat5",
-			"Macofe"
+			"Macofe",
+			"Lemondoge"
 		]
 	},
 	"semanticsignup": "Registro semántico",
 	"ses-desc": "Permite rellenar una página de usuario con datos semánticos en el momento del registro",
 	"ses-nousername": "No se ha especificado el nombre de usuario.",
-	"ses-noformname": "No se ha especificado un formulario de registro. (ver el `egSemanticSignupSettings`)",
-	"ses-nobotname": "Un usuario con privilegios (bot) no se ha especificado para permitir crear nuevas cuentas de usuario. (ver el `egSemanticSignupSettings`)",
+	"ses-noformname": "Un formulario de inscripción no se ha especificado. (ver el <var>\"$egSemanticSignupSettings\"</var> configuración para obtener información sobre esto).",
+	"ses-nobotname": "Un usuario con privilegios (bot) no se ha especificado para permitir crear nuevas cuentas de usuario. (ver el <var>\"$egSemanticSignupSettings\"</var> configuración para obtener información sobre esto).",
 	"ses-nopwdmatch": "La contraseña y la confirmación no coinciden.",
 	"ses-norealname": "El nombre real es necesario, pero no se ha especificado.",
 	"ses-userexists": "El usuario ya existe.",
