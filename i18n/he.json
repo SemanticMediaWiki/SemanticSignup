@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Guycn2"
+		]
+	},
+	"ses-nousername": "לא ציינת שם משתמש.",
+	"ses-noformname": "לא צוין טופס הרשמה. ({{GENDER:|ראה|ראי|ראו}} את ההגדרה <var>\"$egSemanticSignupSettings\"</var> למידע נוסף.)",
+	"ses-nopwdmatch": "שתי הסיסמאות שהוקלדו אינן תואמות.",
+	"ses-norealname": "חובה לציין את השם האמיתי.",
+	"ses-userexists": "המשתמש כבר קיים.",
+	"ses-emailfailed": "שליחת דוא\"ל האישור נכשלה.",
+	"ses-createforbidden": "המשתמש הנוכחי אינו מורשה ליצור חשבונות.",
+	"ses-throttlehit": "חרגת מהמספר המרבי של החשבונות שניתן ליצור ביום."
+}
