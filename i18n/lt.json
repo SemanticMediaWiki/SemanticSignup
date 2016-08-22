@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200"
+		]
+	},
+	"ses-nousername": "Vartotojo vardas nebuvo nurodytas.",
+	"ses-nopwdmatch": "Slaptažodis ir slaptažodžio patvirtinimas nesutampa.",
+	"ses-norealname": "Tikrasis vardas yra privalomas, bet nebuvo nurodytas.",
+	"ses-userexists": "Vartotojas jau egzistuoja.",
+	"ses-emailfailed": "Patvirtinimo el. laiško išsiųsti nepavyko.",
+	"ses-createforbidden": "Dabartiniam vartotojui nėra leidžiama sukurti paskyrų.",
+	"ses-throttlehit": "Šio IP adreso didžiausias leistinas naujų vartotojų paskyrų per dieną skaičius buvo viršitas."
+}
