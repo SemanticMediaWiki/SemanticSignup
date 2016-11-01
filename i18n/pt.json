@@ -3,14 +3,15 @@
 		"authors": [
 			"Vitorvicentevalente",
 			"Fernandofelippe",
-			"Jkb8"
+			"Jkb8",
+			"Hamilton Abreu"
 		]
 	},
 	"semanticsignup": "Semântica de Registo",
 	"ses-desc": "Permite o preenchimento da página de utilizador com dados semânticos na altura do registo",
 	"ses-nousername": "O nome de utilizador não foi especificado.",
-	"ses-noformname": "Um formulário de inscrição não foi ainda especificado. (consulte a <code>\"egSemanticSignupSettings</code>\" configuração para obter informações sobre isso.)",
-	"ses-nobotname": "Um utilizador privilegiado (robô) não foi especificado para permitir a criação de novas contas de usuário. (Veja a configuração <code>\"egSemanticSignupSettings</code>\" para isso).",
+	"ses-noformname": "Ainda não foi especificado um formulário de inscrição. (consulte a configuração <var>\"$egSemanticSignupSettings\"</var> para obter informações sobre isto.)",
+	"ses-nobotname": "Não foi especificado um utilizador privilegiado (robô) para permitir a criação de novas contas de utilizador. (Veja a configuração <var>\"$egSemanticSignupSettings\"</var> para mais informações sobre isto).",
 	"ses-nopwdmatch": "A palavra-chave e a sua confirmação não correspondem.",
 	"ses-norealname": "O nome verdadeiro é necessário mas não foi especificado.",
 	"ses-userexists": "O utilizador já existe.",
