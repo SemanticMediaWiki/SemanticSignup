@@ -17,5 +17,5 @@
 	"ses-userexists": "O utilizador já existe.",
 	"ses-emailfailed": "O envio do correio eletrónico de confirmação falhou.",
 	"ses-createforbidden": "O utilizador atual não está autorizado a criar contas.",
-	"ses-throttlehit": "Foi excedido o número máximo de criação de contas de utilizador por dia através deste endereço de IP."
+	"ses-throttlehit": "Foi excedido o número máximo de criação de contas de utilizador por dia através deste endereço IP."
 }

@@ -9,7 +9,7 @@
 	"ses-nousername": "Nun se conseñó un nome d'usuariu.",
 	"ses-noformname": "Nun s'especificó un formulariu de rexistru. (Ver el valor <var>\"$egSemanticSignupSettings\"</var> pa más información)",
 	"ses-nobotname": "Nun s'especificó un usuariu con privilexos (bot) que permita crear cuentes nueves. (Ver el valor <var>\"$egSemanticSignupSettings\"</var> pa más información.)",
-	"ses-nopwdmatch": "La conseña y la confirmación de la mesma nun casen.",
+	"ses-nopwdmatch": "La contraseña y la confirmación de la mesma nun casen.",
 	"ses-norealname": " Ye necesariu'l nome real, pero nun se conseñó.",
 	"ses-userexists": "L'usuariu yá esiste.",
 	"ses-emailfailed": "Falló l'unviu del corréu electrónicu de confirmación.",
