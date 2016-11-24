@@ -3,11 +3,12 @@
 		"authors": [
 			"HanV",
 			"Siebrand",
-			"Rangekill"
+			"Rangekill",
+			"Hex"
 		]
 	},
 	"semanticsignup": "Semantisch inschrijven",
-	"ses-desc": "Uitbreiding bovenop Semantic Forms om een gebruikerspagina aan te maken met semantische gegevens tijdens de registratie",
+	"ses-desc": "Maakt het mogelijk om een gebruikerspagina te vullen met semantische gegevens tijdens de registratie",
 	"ses-nousername": "De gebruikersnaam is niet opgegeven.",
 	"ses-nopwdmatch": "Het wachtwoord en de bevestiging komen niet overeen.",
 	"ses-norealname": "Een echte naam is vereist maar is niet opgegeven.",
