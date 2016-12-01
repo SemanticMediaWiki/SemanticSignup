@@ -1,12 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Event"
+			"Event",
+			"Jon Harald Søby"
 		]
 	},
 	"semanticsignup": "Semantisk brukerkontoinformasjon",
-	"ses-desc": "En MediaWiki-utvidelse bygd på Semantic Forms som tillater å legge inn semantiske data på en brukerside ved opprettelse av en bruker",
+	"ses-desc": "Gjør det mulig å putte semantiske data på en brukerside når brukeren registreres seg",
 	"ses-nousername": "Brukernavn er ikke angitt.",
+	"ses-noformname": "Et registreringsskjema har ikke blitt spesifisert. (Se innstillingen for <var>$egSemanticSignupSettings</var> for hvordan dette gjøres.)",
+	"ses-nobotname": "En priviligert bruker (bot) har ikke fått tilgang til å opprette nye brukerkontoer. (Se innstillingen <var>$egSemanticSignupSettings</var> for hvordan dette gjøres.)",
 	"ses-nopwdmatch": "Passord og passord-bekreftelse stemmer ikke overens.",
 	"ses-norealname": "Det kreves at virkelig navn oppgis.",
 	"ses-userexists": "Bruker finnes allerede.",
