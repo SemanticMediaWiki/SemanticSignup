@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jaideraf"
+			"Jaideraf",
+			"!Silent"
 		]
 	},
 	"semanticsignup": "Cadastro Semântico",
-	"ses-desc": "Uma extensão do MediaWiki, construída a partir da extensão Semantic Forms, que permite preencher uma página de usuário com dados semânticos na hora do cadastro.",
+	"ses-desc": "Permite o preenchimento de uma página de usuário com dados semânticos no momento do registro",
 	"ses-nousername": "O nome de usuário não foi especificado.",
-	"ses-noformname": "Um formulário de cadastro não foi especificado. (veja a configuração `egSemanticSignupSettings`)",
-	"ses-nobotname": "Um usuário privilegiado (bot) não foi especificado para permitir a criação de novas contas de usuário. (veja a configuração `egSemanticSignupSettings`)",
+	"ses-noformname": "Ainda não foi especificado um formulário de inscrição (consulte a configuração <var>\"$egSemanticSignupSettings\"</var> para obter informações sobre isto).",
+	"ses-nobotname": "Não foi especificado um usuário privilegiado (robô) para permitir a criação de novas contas (veja a configuração <var>\"$egSemanticSignupSettings\"</var> para mais informações sobre isto).",
 	"ses-nopwdmatch": "A senha e a confirmação da senha não coincidem.",
 	"ses-norealname": "O nome real é necessário, mas não foi especificado.",
 	"ses-userexists": "Esse usuário já existe.",
