@@ -5,7 +5,7 @@
 		]
 	},
 	"semanticsignup": "Inscription semantic",
-	"ses-desc": "Un extension de MediaWiki, construite super Formularios Semantic, que permitte plenar un pagina de usator con datos semantic al momento de creation del conto",
+	"ses-desc": "Permitte plenar un pagina de usator con datos semantic al momento de creation del conto",
 	"ses-nousername": "Le nomine de usator non ha essite specificate.",
 	"ses-nopwdmatch": "Contrasigno e confirmation non corresponde.",
 	"ses-norealname": "Le nomine real es obligatori ma non ha essite specificate.",
