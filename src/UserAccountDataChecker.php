@@ -24,13 +24,20 @@ class UserAccountDataChecker extends DataChecker {
 	public $mUser = null;
 
 	public function __construct() {
-		$this->addCheck( array( $this, 'checkDomainValidity' ), array() );
-		$this->addCheck( array( $this, 'checkDomainUser' ), array() );
-		$this->addCheck( array( $this, 'checkCreatePermissions' ), array() );
-		$this->addCheck( array( $this, 'checkSorbs' ), array() );
-		$this->addCheck( array( $this, 'checkUserExists' ), array() );
-		$this->addCheck( array( $this, 'checkPasswordLength' ), array() );
-		$this->addCheck( array( $this, 'checkEmailValidity' ), array() );
+		$checkDomainValidity = $this;
+		$this->addCheck( array( $checkDomainValidity, 'checkDomainValidity' ), array() );
+		$checkDomainUser = $this;
+		$this->addCheck( array( $checkDomainUser, 'checkDomainUser' ), array() );
+		$checkCreatePermissions = $this;
+		$this->addCheck( array( $checkCreatePermissions, 'checkCreatePermissions' ), array() );
+		$checkSorbs = $this;
+		$this->addCheck( array( $checkSorbs, 'checkSorbs' ), array() );
+		$checkUserExists = $this;
+		$this->addCheck( array( $checkUserExists, 'checkUserExists' ), array() );
+		$checkPasswordLength = $this;
+		$this->addCheck( array( $checkPasswordLength, 'checkPasswordLength' ), array() );
+		$checkEmailValidity = $this;
+		$this->addCheck( array( $checkEmailValidity, 'checkEmailValidity' ), array() );
 	}
 
 	// Checks
