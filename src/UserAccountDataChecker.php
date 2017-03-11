@@ -24,20 +24,14 @@ class UserAccountDataChecker extends DataChecker {
 	public $mUser = null;
 
 	public function __construct() {
-		$checkDomainValidity = $this;
-		$this->addCheck( array( $checkDomainValidity, 'checkDomainValidity' ), array() );
-		$checkDomainUser = $this;
-		$this->addCheck( array( $checkDomainUser, 'checkDomainUser' ), array() );
-		$checkCreatePermissions = $this;
-		$this->addCheck( array( $checkCreatePermissions, 'checkCreatePermissions' ), array() );
-		$checkSorbs = $this;
-		$this->addCheck( array( $checkSorbs, 'checkSorbs' ), array() );
-		$checkUserExists = $this;
-		$this->addCheck( array( $checkUserExists, 'checkUserExists' ), array() );
-		$checkPasswordLength = $this;
-		$this->addCheck( array( $checkPasswordLength, 'checkPasswordLength' ), array() );
-		$checkEmailValidity = $this;
-		$this->addCheck( array( $checkEmailValidity, 'checkEmailValidity' ), array() );
+		$that = $this;
+		$this->addCheck( array( &$that, 'checkDomainValidity' ), array() );
+		$this->addCheck( array( &$that, 'checkDomainUser' ), array() );
+		$this->addCheck( array( &$that, 'checkCreatePermissions' ), array() );
+		$this->addCheck( array( &$that, 'checkSorbs' ), array() );
+		$this->addCheck( array( &$that, 'checkUserExists' ), array() );
+		$this->addCheck( array( &$that, 'checkPasswordLength' ), array() );
+		$this->addCheck( array( &$that, 'checkEmailValidity' ), array() );
 	}
 
 	// Checks
