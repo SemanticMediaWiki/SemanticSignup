@@ -24,13 +24,14 @@ class UserAccountDataChecker extends DataChecker {
 	public $mUser = null;
 
 	public function __construct() {
-		$this->addCheck( array( &$this, 'checkDomainValidity' ), array() );
-		$this->addCheck( array( &$this, 'checkDomainUser' ), array() );
-		$this->addCheck( array( &$this, 'checkCreatePermissions' ), array() );
-		$this->addCheck( array( &$this, 'checkSorbs' ), array() );
-		$this->addCheck( array( &$this, 'checkUserExists' ), array() );
-		$this->addCheck( array( &$this, 'checkPasswordLength' ), array() );
-		$this->addCheck( array( &$this, 'checkEmailValidity' ), array() );
+		$that = $this;
+		$this->addCheck( array( &$that, 'checkDomainValidity' ), array() );
+		$this->addCheck( array( &$that, 'checkDomainUser' ), array() );
+		$this->addCheck( array( &$that, 'checkCreatePermissions' ), array() );
+		$this->addCheck( array( &$that, 'checkSorbs' ), array() );
+		$this->addCheck( array( &$that, 'checkUserExists' ), array() );
+		$this->addCheck( array( &$that, 'checkPasswordLength' ), array() );
+		$this->addCheck( array( &$that, 'checkEmailValidity' ), array() );
 	}
 
 	// Checks
