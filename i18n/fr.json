@@ -9,7 +9,7 @@
 		]
 	},
 	"semanticsignup": "Inscription sémantique",
-	"ses-desc": "Permet de remplir une page utilisateur avec des données sémantiques au moment de l'inscription",
+	"ses-desc": "Permet de remplir une page d’utilisateur avec des données sémantiques au moment de l’inscription",
 	"ses-nousername": "Le nom d’utilisateur n’a pas été spécifié.",
 	"ses-noformname": "Un formulaire d'inscription n'a pas été spécifié. (voir le paramètre « <var>$egSemanticSignupSettings</var> » pour plus d’informations)",
 	"ses-nobotname": "Un utilisateur privilégié (robot) n’a pas été spécifié pour permettre de créer de nouveaux comptes utilisateur (voir le paramètre « <var>$egSemanticSignupSettings</var> » pour plus d’informations).",
