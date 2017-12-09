@@ -5,7 +5,6 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SemanticMediaWiki/SemanticSignup/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/SemanticMediaWiki/SemanticSignup/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/mediawiki/semantic-signup/version.png)](https://packagist.org/packages/mediawiki/semantic-signup)
 [![Packagist download count](https://poser.pugx.org/mediawiki/semantic-signup/d/total.png)](https://packagist.org/packages/mediawiki/semantic-signup)
-[![Dependency Status](https://www.versioneye.com/php/mediawiki:semantic-signup/badge.png)](https://www.versioneye.com/php/mediawiki:semantic-signup)
 
 Semantic Signup (a.k.a. SES) is a [Semantic Mediawiki][smw] extension that uses
 Semantic Forms to improve the user registration process.
@@ -55,7 +54,7 @@ have a look at the contribution guideline.
 
 * [File an issue](https://github.com/SemanticMediaWiki/SemanticSignup/issues)
 * [Submit a pull request](https://github.com/SemanticMediaWiki/SemanticSignup/pulls)
-* Ask a question on [the mailing list](https://semantic-mediawiki.org/wiki/Mailing_list)
+* Ask a question on [the mailing list](https://www.semantic-mediawiki.org/wiki/Mailing_list)
 * Ask a question on the #semantic-mediawiki IRC channel on Freenode.
 
 ### Tests
