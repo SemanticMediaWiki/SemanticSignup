@@ -4,7 +4,8 @@
 			"HanV",
 			"Siebrand",
 			"Rangekill",
-			"Hex"
+			"Hex",
+			"Mar(c)"
 		]
 	},
 	"semanticsignup": "Semantisch inschrijven",
@@ -14,6 +15,6 @@
 	"ses-norealname": "Een echte naam is vereist maar is niet opgegeven.",
 	"ses-userexists": "De gebruiker bestaat al.",
 	"ses-emailfailed": "Het e-mailen van de bevestiging is mislukt.",
-	"ses-createforbidden": "De huidige gebruiker mag geen nieuwe gebruikers aanmaken.",
+	"ses-createforbidden": "De huidige gebruiker mag geen nieuwe accounts aanmaken.",
 	"ses-throttlehit": "Het maximale aantal aan te maken gebruikers per dag is bereikt voor dit IP-adres."
 }
