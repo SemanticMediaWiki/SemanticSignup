@@ -11,15 +11,15 @@
 		"structured registration",
 		"workflow"
 	],
-	"homepage": "https://semantic-mediawiki.org/wiki/Extension:SemanticSignup",
-	"license": "GPL-3.0+",
+	"homepage": "https://www.semantic-mediawiki.org/wiki/Extension:SemanticSignup",
+	"license": "GPL-3.0-or-later",
 	"authors": [],
 	"support": {
 		"email": "semediawiki-user@lists.sourceforge.net",
 		"issues": "https://github.com/SemanticMediaWiki/SemanticSignup/issues",
 		"irc": "irc://irc.freenode.net/semantic-mediawiki",
-		"forum": "https://semantic-mediawiki.org/wiki/semantic-mediawiki.org_talk:Community_portal",
-		"wiki": "https://semantic-mediawiki.org/wiki/",
+		"forum": "https://www.semantic-mediawiki.org/wiki/semantic-mediawiki.org_talk:Community_portal",
+		"wiki": "https://www.semantic-mediawiki.org/wiki/",
 		"source": "https://github.com/SemanticMediaWiki/SemanticSignup"
 	},
 	"require": {

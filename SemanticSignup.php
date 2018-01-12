@@ -47,7 +47,7 @@ call_user_func( function () {
 		),
 		'url' => 'https://www.mediawiki.org/wiki/Extension:SemanticSignup',
 		'descriptionmsg' => 'ses-desc',
-		'license-name' => 'GPL-3.0+'
+		'license-name' => 'GPL-3.0-or-later'
 	);
 
 	$GLOBALS['wgMessagesDirs']['semantic-signup'] = __DIR__ . '/i18n';
