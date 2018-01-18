@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jagwar"
+		]
+	},
+	"ses-userexists": "Efa misy ilay mpikambana",
+	"ses-createforbidden": "Tsy afaka mamorona kaonty ilay mpikambana amin'izao fotoana izao.",
+	"ses-throttlehit": "Ity adiresy IP ity dia nanoatra ny isan'ny famoronan-kaonty azo atao."
+}
