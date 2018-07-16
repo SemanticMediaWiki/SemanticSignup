@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"BeginaFelicysym"
+			"BeginaFelicysym",
+			"Railfail536"
 		]
 	},
+	"semanticsignup": "Semantyczna rejestracja",
+	"ses-desc": "Pozwala na wypełnianie strony użytkownika semantycznymi informacjami podczas rejestracji.",
 	"ses-nousername": "Nie określono nazwy użytkownika.",
 	"ses-nopwdmatch": "Hasło i jego potwierdzenie nie są jednakowe.",
 	"ses-norealname": "Prawdziwe nazwisko jest wymagane, ale nie zostało określone.",
