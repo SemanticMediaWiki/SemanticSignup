@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amaia",
+			"Mikel Ibaiba"
+		]
+	},
+	"ses-nousername": "Ez da erabiltzaile izena zehaztu.",
+	"ses-nopwdmatch": "Pasahitza eta pasahitzaren egiaztapena ez datoz bat.",
+	"ses-userexists": "Erabiltzailea jadanik existitzen da",
+	"ses-emailfailed": "Arazo bat egon da egiaztatze mezua bidaltzean."
+}
