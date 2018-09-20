@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nedergard"
+			"Nedergard",
+			"01miki10"
 		]
 	},
 	"semanticsignup": "Semanttinen kirjautuminen",
-	"ses-desc": "Semanttisia lomakkeita käyttävä MediaWikin laajennus, jonka avulla käyttäjäsivulle lisätään kirjauduttaessa semanttisia tietoja.",
+	"ses-desc": "Mahdollistaa semanttisten tietojen lisäämisen käyttäjäsivulle kirjauduttaessa",
 	"ses-nousername": "Käyttäjätunnusta ei ole määritetty.",
 	"ses-nopwdmatch": "Salasana ja salasanan vahvistus eivät täsmää.",
 	"ses-norealname": "Oikea nimi on pakollinen, mutta sitä ei ole määritetty.",
