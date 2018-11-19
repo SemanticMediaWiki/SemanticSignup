@@ -1,0 +1,14 @@
+{
+	"@metadata": [],
+	"semanticsignup": "Semantička grupa",
+	"ses-desc": "Omogućava promenu korisničke stranice dodavanjem semantičkih podataka u vreme pravljenja naloga",
+	"ses-nousername": "Korisničko ime nije određeno.",
+	"ses-noformname": "Obrazac za registrovanje nije naveden. (Pogledajte podešavanje <var>„$egSemanticSignupSettings”</var> za informacije o ovome.)",
+	"ses-nobotname": "Privilegovani korisnik (bot) nije određen da bi se dopustilo pravljenje novih korisničkih naloga. (Pogledajte podešavanje <var>\"$egSemanticSignupSettings\"</var> za informacije o ovome.)",
+	"ses-nopwdmatch": "Lozinka i potvrdna lozinka se ne poklapaju.",
+	"ses-norealname": "Pravo ime je neophodno a nije određeno.",
+	"ses-userexists": "Korisnik već postoji.",
+	"ses-emailfailed": "Slanje imejla za potvrdu nije uspelo.",
+	"ses-createforbidden": "Trenutni korisnik nema pravo da pravi naloge.",
+	"ses-throttlehit": "Maksimalan broj novih korisničkih naloga po danu je prekoračen za ovu IP adresu."
+}
