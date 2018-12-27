@@ -2,12 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"BeginaFelicysym",
-			"Railfail536"
+			"Railfail536",
+			"CiaPan"
 		]
 	},
 	"semanticsignup": "Semantyczna rejestracja",
 	"ses-desc": "Pozwala na wypełnianie strony użytkownika semantycznymi informacjami podczas rejestracji.",
 	"ses-nousername": "Nie określono nazwy użytkownika.",
+	"ses-noformname": "Nie określono formy rejestracji. (Więcej informacji w opisie nastawy <var>\"$egSemanticSignupSettings\"</var>.)",
+	"ses-nobotname": "Nie określono uprawnionego użytkownika (bota) do tworzenia nowych kont użytkowników. (Więcej informacji w opisie nastawy <var>\"$egSemanticSignupSettings\"</var>.)",
 	"ses-nopwdmatch": "Hasło i jego potwierdzenie nie są jednakowe.",
 	"ses-norealname": "Prawdziwe nazwisko jest wymagane, ale nie zostało określone.",
 	"ses-userexists": "Użytkownik już istnieje.",
