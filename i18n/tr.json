@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK"
+		]
+	},
+	"semanticsignup": "Anlamsal Kayıt",
+	"ses-desc": "Bir kullanıcı sayfasını, kayıt anında anlamsal verilerle doldurmaya izin verir",
+	"ses-nousername": "Kullanıcı adı belirtilmedi.",
+	"ses-noformname": "Bir kayıt formu belirtilmedi. (bu konuda bilgi için <var>\"$egSemanticSignupSettings\"</var> ayarına bakın.)",
+	"ses-nobotname": "Yeni kullanıcı hesapları oluşturmaya izin verecek ayrıcalıklı bir kullanıcı (bot) belirtilmemiş. (bu konuda bilgi için <var>\"$egSemanticSignupSettings\"</var> ayarına bakın.)",
+	"ses-nopwdmatch": "Şifre ve şifre onayı uyuşmuyor.",
+	"ses-norealname": "Gerçek ad gerekli ancak belirtilmemiş.",
+	"ses-userexists": "Kullanıcı zaten mevcut.",
+	"ses-emailfailed": "Onay e-postası gönderilemedi.",
+	"ses-createforbidden": "Mevcut kullanıcının hesap oluşturmasına izin verilmiyor.",
+	"ses-throttlehit": "Bu IP adresi için günlük maksimum yeni kullanıcı hesabı sayısı aşılmıştır."
+}
