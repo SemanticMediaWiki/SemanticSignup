@@ -5,7 +5,9 @@
 			"Wladek92",
 			"Orlodrim",
 			"Mattho69",
-			"Urhixidur"
+			"Urhixidur",
+			"Thibaut120094",
+			"Verdy p"
 		]
 	},
 	"semanticsignup": "Inscription sémantique",
@@ -15,8 +17,8 @@
 	"ses-nobotname": "Un utilisateur privilégié (robot) n’a pas été spécifié pour permettre de créer de nouveaux comptes utilisateur (voir le paramètre « <var>$egSemanticSignupSettings</var> » pour plus d’informations).",
 	"ses-nopwdmatch": "Le mot de passe et sa confirmation ne concordent pas.",
 	"ses-norealname": "Le vrai nom est obligatoire mais n'a pas été spécifié.",
-	"ses-userexists": "L'utilisateur existe déjà.",
-	"ses-emailfailed": "L'envoi du courriel de confirmation a échoué.",
-	"ses-createforbidden": "L'utilisateur courant n'est pas autorisé à créer des comptes.",
+	"ses-userexists": "L’utilisateur existe déjà.",
+	"ses-emailfailed": "L’envoi du courriel de confirmation a échoué.",
+	"ses-createforbidden": "L’utilisateur actuel n’est pas autorisé à créer des comptes.",
 	"ses-throttlehit": "Le nombre de nouveaux comptes utilisateur par jour a été dépassé pour cette adresse IP."
 }
