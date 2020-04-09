@@ -1,5 +1,7 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": []
+	},
 	"semanticsignup": "Semantička grupa",
 	"ses-desc": "Omogućava promenu korisničke stranice dodavanjem semantičkih podataka u vreme pravljenja naloga",
 	"ses-nousername": "Korisničko ime nije određeno.",
