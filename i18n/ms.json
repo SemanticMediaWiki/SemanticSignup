@@ -1,9 +1,0 @@
-{
-	"@metadata": {
-		"authors": [
-			"Anakmalaysia"
-		]
-	},
-	"ses-noformname": "Borang pendaftaran belum ditentukan. (rujuk `egSemanticSignupSettings`)",
-	"ses-nobotname": "Seorang pengguna (bot) berkeistimewaan belum ditentukan untuk mengizinkan pembukaan akaun baru. (see the `egSemanticSignupSettings`)"
-}
