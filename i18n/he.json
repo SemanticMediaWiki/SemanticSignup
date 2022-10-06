@@ -1,11 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Guycn2"
 		]
 	},
+	"semanticsignup": "הרשמה סמנטית",
+	"ses-desc": "אפשרות למלא דף משתמש בנתונים סמנטיים בזמן ההרשמה",
 	"ses-nousername": "לא ציינת שם משתמש.",
 	"ses-noformname": "לא צוין טופס הרשמה. ({{GENDER:|ראה|ראי|ראו}} את ההגדרה <var>\"$egSemanticSignupSettings\"</var> למידע נוסף.)",
+	"ses-nobotname": "לא צוין משתמש בעל הרשאה (בוט) כדי לאפשר ליצור חשבונות משתמש חדשים. (ר' את ההגדרה <var>\"$egSemanticSignupSettings\"</var> למידע על כך.)",
 	"ses-nopwdmatch": "שתי הסיסמאות שהוקלדו אינן תואמות.",
 	"ses-norealname": "חובה לציין את השם האמיתי.",
 	"ses-userexists": "המשתמש כבר קיים.",
