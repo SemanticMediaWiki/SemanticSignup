@@ -7,6 +7,8 @@
 	"semanticsignup": "Inscription semantic",
 	"ses-desc": "Permitte plenar un pagina de usator con datos semantic al momento de creation del conto",
 	"ses-nousername": "Le nomine de usator non ha essite specificate.",
+	"ses-noformname": "Necun formulario de inscription ha essite specificate. (Vide le parametro <var>\"$egSemanticSignupSettings\"</var> pro information sur isto.)",
+	"ses-nobotname": "Necun usator privilegiate (robot) ha essite specificate pro permitter le creation de nove contos de usator. (Vide le parametro <var>\"$egSemanticSignupSettings\"</var> pro information sur isto.)",
 	"ses-nopwdmatch": "Contrasigno e confirmation non corresponde.",
 	"ses-norealname": "Le nomine real es obligatori ma non ha essite specificate.",
 	"ses-userexists": "Le usator existe jam.",
