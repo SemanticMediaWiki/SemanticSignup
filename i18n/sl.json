@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"semanticsignup": "Semantična registracija",
+	"ses-desc": "Omogoča napolnitev uporabniške strani s semantičnimi podatki ob času registracije",
+	"ses-nousername": "Uporabniško ime ni bilo določeno.",
+	"ses-noformname": "Obrazec za registracijo ni določen. (Za informacije o tem glejte nastavitev »<var>$egSemanticSignupSettings</var>«.)",
+	"ses-nobotname": "Privilegiran uporabnik (bot) ni bil odobren za ustvarjanje novih uporabniških računov. (Za informacije o tem glejte nastavitev »<var>$egSemanticSignupSettings</var>«.)",
+	"ses-nopwdmatch": "Geslo in potrditev gesla se ne ujemata.",
+	"ses-norealname": "Zahtevano je pravo ime, vendar ni navedeno.",
+	"ses-userexists": "Uporabnik že obstaja.",
+	"ses-emailfailed": "Pošiljanje potrditvenega e-poštnega sporočila ni uspelo.",
+	"ses-createforbidden": "Trenutnemu uporabniku ni dovoljeno ustvarjati računov.",
+	"ses-throttlehit": "Za ta IP-naslov je bilo preseženo največje število novih uporabniških računov na dan."
+}
