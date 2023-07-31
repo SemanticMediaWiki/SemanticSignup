@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Diskdance",
 			"Lakejason0",
 			"Linforest",
 			"Liuxinyu970226",
@@ -16,6 +17,6 @@
 	"ses-norealname": "真实姓名是必需的但尚未指定。",
 	"ses-userexists": "用户已存在。",
 	"ses-emailfailed": "用于确认的电子邮件发送失败。",
-	"ses-createforbidden": "不允许当前用户创建帐户。",
+	"ses-createforbidden": "不允许当前用户创建账号。",
 	"ses-throttlehit": "此IP地址已经超过了每天新用户账户的最大数量。"
 }
