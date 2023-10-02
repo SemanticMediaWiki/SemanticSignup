@@ -15,7 +15,7 @@
 	"ses-noformname": "未指定注册表单。（有关信息请查看<var>“$egSemanticSignupSettings”</var>设置。）",
 	"ses-nobotname": "未指定允许创建新用户账号的特权用户（机器人）。（有关信息请查看<var>“$egSemanticSignupSettings”</var>设置。）",
 	"ses-nopwdmatch": "密码与确认密码不匹配。",
-	"ses-norealname": "必需真实姓名但未指定。",
+	"ses-norealname": "需要真实姓名但未指定。",
 	"ses-userexists": "用户已存在。",
 	"ses-emailfailed": "确认电子邮件发送失败。",
 	"ses-createforbidden": "当前用户不允许创建账号。",
