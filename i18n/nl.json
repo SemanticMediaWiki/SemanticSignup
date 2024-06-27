@@ -4,6 +4,7 @@
 			"HanV",
 			"Hex",
 			"Mar(c)",
+			"McDutchie",
 			"Rangekill",
 			"Siebrand"
 		]
@@ -11,6 +12,8 @@
 	"semanticsignup": "Semantisch inschrijven",
 	"ses-desc": "Maakt het mogelijk om een gebruikerspagina te vullen met semantische gegevens tijdens de registratie",
 	"ses-nousername": "De gebruikersnaam is niet opgegeven.",
+	"ses-noformname": "Er is geen inschrijvingsformulier opgegeven. (Zie de instelling <var>$egSemanticSignupSettings</var> voor informatie hierover.)",
+	"ses-nobotname": "Er is geen bevoorrechte gebruiker (robot) opgegeven die het aanmaken van nieuwe gebruikersaccounts toestaat. (Xie de instelling <var>$egSemanticSignupSettings</var> voor informatie hierover.)",
 	"ses-nopwdmatch": "Het wachtwoord en de bevestiging komen niet overeen.",
 	"ses-norealname": "Een echte naam is vereist maar is niet opgegeven.",
 	"ses-userexists": "De gebruiker bestaat al.",
