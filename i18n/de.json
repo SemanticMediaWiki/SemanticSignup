@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Justman10000",
 			"Kghbln",
 			"Metalhead64"
 		]
@@ -11,7 +12,7 @@
 	"ses-noformname": "Es wurde kein Formular festgelegt (siehe hierzu den Konfigurationsparameter <var>„$egSemanticSignupSettings“</var> zur Information).",
 	"ses-nobotname": "Es wurde kein Benutzerkonto festgelegt, das die Berechtigung hat, Benutzerkonten zu erstellen (siehe hierzu den Konfigurationsparameter <var>„$egSemanticSignupSettings“</var> zur Information).",
 	"ses-nopwdmatch": "Das Passwort und die Passwortbestätigung stimmen nicht überein.",
-	"ses-norealname": "Der bürgerliche Name ist erforderlich, wurde aber nicht angegeben.",
+	"ses-norealname": "Der bürgerliche Name ist erforderlich, wurde jedoch nicht angegeben.",
 	"ses-userexists": "Der Benutzer ist bereits vorhanden.",
 	"ses-emailfailed": "Der Versand der Bestätigungs-E-Mail ist gescheitert.",
 	"ses-createforbidden": "Der aktuelle Benutzer ist nicht berechtigt, Benutzerkonten zu erstellen.",
