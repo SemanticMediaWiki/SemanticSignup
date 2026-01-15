@@ -2,12 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Martinwiss",
+			"Stefan2255",
 			"WikiPhoenix"
 		]
 	},
 	"semanticsignup": "Semantic Signup",
-	"ses-desc": "Ett tillägg till MediaWiki som kompletterar tillägget Semantic Forms och gör så att användare kan fylla i en användarsida med semantiska data i samband med skapandet av en ny användare.",
+	"ses-desc": "Tillåter att en användarsida fylls med semantisk data vid registreringstillfället",
 	"ses-nousername": "Användarnamn har inte angetts.",
+	"ses-noformname": "Ett registreringsformulär har inte angetts. (Se inställningen <var>\"$egSemanticSignupSettings\"</var> för information om detta.)",
+	"ses-nobotname": "En privilegierad användare (bot) har inte angetts för att tillåta att nya användarkonton skapas. (Se inställningen <var>\"$egSemanticSignupSettings\"</var> för information om detta.)",
 	"ses-nopwdmatch": "Lösenordet och upprepningen av lösenordet stämmer inte överens.",
 	"ses-norealname": "Det rikta namnet krävs men har inte angetts.",
 	"ses-userexists": "Användaren finns redan.",
