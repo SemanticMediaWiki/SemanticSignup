@@ -2,6 +2,9 @@
 
 namespace SES\Tests;
 
+use FauxRequest;
+use MediaWiki\SpecialPage\SpecialPageFactory;
+use PHPUnit\Framework\TestCase;
 use SES\SpecialSemanticSignup;
 
 /**
@@ -14,15 +17,14 @@ use SES\SpecialSemanticSignup;
  *
  * @author mwjames
  */
-class SpecialSemanticSignupTest extends \PHPUnit_Framework_TestCase {
+class SpecialSemanticSignupTest extends TestCase {
 
 	public function testCanConstruct() {
 
-		$request = new \FauxRequest( array(), true );
-		$specialPage = \SpecialPageFactory::getPage( 'SemanticSignup' );
+		$request = new FauxRequest( array(), true );
+		$specialPage = SpecialPageFactory::getPage( 'SemanticSignup' );
 
-		// Deprecated: Use of SpecialPage::getTitle was deprecated in MediaWiki 1.23
-		$title = method_exists( $specialPage, 'getPageTitle') ? $specialPage->getPageTitle() : $specialPage->getTitle();
+		$title = $specialPage->getPageTitle();
 
 		$context = \RequestContext::newExtraneousContext( $title );
 		$context->setRequest( $request );

@@ -2,6 +2,7 @@
 
 namespace SES\Tests;
 
+use PHPUnit\Framework\TestCase;
 use SES\DataChecker;
 
 /**
@@ -14,7 +15,7 @@ use SES\DataChecker;
  *
  * @author mwjames
  */
-class DataCheckerTest extends \PHPUnit_Framework_TestCase {
+class DataCheckerTest extends TestCase {
 
 	public function testCanConstruct() {
 

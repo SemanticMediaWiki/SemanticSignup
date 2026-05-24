@@ -55,7 +55,7 @@ class SignupFieldsParserFunction {
 
 		$this->userFieldsCreateTemplate->set( 'link', '' ); // TODO
 		$this->userFieldsCreateTemplate->set( 'email', '' ); // TODO
-		$this->userFieldsCreateTemplate->set( 'createemail', $wgEnableEmail && $wgUser->isLoggedIn() );
+		$this->userFieldsCreateTemplate->set( 'createemail', $wgEnableEmail && $wgUser->isRegistered() );
 		$this->userFieldsCreateTemplate->set( 'userealname', $allowRealName );
 		$this->userFieldsCreateTemplate->set( 'useemail', $wgEnableEmail );
 		$this->userFieldsCreateTemplate->set( 'emailrequired', $wgEmailConfirmToEdit );

@@ -2,6 +2,7 @@
 
 namespace SES\Tests\Integration;
 
+use PHPUnit\Framework\TestCase;
 use SMW\Tests\Utils\UtilityFactory;
 
 /**
@@ -13,7 +14,7 @@ use SMW\Tests\Utils\UtilityFactory;
  *
  * @author mwjames
  */
-class I18nJsonFileIntegrityTest extends \PHPUnit_Framework_TestCase {
+class I18nJsonFileIntegrityTest extends TestCase {
 
 	/**
 	 * @dataProvider i18nFileProvider
@@ -22,23 +23,21 @@ class I18nJsonFileIntegrityTest extends \PHPUnit_Framework_TestCase {
 
 		$jsonFileReader = UtilityFactory::getInstance()->newJsonFileReader( $file );
 
-		$this->assertInternalType(
-			'integer',
+		$this->assertIsInt(
 			$jsonFileReader->getModificationTime()
 		);
 
-		$this->assertInternalType(
-			'array',
+		$this->assertIsArray(
 			$jsonFileReader->read()
 		);
 	}
 
 	public function i18nFileProvider() {
 
-		$provider = array();
-		$location = $GLOBALS['wgMessagesDirs']['semantic-signup'];
+		$provider = [];
+		$location = $GLOBALS['wgMessagesDirs']['SemanticSignup'];
 
-		$bulkFileProvider = UtilityFactory::getInstance()->newBulkFileProvider( $location );
+		$bulkFileProvider = UtilityFactory::getInstance()->newBulkFileProvider( $location[0] );
 		$bulkFileProvider->searchByFileExtension( 'json' );
 
 		foreach ( $bulkFileProvider->getFiles() as $file ) {

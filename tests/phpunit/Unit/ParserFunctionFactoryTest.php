@@ -2,11 +2,10 @@
 
 namespace SES\Tests;
 
-use SES\ParserFunctionFactory;
-
-use Title;
+use PHPUnit\Framework\TestCase;
 use Parser;
 use ParserOptions;
+use SES\ParserFunctionFactory;
 
 /**
  * @covers \SES\ParserFunctionFactory
@@ -18,7 +17,7 @@ use ParserOptions;
  *
  * @author mwjames
  */
-class ParserFunctionFactoryTest extends \PHPUnit_Framework_TestCase {
+class ParserFunctionFactoryTest extends TestCase {
 
 	public function testCanConstruct() {
 

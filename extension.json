@@ -1,0 +1,50 @@
+{
+    "name": "SemanticSignup",
+	"version": "1.1-alpha",
+	"author": [
+		"Serg Kutny",
+		"[https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw Jeroen De Dauw]",
+		"..."
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:SemanticSignup",
+	"descriptionmsg": "ses-desc",
+	"license-name": "GPL-3.0-or-later",
+	"type": "semantic",
+	"requires": {
+		"MediaWiki": ">= 1.43",
+		"extensions": {
+			"SemanticMediaWiki": ">= 6.0"
+		}
+	},
+	"MessagesDirs": {
+		"SemanticSignup": [
+			"i18n"
+		]
+	},
+	"callback": "SemanticSignup::initExtension",
+	"ExtensionFunctions": [
+		"SemanticSignup::onExtensionFunction"
+	],
+	"ExtensionMessagesFiles": {
+		"SemanticSignupAlias": "i18n/SemanticSignup.i18n.aliases.php",
+		"SemanticSignupMagic": "i18n/SemanticSignup.i18n.magic.php"
+	},
+	"AutoloadNamespaces": {
+		"SES\\": "src/"
+	},
+	"TestAutoloadNamespaces": {
+		"SES\\Tests\\": "tests/phpunit/"
+	},
+	"SpecialPages": {
+		"SemanticSignup": "SES\\SpecialSemanticSignup"
+	},
+	"config_prefix": "eg",
+	"config": {
+		"SemanticSignupSettings": {
+			"value": [],
+			"description": "..."
+		}
+	},
+	"load_composer_autoloader": true,
+	"manifest_version": 2
+}

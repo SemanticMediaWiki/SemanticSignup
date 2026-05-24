@@ -2,6 +2,7 @@
 
 namespace SES;
 
+use MediaWiki\MediaWikiServices;
 use OutputPage;
 use SpecialPage;
 
@@ -42,7 +43,14 @@ class RedirectFormFinder {
 
 		$url = htmlspecialchars( SpecialPage::getTitleFor( 'SemanticSignup' )->getFullURL() );
 
-		wfRunHooks( 'SemanticSignupBeforeRedirect', array( &$url ) );
+		MediaWikiServices::getInstance()
+			->getHookContainer()
+			->run(
+				'SemanticSignupBeforeRedirect',
+				[
+					&$url
+				]
+			);
 
 		$output->redirect( $url );
 

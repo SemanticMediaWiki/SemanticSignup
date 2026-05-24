@@ -2,8 +2,8 @@
 
 namespace SES;
 
+use MediaWiki\Title\Title;
 use Parser;
-use Title;
 use SpecialPage;
 
 /**

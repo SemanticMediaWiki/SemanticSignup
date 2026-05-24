@@ -2,6 +2,7 @@
 
 namespace SES\Tests;
 
+use PHPUnit\Framework\TestCase;
 use SES\RedirectFormFinder;
 
 /**
@@ -14,7 +15,7 @@ use SES\RedirectFormFinder;
  *
  * @author mwjames
  */
-class RedirectFormFinderTest extends \PHPUnit_Framework_TestCase {
+class RedirectFormFinderTest extends TestCase {
 
 	public function testCanConstruct() {
 

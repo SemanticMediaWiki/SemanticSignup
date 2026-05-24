@@ -2,7 +2,7 @@
 
 namespace SES;
 
-use Title;
+use MediaWiki\Title\Title;
 
 /**
  * @license GNU GPL v2+
@@ -98,7 +98,7 @@ class FormPrinterHandler {
 		}
 
 		$form = new \Article( $this->form );
-		$form_definition = $form->getContent();
+		$form_definition = $form->fetchRevisionRecord();
 
 		list ( $form_text, $javascript_text, $data_text, $form_page_title, $generated_page_name ) =
 			$this->formPrinter->formHTML( $form_definition, $this->submitState, false );

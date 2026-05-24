@@ -2,7 +2,7 @@
 
 namespace SES;
 
-use Title;
+use MediaWiki\Title\Title;
 
 /**
  * @license GNU GPL v2+
@@ -21,12 +21,12 @@ class SignupFactory {
 
 		$form = Title::newFromText(
 			Settings::get( 'formName' ),
-			SF_NS_FORM
+			PF_NS_FORM
 		);
 
 		return new FormPrinterHandler(
 			$form,
-			$GLOBALS['sfgFormPrinter']
+			$GLOBALS['wgPageFormsFormPrinter']
 		);
 	}
 

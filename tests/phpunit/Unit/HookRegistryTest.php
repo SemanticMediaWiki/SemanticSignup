@@ -2,6 +2,7 @@
 
 namespace SES\Tests;
 
+use PHPUnit\Framework\TestCase;
 use SES\HookRegistry;
 
 /**
@@ -14,7 +15,7 @@ use SES\HookRegistry;
  *
  * @author mwjames
  */
-class HookRegistryTest extends \PHPUnit_Framework_TestCase {
+class HookRegistryTest extends TestCase {
 
 	public function testCanConstruct() {
 
@@ -56,8 +57,7 @@ class HookRegistryTest extends \PHPUnit_Framework_TestCase {
 
 	private function assertHookIsExcutable( $wgHooks, $hookName, $arguments ) {
 		foreach ( $wgHooks[ $hookName ] as $hook ) {
-			$this->assertInternalType(
-				'boolean',
+			$this->assertIsBool(
 				call_user_func_array( $hook, $arguments )
 			);
 		}

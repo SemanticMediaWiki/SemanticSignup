@@ -2,6 +2,7 @@
 
 namespace SES\Tests;
 
+use PHPUnit\Framework\TestCase;
 use SES\SignupFactory;
 
 /**
@@ -14,7 +15,7 @@ use SES\SignupFactory;
  *
  * @author mwjames
  */
-class SignupFactoryTest extends \PHPUnit_Framework_TestCase {
+class SignupFactoryTest extends TestCase {
 
 	public function testCanConstruct() {
 

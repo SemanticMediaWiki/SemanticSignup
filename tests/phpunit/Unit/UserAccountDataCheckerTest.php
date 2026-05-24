@@ -2,6 +2,7 @@
 
 namespace SES\Tests;
 
+use PHPUnit\Framework\TestCase;
 use SES\UserAccountDataChecker;
 
 /**
@@ -14,7 +15,7 @@ use SES\UserAccountDataChecker;
  *
  * @author mwjames
  */
-class UserAccountDataCheckerTest extends \PHPUnit_Framework_TestCase {
+class UserAccountDataCheckerTest extends TestCase {
 
 	public function testCanConstruct() {
 

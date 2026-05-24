@@ -2,6 +2,7 @@
 
 namespace SES\Tests;
 
+use PHPUnit\Framework\TestCase;
 use SES\SignupFieldsParserFunction;
 
 /**
@@ -14,7 +15,7 @@ use SES\SignupFieldsParserFunction;
  *
  * @author mwjames
  */
-class SignupFieldsParserFunctionTest extends \PHPUnit_Framework_TestCase {
+class SignupFieldsParserFunctionTest extends TestCase {
 
 	public function testCanConstruct() {
 
@@ -36,8 +37,7 @@ class SignupFieldsParserFunctionTest extends \PHPUnit_Framework_TestCase {
 
 		$instance = new SignupFieldsParserFunction( $userFieldsCreateTemplate );
 
-		$this->assertInternalType(
-			'array',
+		$this->assertIsArray(
 			$instance->parse( array() )
 		);
 	}

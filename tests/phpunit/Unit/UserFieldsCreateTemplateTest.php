@@ -2,6 +2,7 @@
 
 namespace SES\Tests;
 
+use PHPUnit\Framework\TestCase;
 use SES\UserFieldsCreateTemplate;
 
 /**
@@ -14,7 +15,7 @@ use SES\UserFieldsCreateTemplate;
  *
  * @author mwjames
  */
-class UserFieldsCreateTemplateTest extends \PHPUnit_Framework_TestCase {
+class UserFieldsCreateTemplateTest extends TestCase {
 
 	public function testCanConstruct() {
 

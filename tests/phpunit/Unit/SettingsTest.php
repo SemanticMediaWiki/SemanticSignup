@@ -2,6 +2,7 @@
 
 namespace SES\Tests;
 
+use PHPUnit\Framework\TestCase;
 use SES\Settings;
 
 /**
@@ -14,7 +15,7 @@ use SES\Settings;
  *
  * @author mwjames
  */
-class SettingsTest extends \PHPUnit_Framework_TestCase {
+class SettingsTest extends TestCase {
 
 	public function testCanConstruct() {
 
@@ -28,8 +29,7 @@ class SettingsTest extends \PHPUnit_Framework_TestCase {
 
 		$instance = new Settings();
 
-		$this->assertInternalType(
-			'array',
+		$this->assertIsArray(
 			$instance->getSettings()
 		);
 	}

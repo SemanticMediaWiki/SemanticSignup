@@ -2,8 +2,9 @@
 
 namespace SES\Tests;
 
+use MediaWiki\Title\Title;
+use PHPUnit\Framework\TestCase;
 use SES\FormPrinterHandler;
-use Title;
 
 /**
  * @covers \SES\FormPrinterHandler
@@ -15,7 +16,7 @@ use Title;
  *
  * @author mwjames
  */
-class FormPrinterHandlerTest extends \PHPUnit_Framework_TestCase {
+class FormPrinterHandlerTest extends TestCase {
 
 	public function testCanConstruct() {
 
@@ -33,12 +34,16 @@ class FormPrinterHandlerTest extends \PHPUnit_Framework_TestCase {
 			$instance->canUseForm()
 		);
 
-		$title = $this->getMockBuilder( '\Title' )
+		$title = $this->getMockBuilder( Title::class )
 			->disableOriginalConstructor()
 			->getMock();
 
 		$title->expects( $this->once() )
 			->method( 'exists' )
+			->will( $this->returnValue( true ) );
+
+		$title->expects( $this->any() )
+			->method( 'canExist' )
 			->will( $this->returnValue( true ) );
 
 		$instance = new FormPrinterHandler( $title );
@@ -51,12 +56,16 @@ class FormPrinterHandlerTest extends \PHPUnit_Framework_TestCase {
 
 	public function testGetFormText() {
 
-		$title = $this->getMockBuilder( '\Title' )
+		$title = $this->getMockBuilder( Title::class )
 			->disableOriginalConstructor()
 			->getMock();
 
 		$title->expects( $this->any() )
 			->method( 'exists' )
+			->will( $this->returnValue( true ) );
+
+		$title->expects( $this->any() )
+			->method( 'canExist' )
 			->will( $this->returnValue( true ) );
 
 		$instance = new FormPrinterHandler( $title );
@@ -65,7 +74,7 @@ class FormPrinterHandlerTest extends \PHPUnit_Framework_TestCase {
 			$instance->getFormText()
 		);
 
-		$formPrinter = $this->getMockBuilder( '\SFFormPrinter' )
+		$formPrinter = $this->getMockBuilder( '\PFFormPrinter' )
 			->disableOriginalConstructor()
 			->getMock();
 
@@ -86,12 +95,16 @@ class FormPrinterHandlerTest extends \PHPUnit_Framework_TestCase {
 
 	public function testGetTemplateText() {
 
-		$title = $this->getMockBuilder( '\Title' )
+		$title = $this->getMockBuilder( Title::class )
 			->disableOriginalConstructor()
 			->getMock();
 
 		$title->expects( $this->any() )
 			->method( 'exists' )
+			->will( $this->returnValue( true ) );
+
+		$title->expects( $this->any() )
+			->method( 'canExist' )
 			->will( $this->returnValue( true ) );
 
 		$instance = new FormPrinterHandler( $title );
@@ -100,7 +113,7 @@ class FormPrinterHandlerTest extends \PHPUnit_Framework_TestCase {
 			$instance->getTemplateText()
 		);
 
-		$formPrinter = $this->getMockBuilder( '\SFFormPrinter' )
+		$formPrinter = $this->getMockBuilder( '\PFFormPrinter' )
 			->disableOriginalConstructor()
 			->getMock();
 

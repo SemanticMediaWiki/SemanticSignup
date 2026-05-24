@@ -2,9 +2,9 @@
 
 namespace SES;
 
-use User;
-use Sanitizer;
 use Exception;
+use MediaWiki\User\User;
+use Sanitizer;
 
 /**
  * @license GNU GPL v3+

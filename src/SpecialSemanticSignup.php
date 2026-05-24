@@ -2,13 +2,13 @@
 
 namespace SES;
 
+use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use SpecialPage;
 use Exception;
 use SiteStatsUpdate;
 use Sanitizer;
-use Title;
 use Article;
-use User;
 
 /**
  * Special page to replace SpecialUserLogin/signup with an equivalent
