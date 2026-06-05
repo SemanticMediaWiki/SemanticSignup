@@ -14,7 +14,7 @@ Semantic Forms to improve the user registration process.
 - PHP 8.1 or later
 - MediaWiki 1.43 or later
 - [Semantic MediaWiki][smw] 6.0+
-- [Page Forms][pf] 2.8+
+- [Page Forms][pf] 6.0.5+
 
 ## Installation
 
@@ -68,6 +68,6 @@ but can also be executed using `composer phpunit` from the extension base direct
 
 [gpl-licence]: https://www.gnu.org/copyleft/gpl.html
 [smw]: https://github.com/SemanticMediaWiki/SemanticMediaWiki
-[sf]: https://www.mediawiki.org/wiki/Extension:Semantic_Forms
-[travis]: https://travis-ci.org/SemanticMediaWiki/SemanticSignup
+[pf]: https://www.mediawiki.org/wiki/Extension:Page_Forms
+[ci]: https://github.com/SemanticMediaWiki/SemanticSignup/actions
 [composer]: https://getcomposer.org/
