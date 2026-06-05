@@ -21,7 +21,7 @@ class SignupFactory {
 
 		$form = Title::newFromText(
 			Settings::get( 'formName' ),
-			PF_NS_FORM
+			\PF_NS_FORM
 		);
 
 		return new FormPrinterHandler(
