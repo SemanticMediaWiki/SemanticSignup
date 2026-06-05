@@ -14,7 +14,7 @@ Semantic Forms to improve the user registration process.
 - PHP 8.1 or later
 - MediaWiki 1.43 or later
 - [Semantic MediaWiki][smw] 6.0+
-- [Semantic Forms][sf] 2.8+
+- [Page Forms][pf] 2.8+
 
 ## Installation
 
