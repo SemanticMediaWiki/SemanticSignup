@@ -1,19 +1,19 @@
 # Semantic Signup
 
-[![Build Status](https://secure.travis-ci.org/SemanticMediaWiki/SemanticSignup.svg?branch=master)](http://travis-ci.org/SemanticMediaWiki/SemanticSignup)
-[![Code Coverage](https://scrutinizer-ci.com/g/SemanticMediaWiki/SemanticSignup/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/SemanticMediaWiki/SemanticSignup/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SemanticMediaWiki/SemanticSignup/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/SemanticMediaWiki/SemanticSignup/?branch=master)
+[![CI](https://github.com/SemanticMediaWiki/SemanticSignup/actions/workflows/ci.yml/badge.svg)](https://github.com/SemanticMediaWiki/SemanticSignup/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/SemanticMediaWiki/SemanticSignup/graph/badge.svg)](https://codecov.io/gh/SemanticMediaWiki/SemanticSignup)
 [![Latest Stable Version](https://poser.pugx.org/mediawiki/semantic-signup/version.png)](https://packagist.org/packages/mediawiki/semantic-signup)
 [![Packagist download count](https://poser.pugx.org/mediawiki/semantic-signup/d/total.png)](https://packagist.org/packages/mediawiki/semantic-signup)
+
 
 Semantic Signup (a.k.a. SES) is a [Semantic Mediawiki][smw] extension that uses
 Semantic Forms to improve the user registration process.
 
 ## Requirements
 
-- PHP 5.3.2 or later
-- MediaWiki 1.19 or later
-- [Semantic MediaWiki][smw] 1.9+
+- PHP 8.1 or later
+- MediaWiki 1.43 or later
+- [Semantic MediaWiki][smw] 6.0+
 - [Semantic Forms][sf] 2.8+
 
 ## Installation
